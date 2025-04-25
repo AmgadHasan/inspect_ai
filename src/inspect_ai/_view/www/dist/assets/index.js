@@ -24105,13 +24105,13 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         const hours = Math.floor(seconds / (60 * 60));
         const minutes = Math.floor(seconds % (60 * 60) / 60);
         const remainingSeconds = seconds % 60;
-        return `${hours} hr ${minutes} min ${remainingSeconds} sec`;
+        return `${hours} hr ${minutes} min ${Math.floor(remainingSeconds)} sec`;
       } else {
         const days = Math.floor(seconds / (60 * 60 * 24));
         const hours = Math.floor(seconds % (60 * 60 * 24) / (60 * 60));
         const minutes = Math.floor(seconds % (60 * 60) / 60);
         const remainingSeconds = seconds % 60;
-        return `${days} days ${hours} hr ${minutes} min ${remainingSeconds} sec`;
+        return `${days} days ${hours} hr ${minutes} min ${Math.floor(remainingSeconds)} sec`;
       }
     };
     function formatPrettyDecimal(num2, maxDecimals = 3) {
@@ -24445,12 +24445,12 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       }, [callback]);
       return elementRef;
     };
-    const expandableBordered = "_expandableBordered_1wpxz_1";
-    const expandableCollapsed = "_expandableCollapsed_1wpxz_13";
-    const moreToggle = "_moreToggle_1wpxz_17";
-    const bordered = "_bordered_1wpxz_24";
-    const moreToggleContainer = "_moreToggleContainer_1wpxz_28";
-    const moreToggleButton = "_moreToggleButton_1wpxz_39";
+    const expandableBordered = "_expandableBordered_1c46w_1";
+    const expandableCollapsed = "_expandableCollapsed_1c46w_13";
+    const moreToggle = "_moreToggle_1c46w_17";
+    const bordered = "_bordered_1c46w_24";
+    const moreToggleContainer = "_moreToggleContainer_1c46w_28";
+    const moreToggleButton = "_moreToggleButton_1c46w_39";
     const styles$1j = {
       expandableBordered,
       expandableCollapsed,
@@ -60587,7 +60587,7 @@ ${events}
                   title: "JSON",
                   onSelected: onSelectedTab,
                   selected: effectiveSelectedTab === kSampleJsonTabId,
-                  children: !sample2 ? /* @__PURE__ */ jsxRuntimeExports.jsx(NoContentsPanel, { text: "JSON not available" }) : estimateSize(sample2.events) > 25e4 ? /* @__PURE__ */ jsxRuntimeExports.jsx(NoContentsPanel, { text: "JSON too large too display" }) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: clsx(styles$A.padded, styles$A.fullWidth), children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  children: !sample2 ? /* @__PURE__ */ jsxRuntimeExports.jsx(NoContentsPanel, { text: "JSON not available" }) : estimateSize(sample2.events) > 25e4 ? /* @__PURE__ */ jsxRuntimeExports.jsx(NoContentsPanel, { text: "JSON too large to display" }) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: clsx(styles$A.padded, styles$A.fullWidth), children: /* @__PURE__ */ jsxRuntimeExports.jsx(
                     JSONPanel,
                     {
                       data: sample2,
