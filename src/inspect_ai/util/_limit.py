@@ -19,7 +19,6 @@ if TYPE_CHECKING:
 
 logger = logging.getLogger(__name__)
 TNode = TypeVar("TNode", bound="_LimitNode")
-TLimit = TypeVar("TLimit", bound=int | float)
 
 
 class LimitExceededError(Exception):
