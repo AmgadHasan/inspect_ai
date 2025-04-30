@@ -91,6 +91,7 @@ from inspect_ai.solver._solver import Solver
 from inspect_ai.solver._task_state import sample_state, set_sample_state, state_jsonable
 from inspect_ai.util._limit import LimitExceededError
 from inspect_ai.util._limit import time_limit as create_time_limit
+from inspect_ai.util._limit import working_time_limit as create_working_time_limit
 from inspect_ai.util._sandbox.context import sandbox_connections
 from inspect_ai.util._sandbox.environment import SandboxEnvironmentSpec
 from inspect_ai.util._subtask import init_subtask
@@ -648,6 +649,7 @@ async def task_run_sample(
                         state._token_limit,
                         state._message_limit,
                         create_time_limit(time_limit),
+                        create_working_time_limit(working_limit),
                     ):
                         # mark started
                         active.started = datetime.now().timestamp()

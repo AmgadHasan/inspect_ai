@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import abc
 import logging
+import time
 from contextlib import ExitStack, contextmanager
 from contextvars import ContextVar
 from types import TracebackType
@@ -191,6 +192,24 @@ def time_limit(limit: float | None) -> _TimeLimit:
     return _TimeLimit(limit)
 
 
+def working_time_limit(limit: float | None) -> _WorkingTimeLimit:
+    return _WorkingTimeLimit(limit)
+
+
+def record_waiting_time(waiting_time: float) -> None:
+    node = working_time_limit_tree.get()
+    if node is None:
+        return
+    node.record_waiting_time(waiting_time)
+
+
+def check_working_time_limit() -> None:
+    node = working_time_limit_tree.get()
+    if node is None:
+        return
+    node.check()
+
+
 class _Tree(Generic[TNode]):
     """A tree data structure of limit nodes.
 
@@ -227,6 +246,7 @@ message_limit_tree: _Tree[_MessageLimitNode] = _Tree("message_limit_tree")
 # Store the time limit leaf node so that we can exit the correct cancel scope when the
 # _MessageLimit context manager is exited.
 time_limit_tree: _Tree[_TimeLimitNode] = _Tree("time_limit_tree")
+working_time_limit_tree: _Tree[_WorkingTimeLimitNode] = _Tree("working_time_limit_tree")
 
 
 class _LimitValueWrapper:
@@ -454,3 +474,64 @@ class _TimeLimitNode(_LimitNode):
             raise LimitExceededError(
                 "time", value=limit, limit=limit, message=message
             ) from exc_val
+
+
+class _WorkingTimeLimit(Limit):
+    def __init__(self, limit: float | None) -> None:
+        self._validate_time_limit(limit)
+        self._limit = _LimitValueWrapper(limit)
+
+    def __enter__(self) -> Limit:
+        # State is not stored as instance variables, because the context manager may be
+        # opened multiple times including across different execution contexts.
+        working_time_limit_tree.push(_WorkingTimeLimitNode(self._limit))
+        return self
+
+    def __exit__(
+        self,
+        exc_type: type[BaseException] | None,
+        exc_val: BaseException | None,
+        exc_tb: TracebackType | None,
+    ) -> None:
+        working_time_limit_tree.pop()
+
+    def _validate_time_limit(self, value: float | None) -> None:
+        if value is not None and value < 0:
+            raise ValueError(
+                f"Working time limit value must be a non-negative float or None: {value}"
+            )
+
+
+class _WorkingTimeLimitNode(_LimitNode):
+    def __init__(self, limit: _LimitValueWrapper) -> None:
+        super().__init__(limit)
+        self._start_time = time.monotonic()
+        self._waiting_time = 0.0
+
+    def record_waiting_time(self, waiting_time: float) -> None:
+        """Record waiting time for this node and its parent nodes."""
+        if self.parent is not None:
+            self.parent.record_waiting_time(waiting_time)
+        self._waiting_time += waiting_time
+
+    def check(self) -> None:
+        """Check if this working time limit or any parent limits have been exceeded."""
+        self._check_self()
+        if self.parent is not None:
+            self.parent.check()
+
+    def _check_self(self) -> None:
+        from inspect_ai.log._transcript import SampleLimitEvent, transcript
+
+        if self._limit.value is None:
+            return
+        working_time = time.monotonic() - self._start_time - self._waiting_time
+        limit = self._limit.value
+        if working_time > limit:
+            message = f"Working time limit exceeded. limit: {limit} seconds"
+            transcript()._event(
+                SampleLimitEvent(type="working", message=message, limit=limit)
+            )
+            raise LimitExceededError(
+                "working", value=working_time, limit=limit, message=message
+            )
