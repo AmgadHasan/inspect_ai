@@ -27,6 +27,8 @@ logger = logging.getLogger(__name__)
 token_limit_leaf_node: ContextVar[_TokenLimitNode | None] = ContextVar(
     "token_limit_leaf_node", default=None
 )
+# Also store the message limit leaf node so that we know which limit to check in
+# check_message_limit().
 message_limit_leaf_node: ContextVar[_MessageLimitNode | None] = ContextVar(
     "message_limit_leaf_node", default=None
 )
@@ -324,14 +326,16 @@ class _MessageLimit(Limit):
     def __init__(self, limit: int | None) -> None:
         self._validate_message_limit(limit)
         self._limit_value_wrapper = _LimitValueWrapper(limit)
+        self._entered = False
 
     def __enter__(self) -> Limit:
-        current_node = message_limit_leaf_node.get()
-        new_node = _MessageLimitNode(self._limit_value_wrapper, current_node)
-        # Note that we don't store new_node as an instance variable, because the context
-        # manager may be used across multiple execution contexts, or opened multiple
-        # times.
-        message_limit_leaf_node.set(new_node)
+        super().__enter__()
+        if self._entered:
+            raise RuntimeError(
+                "Cannot enter a message limit context manager instance multiple times. "
+                "Please create a new instance."
+            )
+        self._entered = True
         return self
 
     def __exit__(
