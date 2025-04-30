@@ -70,7 +70,7 @@ async def test_enter_context_manager_multiple_times() -> None:
         with limit:
             pass
 
-    assert "Cannot enter a time limit context manager instance multiple times" in str(
+    assert "Cannot enter a limit context manager instance multiple times" in str(
         exc_info.value
     )
 
@@ -83,6 +83,6 @@ async def test_enter_context_manager_multiple_times_nested() -> None:
             with limit:
                 pass
 
-    assert "Cannot enter a time limit context manager instance multiple times" in str(
+    assert "Cannot enter a limit context manager instance multiple times" in str(
         exc_info.value
     )

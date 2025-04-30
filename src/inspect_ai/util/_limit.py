@@ -73,9 +73,16 @@ class LimitExceededError(Exception):
 class Limit(abc.ABC):
     """Base class for all limits."""
 
-    @abc.abstractmethod
+    _entered: bool = False
+
     def __enter__(self) -> Limit:
-        pass
+        if self._entered is True:
+            raise RuntimeError(
+                "Cannot enter a limit context manager instance multiple times. "
+                "Please create a new instance."
+            )
+        self._entered = True
+        return self
 
     @abc.abstractmethod
     def __exit__(
@@ -221,6 +228,7 @@ class _TokenLimit(Limit):
         self._limit_value_wrapper = _LimitValueWrapper(limit)
 
     def __enter__(self) -> Limit:
+        super().__enter__()
         current_node = token_limit_leaf_node.get()
         new_node = _TokenLimitNode(self._limit_value_wrapper, current_node)
         # Note that we don't store new_node as an instance variable, because the context
@@ -326,16 +334,15 @@ class _MessageLimit(Limit):
     def __init__(self, limit: int | None) -> None:
         self._validate_message_limit(limit)
         self._limit_value_wrapper = _LimitValueWrapper(limit)
-        self._entered = False
 
     def __enter__(self) -> Limit:
         super().__enter__()
-        if self._entered:
-            raise RuntimeError(
-                "Cannot enter a message limit context manager instance multiple times. "
-                "Please create a new instance."
-            )
-        self._entered = True
+        current_node = message_limit_leaf_node.get()
+        new_node = _MessageLimitNode(self._limit_value_wrapper, current_node)
+        # Note that we don't store new_node as an instance variable, because the context
+        # manager may be used across multiple execution contexts, or opened multiple
+        # times.
+        message_limit_leaf_node.set(new_node)
         return self
 
     def __exit__(
@@ -425,15 +432,9 @@ class _TimeLimit(Limit):
     def __init__(self, limit: float | None) -> None:
         self._validate_time_limit(limit)
         self._limit = limit
-        self._entered = False
 
     def __enter__(self) -> Limit:
-        if self._entered:
-            raise RuntimeError(
-                "Cannot enter a time limit context manager instance multiple times. "
-                "Please create a new instance."
-            )
-        self._entered = True
+        super().__enter__()
         self._cancel_scope = anyio.move_on_after(self._limit)
         self._cancel_scope.__enter__()
         return self
