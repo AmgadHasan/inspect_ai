@@ -244,15 +244,27 @@ class _LimitValueWrapper:
         return int(self.value) if self.value is not None else None
 
 
+class _LimitNode:
+    """Base class for all limit nodes.
+
+    A new node instance is created every time a Limit context manager is opened.
+    """
+
+    parent: Self | None
+    _limit: _LimitValueWrapper
+
+    def __init__(self, limit: _LimitValueWrapper) -> None:
+        self._limit = limit
+
+
 class _TokenLimit(Limit):
     def __init__(self, limit: int | None) -> None:
         self._validate_token_limit(limit)
         self._limit_value_wrapper = _LimitValueWrapper(limit)
 
     def __enter__(self) -> Limit:
-        # Note that we don't store new_node as an instance variable, because the context
-        # manager may be used across multiple execution contexts, or opened multiple
-        # times.
+        # State is not stored as instance variables, because the context manager may be
+        # opened multiple times including across different execution contexts.
         token_limit_tree.push(_TokenLimitNode(self._limit_value_wrapper))
         return self
 
@@ -289,24 +301,7 @@ class _TokenLimit(Limit):
             )
 
 
-class _LimitNode:
-    """Represents a node in a limit tree."""
-
-    parent: Self | None
-    _limit: _LimitValueWrapper
-
-    def __init__(self, limit: _LimitValueWrapper) -> None:
-        self._limit = limit
-
-
 class _TokenLimitNode(_LimitNode):
-    """
-    Token limit node.
-
-    Tracks the token usage for this node and its parent nodes and checks if the
-    usage has exceeded a (variable) limit.
-    """
-
     def __init__(self, limit: _LimitValueWrapper) -> None:
         from inspect_ai.model._model_output import ModelUsage
 
@@ -346,9 +341,8 @@ class _MessageLimit(Limit):
         self._limit_value_wrapper = _LimitValueWrapper(limit)
 
     def __enter__(self) -> Limit:
-        # Note that we don't store new_node as an instance variable, because the context
-        # manager may be used across multiple execution contexts, or opened multiple
-        # times.
+        # State is not stored as instance variables, because the context manager may be
+        # opened multiple times including across different execution contexts.
         message_limit_tree.push(_MessageLimitNode(self._limit_value_wrapper))
         return self
 
@@ -416,9 +410,8 @@ class _TimeLimit(Limit):
         self._limit = _LimitValueWrapper(limit)
 
     def __enter__(self) -> Limit:
-        # Note that we don't store new_node as an instance variable, because the context
-        # manager may be used across multiple execution contexts, or opened multiple
-        # times.
+        # State is not stored as instance variables, because the context manager may be
+        # opened multiple times including across different execution contexts.
         time_limit_tree.push(_TimeLimitNode(self._limit))
         return self
 
