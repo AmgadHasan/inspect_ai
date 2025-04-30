@@ -61,28 +61,29 @@ async def test_inner_limits_are_enforced() -> None:
     assert exc_info.value.value == 0.1
 
 
-async def test_enter_context_manager_multiple_times() -> None:
-    limit = time_limit(1)
+async def test_can_reuse_context_manager() -> None:
+    limit = time_limit(0.5)
 
     with limit:
         pass
-    with pytest.raises(RuntimeError) as exc_info:
+
+    with limit:
+        pass
+
+    with pytest.raises(LimitExceededError):
         with limit:
-            pass
+            await asyncio.sleep(1)
 
-    assert "Cannot enter a limit context manager instance multiple times" in str(
-        exc_info.value
-    )
+    with limit:
+        pass
 
 
-async def test_enter_context_manager_multiple_times_nested() -> None:
+async def test_can_reuse_context_manager_in_stack() -> None:
     limit = time_limit(1)
 
-    with pytest.raises(RuntimeError) as exc_info:
+    with pytest.raises(LimitExceededError) as exc_info:
         with limit:
             with limit:
-                pass
+                await asyncio.sleep(10)
 
-    assert "Cannot enter a limit context manager instance multiple times" in str(
-        exc_info.value
-    )
+    assert exc_info.value.value == 1

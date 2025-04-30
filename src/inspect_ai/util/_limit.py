@@ -27,10 +27,15 @@ logger = logging.getLogger(__name__)
 token_limit_leaf_node: ContextVar[_TokenLimitNode | None] = ContextVar(
     "token_limit_leaf_node", default=None
 )
-# Also store the message limit leaf node so that we know which limit to check in
+# Store the message limit leaf node so that we know which limit to check in
 # check_message_limit().
 message_limit_leaf_node: ContextVar[_MessageLimitNode | None] = ContextVar(
     "message_limit_leaf_node", default=None
+)
+# Store the time limit leaf node so that we can exit the correct cancel scope when the
+# _MessageLimit context manager is exited.
+time_limit_leaf_node: ContextVar[_TimeLimitNode | None] = ContextVar(
+    "time_limit_leaf_node", default=None
 )
 
 
@@ -73,16 +78,9 @@ class LimitExceededError(Exception):
 class Limit(abc.ABC):
     """Base class for all limits."""
 
-    _entered: bool = False
-
+    @abc.abstractmethod
     def __enter__(self) -> Limit:
-        if self._entered is True:
-            raise RuntimeError(
-                "Cannot enter a limit context manager instance multiple times. "
-                "Please create a new instance."
-            )
-        self._entered = True
-        return self
+        pass
 
     @abc.abstractmethod
     def __exit__(
@@ -228,7 +226,6 @@ class _TokenLimit(Limit):
         self._limit_value_wrapper = _LimitValueWrapper(limit)
 
     def __enter__(self) -> Limit:
-        super().__enter__()
         current_node = token_limit_leaf_node.get()
         new_node = _TokenLimitNode(self._limit_value_wrapper, current_node)
         # Note that we don't store new_node as an instance variable, because the context
@@ -336,7 +333,6 @@ class _MessageLimit(Limit):
         self._limit_value_wrapper = _LimitValueWrapper(limit)
 
     def __enter__(self) -> Limit:
-        super().__enter__()
         current_node = message_limit_leaf_node.get()
         new_node = _MessageLimitNode(self._limit_value_wrapper, current_node)
         # Note that we don't store new_node as an instance variable, because the context
@@ -434,12 +430,59 @@ class _TimeLimit(Limit):
         self._limit = limit
 
     def __enter__(self) -> Limit:
-        super().__enter__()
-        self._cancel_scope = anyio.move_on_after(self._limit)
-        self._cancel_scope.__enter__()
+        current_node = time_limit_leaf_node.get()
+        new_node = _TimeLimitNode(self._limit, current_node)
+        # Note that we don't store new_node as an instance variable, because the context
+        # manager may be used across multiple execution contexts, or opened multiple
+        # times.
+        time_limit_leaf_node.set(new_node)
         return self
 
     def __exit__(
+        self,
+        exc_type: type[BaseException] | None,
+        exc_val: BaseException | None,
+        exc_tb: TracebackType | None,
+    ) -> None:
+        current_node = time_limit_leaf_node.get()
+        assert current_node is not None, (
+            "Time limit node should not be None when exiting context manager."
+        )
+        # Pop the leaf node ahead of exiting the current node, as it may trigger a
+        # LimitExceededError, which will trigger __exit__ on ancestor nodes.
+        time_limit_leaf_node.set(current_node.parent)
+        current_node.exit(exc_type, exc_val, exc_tb)
+
+    def _validate_time_limit(self, value: float | None) -> None:
+        if value is not None and value < 0:
+            raise ValueError(
+                f"Time limit value must be a non-negative float or None: {value}"
+            )
+
+
+class _TimeLimitNode:
+    def __init__(
+        self,
+        limit: float | None,
+        parent: _TimeLimitNode | None,
+    ) -> None:
+        """
+        Initialize a time limit node.
+
+        Forms part of a tree structure. Each node has a pointer to its parent, or None
+        if it is the root node.
+
+        Args:
+          limit: The maximum number of seconds that can pass while the context manager
+            is open.
+          parent: The parent node in the tree.
+        """
+        self._limit = limit
+        self.parent = parent
+        self._cancel_scope = anyio.move_on_after(limit)
+        self._cancel_scope.__enter__()
+
+    def exit(
         self,
         exc_type: type[BaseException] | None,
         exc_val: BaseException | None,
@@ -449,16 +492,10 @@ class _TimeLimit(Limit):
 
         self._cancel_scope.__exit__(exc_type, exc_val, exc_tb)
         if self._cancel_scope.cancel_called and self._limit is not None:
-            message = f"Time limit exceeded. limit: {self._limit:.2f} seconds"
+            message = f"Time limit exceeded. limit: {self._limit} seconds"
             transcript()._event(
                 SampleLimitEvent(type="time", message=message, limit=self._limit)
             )
             raise LimitExceededError(
                 "time", value=self._limit, limit=self._limit, message=message
             ) from exc_val
-
-    def _validate_time_limit(self, value: float | None) -> None:
-        if value is not None and value < 0:
-            raise ValueError(
-                f"Time limit value must be a non-negative float or None: {value}"
-            )
