@@ -19,6 +19,7 @@ if TYPE_CHECKING:
 
 logger = logging.getLogger(__name__)
 TNode = TypeVar("TNode", bound="_LimitNode")
+TLimit = TypeVar("TLimit", bound=int | float)
 
 
 class LimitExceededError(Exception):
@@ -58,7 +59,7 @@ class LimitExceededError(Exception):
 
 
 class Limit(abc.ABC):
-    """Base class for all limits."""
+    """Base class for all limit context managers."""
 
     @abc.abstractmethod
     def __enter__(self) -> Limit:
@@ -191,17 +192,6 @@ def time_limit(limit: float | None) -> _TimeLimit:
     return _TimeLimit(limit)
 
 
-class _LimitValueWrapper:
-    """Container/wrapper type for the limit value.
-
-    This facilitates updating the limit value, which may have been passed to many
-    _TokenLimitNode instances.
-    """
-
-    def __init__(self, value: float | None) -> None:
-        self.value = value
-
-
 class _Tree(Generic[TNode]):
     """A tree data structure of limit nodes.
 
@@ -240,6 +230,20 @@ message_limit_tree: _Tree[_MessageLimitNode] = _Tree("message_limit_tree")
 time_limit_tree: _Tree[_TimeLimitNode] = _Tree("time_limit_tree")
 
 
+class _LimitValueWrapper:
+    """Container/wrapper type for the limit value.
+
+    This facilitates updating the limit value, which may have been passed to many
+    _TokenLimitNode instances.
+    """
+
+    def __init__(self, value: float | None) -> None:
+        self.value = value
+
+    def as_optional_int(self) -> int | None:
+        return int(self.value) if self.value is not None else None
+
+
 class _TokenLimit(Limit):
     def __init__(self, limit: int | None) -> None:
         self._validate_token_limit(limit)
@@ -263,7 +267,7 @@ class _TokenLimit(Limit):
     @property
     def limit(self) -> int | None:
         """Get the configured token limit value."""
-        return self._limit_value_wrapper.value
+        return self._limit_value_wrapper.as_optional_int()
 
     @limit.setter
     def limit(self, value: int | None) -> None:
@@ -286,6 +290,8 @@ class _TokenLimit(Limit):
 
 
 class _LimitNode:
+    """Represents a node in a limit tree."""
+
     parent: Self | None
     _limit: _LimitValueWrapper
 
@@ -325,16 +331,13 @@ class _TokenLimitNode(_LimitNode):
         if self._limit.value is None:
             return
         total = self._usage.total_tokens
-        if total > self._limit.value:
-            message = (
-                f"Token limit exceeded. value: {total:,}; limit: {self._limit.value:,}"
-            )
+        limit = self._limit.value
+        if total > limit:
+            message = f"Token limit exceeded. value: {total:,}; limit: {limit:,}"
             transcript()._event(
-                SampleLimitEvent(type="token", limit=self._limit.value, message=message)
+                SampleLimitEvent(type="token", limit=limit, message=message)
             )
-            raise LimitExceededError(
-                "token", value=total, limit=self._limit.value, message=message
-            )
+            raise LimitExceededError("token", value=total, limit=limit, message=message)
 
 
 class _MessageLimit(Limit):
@@ -360,7 +363,7 @@ class _MessageLimit(Limit):
     @property
     def limit(self) -> int | None:
         """Get the configured message limit value."""
-        return self._limit_value_wrapper.value
+        return self._limit_value_wrapper.as_optional_int()
 
     @limit.setter
     def limit(self, value: int | None) -> None:
@@ -450,14 +453,12 @@ class _TimeLimitNode(_LimitNode):
         from inspect_ai.log._transcript import SampleLimitEvent, transcript
 
         self._cancel_scope.__exit__(exc_type, exc_val, exc_tb)
-        if self._cancel_scope.cancel_called and self._limit.value is not None:
-            message = f"Time limit exceeded. limit: {self._limit.value} seconds"
+        limit = self._limit.value
+        if self._cancel_scope.cancel_called and limit is not None:
+            message = f"Time limit exceeded. limit: {limit} seconds"
             transcript()._event(
-                SampleLimitEvent(type="time", message=message, limit=self._limit.value)
+                SampleLimitEvent(type="time", message=message, limit=limit)
             )
             raise LimitExceededError(
-                "time",
-                value=self._limit.value,
-                limit=self._limit.value,
-                message=message,
+                "time", value=limit, limit=limit, message=message
             ) from exc_val
