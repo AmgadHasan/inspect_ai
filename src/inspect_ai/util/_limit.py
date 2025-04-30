@@ -198,7 +198,7 @@ class _LimitValueWrapper:
     _TokenLimitNode instances.
     """
 
-    def __init__(self, value: int | None) -> None:
+    def __init__(self, value: float | None) -> None:
         self.value = value
 
 
@@ -287,26 +287,24 @@ class _TokenLimit(Limit):
 
 class _LimitNode:
     parent: Self | None
+    _limit: _LimitValueWrapper
+
+    def __init__(self, limit: _LimitValueWrapper) -> None:
+        self._limit = limit
 
 
 class _TokenLimitNode(_LimitNode):
+    """
+    Token limit node.
+
+    Tracks the token usage for this node and its parent nodes and checks if the
+    usage has exceeded a (variable) limit.
+    """
+
     def __init__(self, limit: _LimitValueWrapper) -> None:
-        """
-        Initialize a token limit node.
-
-        Forms part of a tree structure. Each node has a pointer to its parent, or None
-        if it is the root node.
-
-        Tracks the token usage for this node and its parent nodes and checks if the
-        usage has exceeded a (variable) limit.
-
-        Args:
-          limit: The maximum number of tokens that can be used while the context
-            manager is open.
-        """
         from inspect_ai.model._model_output import ModelUsage
 
-        self._limit = limit
+        super().__init__(limit)
         self._usage = ModelUsage()
 
     def record(self, usage: ModelUsage) -> None:
@@ -385,9 +383,6 @@ class _MessageLimit(Limit):
 
 
 class _MessageLimitNode(_LimitNode):
-    def __init__(self, limit: _LimitValueWrapper) -> None:
-        self._limit = limit
-
     def check(self, count: int, raise_for_equal: bool) -> None:
         """Check if this message limit has been exceeded.
 
@@ -415,7 +410,7 @@ class _MessageLimitNode(_LimitNode):
 class _TimeLimit(Limit):
     def __init__(self, limit: float | None) -> None:
         self._validate_time_limit(limit)
-        self._limit = limit
+        self._limit = _LimitValueWrapper(limit)
 
     def __enter__(self) -> Limit:
         # Note that we don't store new_node as an instance variable, because the context
@@ -441,19 +436,9 @@ class _TimeLimit(Limit):
 
 
 class _TimeLimitNode(_LimitNode):
-    def __init__(self, limit: float | None) -> None:
-        """
-        Initialize a time limit node.
-
-        Forms part of a tree structure. Each node has a pointer to its parent, or None
-        if it is the root node.
-
-        Args:
-          limit: The maximum number of seconds that can pass while the context manager
-            is open.
-        """
-        self._limit = limit
-        self._cancel_scope = anyio.move_on_after(limit)
+    def __init__(self, limit: _LimitValueWrapper) -> None:
+        super().__init__(limit)
+        self._cancel_scope = anyio.move_on_after(limit.value)
         self._cancel_scope.__enter__()
 
     def exit(
@@ -465,11 +450,14 @@ class _TimeLimitNode(_LimitNode):
         from inspect_ai.log._transcript import SampleLimitEvent, transcript
 
         self._cancel_scope.__exit__(exc_type, exc_val, exc_tb)
-        if self._cancel_scope.cancel_called and self._limit is not None:
-            message = f"Time limit exceeded. limit: {self._limit} seconds"
+        if self._cancel_scope.cancel_called and self._limit.value is not None:
+            message = f"Time limit exceeded. limit: {self._limit.value} seconds"
             transcript()._event(
-                SampleLimitEvent(type="time", message=message, limit=self._limit)
+                SampleLimitEvent(type="time", message=message, limit=self._limit.value)
             )
             raise LimitExceededError(
-                "time", value=self._limit, limit=self._limit, message=message
+                "time",
+                value=self._limit.value,
+                limit=self._limit.value,
+                message=message,
             ) from exc_val
