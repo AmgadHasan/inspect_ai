@@ -114,3 +114,17 @@ async def test_subtracts_waiting_time() -> None:
             check_working_time_limit()
 
     assert 0.3 < exc_info.value.value < 0.5
+
+
+async def test_subtracts_waiting_time_from_ancestors() -> None:
+    with working_time_limit(0.1):
+        with working_time_limit(0.2):
+            await asyncio.sleep(0.2)
+            record_waiting_time(0.2)
+            check_working_time_limit()
+
+            await asyncio.sleep(0.2)
+            with pytest.raises(LimitExceededError) as exc_info:
+                check_working_time_limit()
+
+    assert 0.1 < exc_info.value.value < 0.3
