@@ -185,6 +185,12 @@ def time_limit(limit: float | None) -> _TimeLimit:
 
     When a limit is exceeded, a LimitExceededError is raised.
 
+    Uses anyio's cancellation scopes meaning that the operations within the context
+    manager block are cancelled if the limit is exceeded. The LimitExceededError is
+    therefore raised at the level that the time_limit() context manager was opened, not
+    at the level of the operation which caused the limit to be exceeded (e.g. a call to
+    generate()).
+
     Args:
       limit: The maximum number of seconds that can pass while the context manager is
         open. A value of None means unlimited time.
@@ -532,6 +538,7 @@ class _WorkingTimeLimitNode(_LimitNode):
             transcript()._event(
                 SampleLimitEvent(type="working", message=message, limit=limit)
             )
+            print(f"Raising working time limit error: {message}")
             raise LimitExceededError(
                 "working", value=working_time, limit=limit, message=message
             )
