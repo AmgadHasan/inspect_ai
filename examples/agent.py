@@ -1,3 +1,4 @@
+import time
 from typing import Generator
 
 from inspect_ai import Task, eval, task
@@ -9,7 +10,12 @@ from inspect_ai.model._model_output import ModelOutput, ModelUsage
 from inspect_ai.scorer import exact
 from inspect_ai.solver._solver import Generate, solver
 from inspect_ai.solver._task_state import TaskState
-from inspect_ai.util._limit import LimitExceededError, token_limit
+from inspect_ai.util._limit import (
+    LimitExceededError,
+    time_limit,
+    token_limit,
+    working_time_limit,
+)
 
 
 @solver
@@ -17,12 +23,13 @@ def my_solver():
     async def solve(state: TaskState, generate: Generate):
         await generate(state)
 
-        # Each fork gets their own copy of the TaskState
         try:
             results = await run(my_agent(), input="hello")
-            print(results)
+            print(f"Results from run(): {results}")
         except LimitExceededError as ex:
-            print(f"Limit exceeded: {ex.value}")
+            print(
+                f"Caught limit exceeded in solver: {ex.type}; value: {ex.value}; limit: {ex.limit}"
+            )
             raise
 
         await generate(state)
@@ -35,10 +42,10 @@ def my_solver():
 @agent
 def my_agent():
     async def solve(state: AgentState) -> AgentState:
-        with token_limit(20):
-            await get_model().generate("hi")
-            await get_model().generate("hi")
-            await get_model().generate("hi")
+        # with working_time_limit(10):
+        await get_model().generate("hi")
+        await get_model().generate("hi")
+        await get_model().generate("hi")
 
         return state
 
@@ -56,14 +63,20 @@ def hello_world():
         ],
         solver=[my_solver()],
         scorer=exact(),
-        token_limit=3,
+        time_limit=4,
     )
+
+
+# Why is there a difference between behaviour of time_limit and working_time_limit=4?
+# In time_limit, no exception is raised from run(). anyio cancels the
+# In working_time_limt, "our" code raises an exception.
 
 
 if __name__ == "__main__":
 
     def repeat_forever(output: ModelOutput) -> Generator[ModelOutput, None, None]:
         while True:
+            time.sleep(1.1)
             yield output
 
     output = ModelOutput.from_content("mockllm/model", "Hello World")
