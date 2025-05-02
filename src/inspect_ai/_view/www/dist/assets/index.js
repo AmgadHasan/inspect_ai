@@ -59819,7 +59819,6 @@ ${events}
     const SubtaskEventView = ({
       id,
       event,
-      depth,
       className: className2
     }) => {
       const body2 = [];
@@ -59827,17 +59826,7 @@ ${events}
         body2.push(
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { title: "Summary", className: clsx(styles$g.summary), children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: clsx("text-style-label"), children: "Inputs" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: clsx(styles$g.summaryRendered), children: /* @__PURE__ */ jsxRuntimeExports.jsx(Rendered, { values: event.input }) }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: clsx("text-style-label"), children: "Transcript" }),
-            event.events.length > 0 ? /* @__PURE__ */ jsxRuntimeExports.jsx(
-              TranscriptView,
-              {
-                id: `${id}-subtask`,
-                "data-name": "Transcript",
-                events: event.events,
-                depth: depth + 1
-              }
-            ) : /* @__PURE__ */ jsxRuntimeExports.jsx(None, {})
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: clsx(styles$g.summaryRendered), children: /* @__PURE__ */ jsxRuntimeExports.jsx(Rendered, { values: event.input }) })
           ] })
         );
       } else {
@@ -59851,19 +59840,6 @@ ${events}
             }
           )
         );
-        if (event.events.length > 0) {
-          body2.push(
-            /* @__PURE__ */ jsxRuntimeExports.jsx(
-              TranscriptView,
-              {
-                id: `${id}-subtask`,
-                "data-name": "Transcript",
-                events: event.events,
-                depth: depth + 1
-              }
-            )
-          );
-        }
       }
       const type = event.type === "fork" ? "Fork" : "Subtask";
       return /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -60204,7 +60180,6 @@ ${events}
     }
     function treeifyEvents(events, depth) {
       const useSpans = hasSpans(events);
-      const treeFn = useSpans ? treeifyFnSpan : treeifyFnStep;
       const pathIndices = [];
       const rootNodes = [];
       const stack2 = [];
@@ -60234,7 +60209,7 @@ ${events}
         pathIndices.pop();
       };
       events.forEach((event) => {
-        treeFn(event, addNode, pushStack, popStack);
+        treeifyFn(event, addNode, pushStack, popStack);
       });
       if (useSpans) {
         return transformTree(rootNodes);
@@ -60242,7 +60217,7 @@ ${events}
         return rootNodes;
       }
     }
-    const treeifyFnStep = (event, addNode, pushStack, popStack) => {
+    const treeifyFn = (event, addNode, pushStack, popStack) => {
       switch (event.event) {
         case ET_STEP:
           if (event.action === ACTION_BEGIN) {
@@ -60251,21 +60226,6 @@ ${events}
           } else {
             popStack();
           }
-          break;
-        case ET_SPAN_BEGIN: {
-          break;
-        }
-        case ET_SPAN_END: {
-          break;
-        }
-        default:
-          addNode(event);
-          break;
-      }
-    };
-    const treeifyFnSpan = (event, addNode, pushStack, popStack) => {
-      switch (event.event) {
-        case ET_STEP:
           break;
         case ET_SPAN_BEGIN: {
           const node2 = addNode(event);
@@ -60365,18 +60325,6 @@ ${events}
         result2.push(...flatTree(node2.children));
       }
       return result2;
-    };
-    const TranscriptView = ({
-      id,
-      events,
-      depth
-    }) => {
-      const resolvedEvents = fixupEventStream(events);
-      const eventNodes = treeifyEvents(
-        resolvedEvents,
-        depth !== void 0 ? depth : 0
-      );
-      return /* @__PURE__ */ jsxRuntimeExports.jsx(TranscriptComponent, { id, eventNodes });
     };
     const TranscriptVirtualList = reactExports.memo(
       (props) => {
@@ -60502,7 +60450,7 @@ ${events}
               {
                 id: node2.id,
                 event: node2.event,
-                children: [],
+                children: node2.children,
                 className: className2
               }
             );
@@ -60517,15 +60465,7 @@ ${events}
               }
             );
           case "subtask":
-            return /* @__PURE__ */ jsxRuntimeExports.jsx(
-              SubtaskEventView,
-              {
-                id,
-                event: node2.event,
-                className: className2,
-                depth: node2.depth
-              }
-            );
+            return /* @__PURE__ */ jsxRuntimeExports.jsx(SubtaskEventView, { id, event: node2.event, className: className2 });
           case "tool":
             return /* @__PURE__ */ jsxRuntimeExports.jsx(
               ToolEventView,
