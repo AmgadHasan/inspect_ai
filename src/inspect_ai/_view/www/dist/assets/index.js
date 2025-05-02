@@ -15851,7 +15851,7 @@ var require_assets = __commonJS({
       return __toString.call(val) === "[object Date]";
     }
     /**
-     * react-router v7.5.1
+     * react-router v7.5.3
      *
      * Copyright (c) Remix Software Inc.
      *
@@ -17249,7 +17249,11 @@ var require_assets = __commonJS({
           }
           return {
             matches,
-            pendingActionResult: [boundaryMatch.route.id, result2]
+            pendingActionResult: [
+              boundaryMatch.route.id,
+              result2,
+              actionMatch.route.id
+            ]
           };
         }
         return {
@@ -19418,7 +19422,9 @@ var require_assets = __commonJS({
       });
       if (pendingError !== void 0 && pendingActionResult) {
         errors2 = { [pendingActionResult[0]]: pendingError };
-        loaderData[pendingActionResult[0]] = void 0;
+        if (pendingActionResult[2]) {
+          loaderData[pendingActionResult[2]] = void 0;
+        }
       }
       return {
         loaderData,
@@ -21109,7 +21115,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     var isBrowser = typeof window !== "undefined" && typeof window.document !== "undefined" && typeof window.document.createElement !== "undefined";
     try {
       if (isBrowser) {
-        window.__reactRouterVersion = "7.5.1";
+        window.__reactRouterVersion = "7.5.3";
       }
     } catch (e) {
     }
@@ -21510,7 +21516,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       304
     ]);
     /**
-     * react-router v7.5.1
+     * react-router v7.5.3
      *
      * Copyright (c) Remix Software Inc.
      *
@@ -22700,6 +22706,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       scrollPositions: {},
       listPositions: {},
       collapsed: {},
+      visible: {},
       messages: {},
       propertyBags: {}
     };
@@ -22820,6 +22827,14 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           setCollapsed: (name2, value2) => {
             set2((state) => {
               state.app.collapsed[name2] = value2;
+            });
+          },
+          getVisible: (name2, defaultValue) => {
+            return getBoolRecord(get2().app.visible, name2, defaultValue);
+          },
+          setVisible: (name2, value2) => {
+            set2((state) => {
+              state.app.visible[name2] = value2;
             });
           },
           getMessageVisible: (name2, defaultValue) => {
@@ -36592,10 +36607,10 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       contentImage,
       reasoning
     };
-    const toolImage = "_toolImage_18gxl_1";
-    const output$1 = "_output_18gxl_6";
-    const textOutput = "_textOutput_18gxl_10";
-    const textCode = "_textCode_18gxl_18";
+    const toolImage = "_toolImage_bv5nm_1";
+    const output$1 = "_output_bv5nm_6";
+    const textOutput = "_textOutput_bv5nm_10";
+    const textCode = "_textCode_bv5nm_18";
     const styles$1f = {
       toolImage,
       output: output$1,
@@ -42460,18 +42475,33 @@ categories: ${categories.join(" ")}`;
         };
       }, [selectedLogFile, selectedSampleSummary]);
     };
-    const useCollapsedState = (id, defaultValue) => {
+    const useCollapsedState = (id, defaultValue, scope) => {
+      const stateId = scope ? `${scope}-${id}` : id;
       const collapsed = useStore(
-        (state) => state.appActions.getCollapsed(id, defaultValue)
+        (state) => state.appActions.getCollapsed(stateId, defaultValue)
       );
       const setCollapsed = useStore((state) => state.appActions.setCollapsed);
       return reactExports.useMemo(() => {
         const set2 = (value2) => {
-          log$1.debug("Set collapsed", id, value2);
-          setCollapsed(id, value2);
+          log$1.debug("Set collapsed", id, scope, value2);
+          setCollapsed(stateId, value2);
         };
         return [collapsed, set2];
       }, [collapsed, setCollapsed]);
+    };
+    const useVisibility = (id, scope, defaultValue) => {
+      const stateId = `${scope}-${id}`;
+      const visible2 = useStore(
+        (state) => state.appActions.getVisible(stateId, defaultValue)
+      );
+      const setVisible = useStore((state) => state.appActions.setVisible);
+      return reactExports.useMemo(() => {
+        const set2 = (value2) => {
+          log$1.debug("Set visibility", id, scope, value2);
+          setVisible(stateId, value2);
+        };
+        return [visible2, set2];
+      }, [visible2, setVisible]);
     };
     const useMessageVisibility = (id, scope) => {
       const visible2 = useStore(
@@ -51207,9 +51237,8 @@ self.onmessage = function (e) {
       collapse,
       children: children2
     }) => {
-      const [isCollapsed, setCollapsed] = useProperty(id, "collapsed", {
-        defaultValue: !!collapse
-      });
+      const [collapsed, setCollapsed] = useCollapsedState(id, collapse, "events");
+      const [visible2, _setVisible] = useVisibility(id, "events", true);
       const hasCollapse = collapse !== void 0;
       const pillId = (index2) => {
         return `${id}-nav-pill-${index2}`;
@@ -51234,8 +51263,8 @@ self.onmessage = function (e) {
       gridColumns2.push("minmax(0, max-content)");
       gridColumns2.push("minmax(0, max-content)");
       const toggleCollapse = reactExports.useCallback(() => {
-        setCollapsed(!isCollapsed);
-      }, [setCollapsed, isCollapsed]);
+        setCollapsed(!collapsed);
+      }, [setCollapsed, collapsed]);
       const titleEl = title2 || icon2 || filteredArrChildren.length > 1 ? /* @__PURE__ */ jsxRuntimeExports.jsxs(
         "div",
         {
@@ -51252,7 +51281,7 @@ self.onmessage = function (e) {
               "i",
               {
                 onClick: toggleCollapse,
-                className: isCollapsed ? ApplicationIcons.chevron.right : ApplicationIcons.chevron.down
+                className: collapsed ? ApplicationIcons.chevron.right : ApplicationIcons.chevron.down
               }
             ) : "",
             icon2 ? /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -51279,10 +51308,10 @@ self.onmessage = function (e) {
               {
                 className: clsx("text-style-secondary", styles$s.label),
                 onClick: toggleCollapse,
-                children: isCollapsed ? text2 : ""
+                children: collapsed ? text2 : ""
               }
             ),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: styles$s.navs, children: (!hasCollapse || !isCollapsed) && filteredArrChildren && filteredArrChildren.length > 1 ? /* @__PURE__ */ jsxRuntimeExports.jsx(
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: styles$s.navs, children: (!hasCollapse || !collapsed) && filteredArrChildren && filteredArrChildren.length > 1 ? /* @__PURE__ */ jsxRuntimeExports.jsx(
               EventNavs,
               {
                 navs: filteredArrChildren.map((child, index2) => {
@@ -51301,32 +51330,39 @@ self.onmessage = function (e) {
           ]
         }
       ) : "";
-      const card2 = /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { id, className: clsx(className2, styles$s.card), children: [
-        titleEl,
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "div",
-          {
-            className: clsx(
-              "tab-content",
-              styles$s.cardContent,
-              hasCollapse && isCollapsed ? styles$s.hidden : void 0
-            ),
-            children: filteredArrChildren == null ? void 0 : filteredArrChildren.map((child, index2) => {
-              const id2 = pillId(index2);
-              const isSelected = id2 === selectedNav;
-              return /* @__PURE__ */ jsxRuntimeExports.jsx(
-                "div",
-                {
-                  id: id2,
-                  className: clsx("tab-pane", "show", isSelected ? "active" : ""),
-                  children: child
-                },
-                `children-${id2}-${index2}`
-              );
-            })
-          }
-        )
-      ] }) });
+      const card2 = /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        "div",
+        {
+          id,
+          className: clsx(className2, styles$s.card, !visible2 && styles$s.hidden),
+          children: [
+            titleEl,
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "div",
+              {
+                className: clsx(
+                  "tab-content",
+                  styles$s.cardContent,
+                  hasCollapse && collapsed ? styles$s.hidden : void 0
+                ),
+                children: filteredArrChildren == null ? void 0 : filteredArrChildren.map((child, index2) => {
+                  const id2 = pillId(index2);
+                  const isSelected = id2 === selectedNav;
+                  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    "div",
+                    {
+                      id: id2,
+                      className: clsx("tab-pane", "show", isSelected ? "active" : ""),
+                      children: child
+                    },
+                    `children-${id2}-${index2}`
+                  );
+                })
+              }
+            )
+          ]
+        }
+      );
       return card2;
     };
     function hasDataDefault(node2) {
@@ -51778,7 +51814,7 @@ self.onmessage = function (e) {
                 }) : "",
                 sections.length > 0 ? /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: styles$m.section, children: sections }) : "",
                 event.sample.target ? /* @__PURE__ */ jsxRuntimeExports.jsx(EventSection, { title: "Target", children: toArray(event.sample.target).map((target2) => {
-                  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: target2 }, target2);
+                  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: clsx("text-size-base"), children: target2 }, target2);
                 }) }) : void 0
               ] })
             ] }),
