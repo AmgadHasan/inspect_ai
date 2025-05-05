@@ -16,7 +16,7 @@ from inspect_ai._util.error import PrerequisiteError
 from inspect_ai._util.httpx import httpx_should_retry, log_httpx_retry_attempt
 from inspect_ai.util._concurrency import concurrency
 
-from .._tool import Tool, ToolResult, tool
+from .._tool import TOOL_INIT_TOOL_DEF, Tool, ToolResult, tool
 
 DEFAULT_RELEVANCE_PROMPT = """I am trying to answer the following question and need to find the most relevant information on the web. Please let me know if the following content is relevant to the question or not. You should just respond with "yes" or "no".
 
@@ -38,7 +38,7 @@ class SearchProvider(Protocol):
 
 @tool
 def web_search(
-    provider: Literal["google"] = "google",
+    provider: Literal["auto", "internal", "google"] = "auto",
     num_results: int = 3,
     max_provider_calls: int = 3,
     max_connections: int = 10,
@@ -55,8 +55,13 @@ def web_search(
     See further documentation at <https://inspect.aisi.org.uk/tools-standard.html#sec-web-search>.
 
     Args:
-      provider: Search provider (defaults to "google", currently
-        the only provider). Possible future providers include "brave" and "bing".
+      provider: Search provider to use:
+        - "auto": Model dependent. If a model supports an internal/built-in web search tool,
+          "auto" will use that one. Otherwise, "auto" defaults to "google".
+        - "internal": Uses the model's built-in/internal web search tool.
+          Raises an error if the current model does not have one.
+        - "google": Uses Google Custom Search (currently the only external provider).
+        Possible future providers include "brave" and "bing".
       num_results: Number of web search result pages to return to the model.
       max_provider_calls: Maximum number of search calls to make to the search provider.
       max_connections: Maximum number of concurrent connections to API
@@ -69,12 +74,12 @@ def web_search(
     # get search client
     client = httpx.AsyncClient()
 
-    if provider == "google":
-        search_provider = google_search_provider(client)
-    else:
-        raise ValueError(
-            f"Provider {provider} not supported. Only 'google' is supported."
-        )
+    # We need to delay the binding of a SearchProvider until we're in the
+    # execute function since the model provider will have to determine if it
+    # uses the execute function or not. Put differently, some of the provider
+    # options are model provider specific. e.g. "internal" is currently only
+    # available for OpenAI.
+    search_provider: SearchProvider | None = None
 
     # resolve provider (only google for now)
     async def execute(query: str) -> ToolResult:
@@ -84,6 +89,18 @@ def web_search(
         Args:
             query (str): Search query.
         """
+        nonlocal search_provider
+        if search_provider is None:
+            match provider:
+                case "auto" | "google":
+                    search_provider = google_search_provider(client)
+                case "internal":
+                    raise ValueError(
+                        f"Provider {provider} not supported by the current model."
+                    )
+                case _:
+                    raise ValueError(f"Provider {provider} not supported.")
+
         # limit number of concurrent searches
         page_contents: list[str] = []
         urls: list[str] = []
@@ -125,6 +142,19 @@ def web_search(
             )
 
         return response
+
+    # Attach metadata so that the provider can choose to use an internal tool if
+    # appropriate. For example, OpenAI provides a web search tool that can be used
+    setattr(
+        execute,
+        TOOL_INIT_TOOL_DEF,
+        {
+            "provider": provider,
+            "num_results": num_results,
+            "max_provider_calls": max_provider_calls,
+            "max_connections": max_connections,
+        },
+    )
 
     return execute
 
