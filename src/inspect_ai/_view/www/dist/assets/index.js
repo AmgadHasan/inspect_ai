@@ -61935,10 +61935,11 @@ self.onmessage = function (e) {
       text: text2,
       icon: icon2,
       children: children2,
-      childIds
+      childIds,
+      collapsibleContent
     }) => {
       const [collapsed, setCollapsed] = useCollapseSampleEvent(id);
-      const isCollapsible = (childIds || []).length > 0;
+      const isCollapsible = (childIds || []).length > 0 || collapsibleContent;
       const pillId = (index) => {
         return `${id}-nav-pill-${index}`;
       };
@@ -61986,7 +61987,7 @@ self.onmessage = function (e) {
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/event/EventPanel.tsx",
-                lineNumber: 97,
+                lineNumber: 99,
                 columnNumber: 11
               },
               void 0
@@ -62004,7 +62005,7 @@ self.onmessage = function (e) {
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/event/EventPanel.tsx",
-                lineNumber: 109,
+                lineNumber: 111,
                 columnNumber: 11
               },
               void 0
@@ -62020,14 +62021,14 @@ self.onmessage = function (e) {
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/event/EventPanel.tsx",
-                lineNumber: 119,
+                lineNumber: 121,
                 columnNumber: 9
               },
               void 0
             ),
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { onClick: toggleCollapse }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/event/EventPanel.tsx",
-              lineNumber: 125,
+              lineNumber: 127,
               columnNumber: 9
             }, void 0),
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
@@ -62041,12 +62042,12 @@ self.onmessage = function (e) {
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/event/EventPanel.tsx",
-                lineNumber: 126,
+                lineNumber: 128,
                 columnNumber: 9
               },
               void 0
             ),
-            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$r.navs, children: (!isCollapsible || !collapsed) && filteredArrChildren && filteredArrChildren.length > 1 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$r.navs, children: isCollapsible && collapsibleContent && collapsed ? "" : filteredArrChildren && filteredArrChildren.length > 1 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
               EventNavs,
               {
                 navs: filteredArrChildren.map((child, index) => {
@@ -62065,13 +62066,13 @@ self.onmessage = function (e) {
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/event/EventPanel.tsx",
-                lineNumber: 136,
+                lineNumber: 138,
                 columnNumber: 13
               },
               void 0
             ) : "" }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/event/EventPanel.tsx",
-              lineNumber: 132,
+              lineNumber: 134,
               columnNumber: 9
             }, void 0)
           ]
@@ -62080,7 +62081,7 @@ self.onmessage = function (e) {
         true,
         {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/event/EventPanel.tsx",
-          lineNumber: 86,
+          lineNumber: 88,
           columnNumber: 7
         },
         void 0
@@ -62093,7 +62094,7 @@ self.onmessage = function (e) {
             className: clsx(
               "tab-content",
               styles$r.cardContent,
-              isCollapsible && collapsed ? styles$r.hidden : void 0
+              isCollapsible && collapsed && collapsibleContent ? styles$r.hidden : void 0
             ),
             children: filteredArrChildren == null ? void 0 : filteredArrChildren.map((child, index) => {
               const id2 = pillId(index);
@@ -62109,7 +62110,7 @@ self.onmessage = function (e) {
                 false,
                 {
                   fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/event/EventPanel.tsx",
-                  lineNumber: 176,
+                  lineNumber: 180,
                   columnNumber: 13
                 },
                 void 0
@@ -62120,14 +62121,14 @@ self.onmessage = function (e) {
           false,
           {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/event/EventPanel.tsx",
-            lineNumber: 164,
+            lineNumber: 166,
             columnNumber: 7
           },
           void 0
         )
       ] }, void 0, true, {
         fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/event/EventPanel.tsx",
-        lineNumber: 162,
+        lineNumber: 164,
         columnNumber: 5
       }, void 0);
       return card2;
@@ -63205,94 +63206,95 @@ self.onmessage = function (e) {
           className: clsx(className2, "text-size-small"),
           subTitle: formatDateTime(new Date(event.timestamp)),
           icon: ApplicationIcons.scorer,
+          collapsibleContent: true,
           children: [
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { "data-name": "Explanation", className: clsx(styles$j.explanation), children: [
               event.target ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(reactExports.Fragment, { children: [
                 /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$j.separator) }, void 0, false, {
                   fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
-                  lineNumber: 43,
+                  lineNumber: 44,
                   columnNumber: 13
                 }, void 0),
                 /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "text-style-label", children: "Target" }, void 0, false, {
                   fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
-                  lineNumber: 44,
+                  lineNumber: 45,
                   columnNumber: 13
                 }, void 0),
                 /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(MarkdownDiv, { markdown: resolvedTarget || "" }, void 0, false, {
                   fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
-                  lineNumber: 46,
+                  lineNumber: 47,
                   columnNumber: 15
                 }, void 0) }, void 0, false, {
                   fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
-                  lineNumber: 45,
+                  lineNumber: 46,
                   columnNumber: 13
                 }, void 0)
               ] }, void 0, true, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
-                lineNumber: 42,
+                lineNumber: 43,
                 columnNumber: 11
               }, void 0) : "",
               /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$j.separator) }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
-                lineNumber: 52,
+                lineNumber: 53,
                 columnNumber: 9
               }, void 0),
               /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "text-style-label", children: "Answer" }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
-                lineNumber: 53,
+                lineNumber: 54,
                 columnNumber: 9
               }, void 0),
               /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(MarkdownDiv, { markdown: event.score.answer || "" }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
-                lineNumber: 55,
+                lineNumber: 56,
                 columnNumber: 11
               }, void 0) }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
-                lineNumber: 54,
+                lineNumber: 55,
                 columnNumber: 9
               }, void 0),
               /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$j.separator) }, void 0, false, {
-                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
-                lineNumber: 57,
-                columnNumber: 9
-              }, void 0),
-              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "text-style-label", children: "Explanation" }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
                 lineNumber: 58,
                 columnNumber: 9
               }, void 0),
-              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(MarkdownDiv, { markdown: event.score.explanation || "" }, void 0, false, {
-                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
-                lineNumber: 60,
-                columnNumber: 11
-              }, void 0) }, void 0, false, {
+              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "text-style-label", children: "Explanation" }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
                 lineNumber: 59,
                 columnNumber: 9
               }, void 0),
-              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$j.separator) }, void 0, false, {
+              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(MarkdownDiv, { markdown: event.score.explanation || "" }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
-                lineNumber: 62,
+                lineNumber: 61,
+                columnNumber: 11
+              }, void 0) }, void 0, false, {
+                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
+                lineNumber: 60,
                 columnNumber: 9
               }, void 0),
-              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "text-style-label", children: "Score" }, void 0, false, {
+              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$j.separator) }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
                 lineNumber: 63,
                 columnNumber: 9
               }, void 0),
-              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: renderScore(event.score.value) }, void 0, false, {
+              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "text-style-label", children: "Score" }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
                 lineNumber: 64,
                 columnNumber: 9
               }, void 0),
-              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$j.separator) }, void 0, false, {
+              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: renderScore(event.score.value) }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
                 lineNumber: 65,
+                columnNumber: 9
+              }, void 0),
+              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$j.separator) }, void 0, false, {
+                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
+                lineNumber: 66,
                 columnNumber: 9
               }, void 0)
             ] }, void 0, true, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
-              lineNumber: 40,
+              lineNumber: 41,
               columnNumber: 7
             }, void 0),
             event.score.metadata ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { "data-name": "Metadata", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
@@ -63305,13 +63307,13 @@ self.onmessage = function (e) {
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
-                lineNumber: 69,
+                lineNumber: 70,
                 columnNumber: 11
               },
               void 0
             ) }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
-              lineNumber: 68,
+              lineNumber: 69,
               columnNumber: 9
             }, void 0) : void 0
           ]
@@ -63332,7 +63334,7 @@ self.onmessage = function (e) {
       } else if (typeof value2 === "object") {
         return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(MetaDataGrid, { entries: value2 }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
-          lineNumber: 83,
+          lineNumber: 84,
           columnNumber: 12
         }, void 0);
       } else {
@@ -70777,7 +70779,7 @@ ${events}
         if (changePreview === void 0) {
           collapseEvent(id, true);
         }
-      }, [changePreview]);
+      }, [changePreview, collapseEvent]);
       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
         EventPanel,
         {
@@ -70786,10 +70788,11 @@ ${events}
           className: className2,
           subTitle: formatDateTime(new Date(event.timestamp)),
           text: !changePreview ? summary2 : void 0,
+          collapsibleContent: true,
           children: [
             changePreview ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { "data-name": "Summary", className: clsx(styles$g.summary), children: changePreview }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/state/StateEventView.tsx",
-              lineNumber: 83,
+              lineNumber: 84,
               columnNumber: 9
             }, void 0) : void 0,
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
@@ -70804,7 +70807,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/state/StateEventView.tsx",
-                lineNumber: 87,
+                lineNumber: 88,
                 columnNumber: 7
               },
               void 0
@@ -71487,6 +71490,7 @@ ${events}
           className: className2,
           subTitle: formatTiming(event.timestamp, event.working_start),
           icon: ApplicationIcons.solvers.use_tools,
+          childIds: children2.map((child) => child.id),
           children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { "data-name": "Summary", className: styles$e.summary, children: [
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
               ToolCallView,
@@ -71503,7 +71507,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ToolEventView.tsx",
-                lineNumber: 66,
+                lineNumber: 67,
                 columnNumber: 9
               },
               void 0
@@ -71520,7 +71524,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ToolEventView.tsx",
-                lineNumber: 77,
+                lineNumber: 78,
                 columnNumber: 11
               },
               void 0
@@ -71535,23 +71539,23 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ToolEventView.tsx",
-                lineNumber: 86,
+                lineNumber: 87,
                 columnNumber: 11
               },
               void 0
             ) : "",
             event.pending ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$e.progress), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(PulsingDots, { subtle: false, size: "medium" }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ToolEventView.tsx",
-              lineNumber: 95,
+              lineNumber: 96,
               columnNumber: 13
             }, void 0) }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ToolEventView.tsx",
-              lineNumber: 94,
+              lineNumber: 95,
               columnNumber: 11
             }, void 0) : void 0
           ] }, void 0, true, {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ToolEventView.tsx",
-            lineNumber: 65,
+            lineNumber: 66,
             columnNumber: 7
           }, void 0)
         },
@@ -71722,7 +71726,7 @@ ${events}
               id: item2.id,
               className: clsx(styles$d.node, paddingClass, attachedClass),
               style: { paddingLeft: `${item2.depth * 0.5}em` },
-              children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(RenderedEventNode, { id: item2.id, node: item2 }, void 0, false, {
+              children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(RenderedEventNode, { node: item2 }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualListComponent.tsx",
                 lineNumber: 54,
                 columnNumber: 11
@@ -71888,7 +71892,7 @@ ${events}
       const targetNode = { ...node2.children[targetIndex] };
       const remainingChildren = node2.children.filter((_, i2) => i2 !== targetIndex);
       targetNode.depth = node2.depth;
-      targetNode.children = reduceDepth(remainingChildren);
+      targetNode.children = setDepth(remainingChildren, node2.depth + 1);
       return targetNode;
     };
     const skipFirstChildNode = (node2) => {
@@ -71908,6 +71912,15 @@ ${events}
           node2.children = reduceDepth(node2.children, 1);
         }
         node2.depth = node2.depth - depth;
+        return node2;
+      });
+    };
+    const setDepth = (nodes, depth) => {
+      return nodes.map((node2) => {
+        if (node2.children.length > 0) {
+          node2.children = setDepth(node2.children, depth + 1);
+        }
+        node2.depth = depth;
         return node2;
       });
     };
@@ -71934,7 +71947,7 @@ ${events}
           const defaultCollapsedIds2 = /* @__PURE__ */ new Set();
           const findCollapsibleEvents = (nodes) => {
             for (const node2 of nodes) {
-              if ((node2.event.event === "step" || node2.event.event === "span_begin") && collapseFilters.some(
+              if ((node2.event.event === "step" || node2.event.event === "span_begin" || node2.event.event === "tool") && collapseFilters.some(
                 (filter) => filter(node2.event)
               )) {
                 defaultCollapsedIds2.add(node2.id);
@@ -71967,7 +71980,7 @@ ${events}
           false,
           {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-            lineNumber: 111,
+            lineNumber: 112,
             columnNumber: 7
           },
           void 0
@@ -71975,19 +71988,17 @@ ${events}
       }
     );
     const collapseFilters = [
+      (event) => event.type === "solver" && event.name === "system_message",
       (event) => {
-        if (event.type === "solver" && event.name === "system_message") {
-          return true;
-        } else if (kSandboxSignalName === event.name) {
-          return true;
-        } else if (event.name === "init" || event.name === "sample_init") {
-          return true;
+        if (event.event === "step" || event.event === "span_begin") {
+          return event.name === kSandboxSignalName || event.name === "init" || event.name === "sample_init";
         }
         return false;
-      }
+      },
+      (event) => event.event === "tool"
     ];
     const RenderedEventNode = reactExports.memo(
-      ({ id, node: node2, className: className2 }) => {
+      ({ node: node2, className: className2 }) => {
         switch (node2.event.event) {
           case "sample_init":
             return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
@@ -72000,7 +72011,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 148,
+                lineNumber: 153,
                 columnNumber: 11
               },
               void 0
@@ -72016,7 +72027,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 156,
+                lineNumber: 161,
                 columnNumber: 11
               },
               void 0
@@ -72032,7 +72043,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 164,
+                lineNumber: 169,
                 columnNumber: 11
               },
               void 0
@@ -72048,7 +72059,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 172,
+                lineNumber: 177,
                 columnNumber: 11
               },
               void 0
@@ -72064,7 +72075,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 180,
+                lineNumber: 185,
                 columnNumber: 11
               },
               void 0
@@ -72080,7 +72091,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 188,
+                lineNumber: 193,
                 columnNumber: 11
               },
               void 0
@@ -72096,7 +72107,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 196,
+                lineNumber: 201,
                 columnNumber: 11
               },
               void 0
@@ -72113,7 +72124,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 204,
+                lineNumber: 209,
                 columnNumber: 11
               },
               void 0
@@ -72130,7 +72141,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 213,
+                lineNumber: 218,
                 columnNumber: 11
               },
               void 0
@@ -72146,7 +72157,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 222,
+                lineNumber: 227,
                 columnNumber: 11
               },
               void 0
@@ -72162,7 +72173,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 230,
+                lineNumber: 235,
                 columnNumber: 11
               },
               void 0
@@ -72179,7 +72190,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 238,
+                lineNumber: 243,
                 columnNumber: 11
               },
               void 0
@@ -72195,7 +72206,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 247,
+                lineNumber: 252,
                 columnNumber: 11
               },
               void 0
@@ -72211,7 +72222,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 255,
+                lineNumber: 260,
                 columnNumber: 11
               },
               void 0
@@ -72227,7 +72238,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 263,
+                lineNumber: 268,
                 columnNumber: 11
               },
               void 0
@@ -72243,7 +72254,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 271,
+                lineNumber: 276,
                 columnNumber: 11
               },
               void 0
