@@ -38,7 +38,7 @@ class SearchProvider(Protocol):
 
 @tool
 def web_search(
-    provider: Literal["auto", "internal", "google"] = "auto",
+    provider: Literal["auto", "internal", "google", "tavily"] = "auto",
     num_results: int = 3,
     max_provider_calls: int = 3,
     max_connections: int = 10,
@@ -60,8 +60,8 @@ def web_search(
           "auto" will use that one. Otherwise, "auto" defaults to "google".
         - "internal": Uses the model's built-in/internal web search tool.
           Raises an error if the current model does not have one.
-        - "google": Uses Google Custom Search (currently the only external provider).
-        Possible future providers include "brave" and "bing".
+        - "google": Uses Google Custom Search.
+        - "tavily": Uses Tavily's LLM tailored search engine.
       num_results: Number of web search result pages to return to the model.
       max_provider_calls: Maximum number of search calls to make to the search provider.
       max_connections: Maximum number of concurrent connections to API
@@ -94,6 +94,8 @@ def web_search(
             match provider:
                 case "auto" | "google":
                     search_provider = google_search_provider(client)
+                case "tavily":
+                    search_provider = tavily_search_provider(client, num_results)
                 case "internal":
                     raise ValueError(
                         f"Provider {provider} not supported by the current model."
@@ -112,9 +114,16 @@ def web_search(
             async with concurrency(f"{provider}_web_search", max_connections):
                 links = await search_provider(query, start_idx=search_calls * 10)
 
+            print(f"XXXXX Found {len(links)} links for query: {query}")
+            for i, link in enumerate(links):
+                print(
+                    f"\tLink {i + 1}:\n\t\tURL: {link.url}\n\t\tSnippet: {link.snippet[:100]}{'...' if len(link.snippet) > 100 else ''}"
+                )
+
             async with anyio.create_task_group() as tg:
 
                 async def process_link(link: SearchLink) -> None:
+                    print(f"XXXXX Processing link: {link.url}")
                     try:
                         page = await page_if_relevant(link.url, query, model, client)
                         if page:
@@ -184,6 +193,7 @@ async def page_if_relevant(
         response = await client.get(link)
         response.raise_for_status()
     except httpx.HTTPError as exc:
+        print(f"XXXXX Error fetching {link}: {exc}")
         raise Exception(f"HTTP error occurred: {exc}")
 
     # parse it
@@ -250,6 +260,49 @@ def google_search_provider(client: httpx.AsyncClient) -> SearchProvider:
 
         if "items" in data:
             return [SearchLink(item["link"], item["snippet"]) for item in data["items"]]
+        else:
+            return []
+
+    return search
+
+
+def tavily_search_provider(
+    client: httpx.AsyncClient, max_results: int
+) -> SearchProvider:
+    tavily_api_key = os.environ.get("TAVILY_API_KEY", None)
+    if not tavily_api_key:
+        raise PrerequisiteError(
+            "TAVILY_API_KEY not set in the environment. Please ensure ths variable is defined to use Tavilywith the web_search tool.\n\nLearn more about the Tavily web search provider at https://inspect.aisi.org.uk/tools.html#tavily-provider"
+        )
+
+    async def search(query: str, start_idx: int) -> list[SearchLink]:
+        search_url = "https://api.tavily.com/search"
+        headers = {
+            "Authorization": f"Bearer {tavily_api_key}",
+        }
+        body = {
+            "query": query,
+            max_results: max_results,
+        }
+
+        # retry up to 5 times over a period of up to 1 minute
+        @retry(
+            wait=wait_exponential_jitter(),
+            stop=stop_after_attempt(5) | stop_after_delay(60),
+            retry=retry_if_exception(httpx_should_retry),
+            before_sleep=log_httpx_retry_attempt(search_url),
+        )
+        async def execute_search() -> httpx.Response:
+            return await client.post(search_url, headers=headers, json=body)
+
+        result = await execute_search()
+        data = result.json()
+        print(f"XXXXX Tavily search result: {data}")
+
+        if "results" in data:
+            return [
+                SearchLink(item["url"], item["content"]) for item in data["results"]
+            ]
         else:
             return []
 
