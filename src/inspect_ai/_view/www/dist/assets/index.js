@@ -72305,7 +72305,7 @@ ${events}
           setSelectedTab
         ]
       );
-      metadataViewsForSample(`${baseId}-${id}`, sample2);
+      const sampleMetadatas = metadataViewsForSample(`${baseId}-${id}`, sample2);
       const tabsetId = `task-sample-details-tab-${id}`;
       const targetId = `${tabsetId}-content`;
       const handlePrintClick = reactExports.useCallback(() => {
@@ -72455,10 +72455,14 @@ ${events}
                   title: "Metadata",
                   onSelected: onSelectedTab,
                   selected: effectiveSelectedTab === kSampleMetdataTabId,
-                  children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(NoContentsPanel, { text: "No metadata" }, void 0, false, {
+                  children: sampleMetadatas.length > 0 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$z.padded, styles$z.fullWidth), children: sampleMetadatas }, void 0, false, {
                     fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-                    lineNumber: 229,
-                    columnNumber: 11
+                    lineNumber: 230,
+                    columnNumber: 13
+                  }, void 0) : /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(NoContentsPanel, { text: "No metadata" }, void 0, false, {
+                    fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
+                    lineNumber: 234,
+                    columnNumber: 13
                   }, void 0)
                 },
                 void 0,
@@ -72482,7 +72486,7 @@ ${events}
                     (sample2 == null ? void 0 : sample2.error) ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Card, { children: [
                       /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(CardHeader, { label: `Sample Error` }, void 0, false, {
                         fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-                        lineNumber: 243,
+                        lineNumber: 249,
                         columnNumber: 19
                       }, void 0),
                       /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(CardBody, { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
@@ -72499,25 +72503,25 @@ ${events}
                         false,
                         {
                           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-                          lineNumber: 245,
+                          lineNumber: 251,
                           columnNumber: 21
                         },
                         void 0
                       ) }, void 0, false, {
                         fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-                        lineNumber: 244,
+                        lineNumber: 250,
                         columnNumber: 19
                       }, void 0)
                     ] }, `sample-error}`, true, {
                       fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-                      lineNumber: 242,
+                      lineNumber: 248,
                       columnNumber: 17
                     }, void 0) : void 0,
                     (_a2 = sample2.error_retries) == null ? void 0 : _a2.map((retry, index) => {
                       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Card, { children: [
                         /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(CardHeader, { label: `Attempt ${index + 1}` }, void 0, false, {
                           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-                          lineNumber: 259,
+                          lineNumber: 265,
                           columnNumber: 21
                         }, void 0),
                         /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(CardBody, { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
@@ -72534,24 +72538,24 @@ ${events}
                           false,
                           {
                             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-                            lineNumber: 261,
+                            lineNumber: 267,
                             columnNumber: 23
                           },
                           void 0
                         ) }, void 0, false, {
                           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-                          lineNumber: 260,
+                          lineNumber: 266,
                           columnNumber: 21
                         }, void 0)
                       ] }, `sample-retry-error-${index}`, true, {
                         fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-                        lineNumber: 258,
+                        lineNumber: 264,
                         columnNumber: 19
                       }, void 0);
                     })
                   ] }, void 0, true, {
                     fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-                    lineNumber: 240,
+                    lineNumber: 246,
                     columnNumber: 13
                   }, void 0)
                 },
@@ -72559,7 +72563,7 @@ ${events}
                 false,
                 {
                   fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-                  lineNumber: 233,
+                  lineNumber: 239,
                   columnNumber: 11
                 },
                 void 0
@@ -72574,11 +72578,11 @@ ${events}
                   selected: effectiveSelectedTab === kSampleJsonTabId,
                   children: !sample2 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(NoContentsPanel, { text: "JSON not available" }, void 0, false, {
                     fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-                    lineNumber: 284,
+                    lineNumber: 290,
                     columnNumber: 13
                   }, void 0) : estimateSize(sample2.events) > 25e4 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(NoContentsPanel, { text: "JSON too large to display" }, void 0, false, {
                     fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-                    lineNumber: 286,
+                    lineNumber: 292,
                     columnNumber: 13
                   }, void 0) : /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$z.padded, styles$z.fullWidth), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
                     JSONPanel,
@@ -72591,13 +72595,13 @@ ${events}
                     false,
                     {
                       fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-                      lineNumber: 289,
+                      lineNumber: 295,
                       columnNumber: 15
                     },
                     void 0
                   ) }, void 0, false, {
                     fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-                    lineNumber: 288,
+                    lineNumber: 294,
                     columnNumber: 13
                   }, void 0)
                 },
@@ -72605,7 +72609,7 @@ ${events}
                 false,
                 {
                   fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-                  lineNumber: 276,
+                  lineNumber: 282,
                   columnNumber: 9
                 },
                 void 0
@@ -72637,7 +72641,7 @@ ${events}
           /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Card, { children: [
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(CardHeader, { label: "Usage" }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-              lineNumber: 311,
+              lineNumber: 317,
               columnNumber: 9
             }, void 0),
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(CardBody, { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
@@ -72650,18 +72654,18 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-                lineNumber: 313,
+                lineNumber: 319,
                 columnNumber: 11
               },
               void 0
             ) }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-              lineNumber: 312,
+              lineNumber: 318,
               columnNumber: 9
             }, void 0)
           ] }, `sample-usage-${id}`, true, {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-            lineNumber: 310,
+            lineNumber: 316,
             columnNumber: 7
           }, void 0)
         );
@@ -72671,42 +72675,42 @@ ${events}
           /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Card, { children: [
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(CardHeader, { label: "Time" }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-              lineNumber: 330,
+              lineNumber: 336,
               columnNumber: 9
             }, void 0),
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(CardBody, { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$z.timePanel, "text-size-smaller"), children: [
               /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-style-label", "text-style-secondary"), children: "Working" }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-                lineNumber: 333,
+                lineNumber: 339,
                 columnNumber: 13
               }, void 0),
               /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: formatTime$1(sample2.working_time) }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-                lineNumber: 336,
+                lineNumber: 342,
                 columnNumber: 13
               }, void 0),
               /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-style-label", "text-style-secondary"), children: "Total" }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-                lineNumber: 337,
+                lineNumber: 343,
                 columnNumber: 13
               }, void 0),
               /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: formatTime$1(sample2.total_time) }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-                lineNumber: 340,
+                lineNumber: 346,
                 columnNumber: 13
               }, void 0)
             ] }, void 0, true, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-              lineNumber: 332,
+              lineNumber: 338,
               columnNumber: 11
             }, void 0) }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-              lineNumber: 331,
+              lineNumber: 337,
               columnNumber: 9
             }, void 0)
           ] }, `sample-time-${id}`, true, {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-            lineNumber: 329,
+            lineNumber: 335,
             columnNumber: 7
           }, void 0)
         );
@@ -72716,7 +72720,7 @@ ${events}
           /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Card, { children: [
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(CardHeader, { label: "Metadata" }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-              lineNumber: 350,
+              lineNumber: 356,
               columnNumber: 9
             }, void 0),
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(CardBody, { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
@@ -72730,18 +72734,18 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-                lineNumber: 352,
+                lineNumber: 358,
                 columnNumber: 11
               },
               void 0
             ) }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-              lineNumber: 351,
+              lineNumber: 357,
               columnNumber: 9
             }, void 0)
           ] }, `sample-metadata-${id}`, true, {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-            lineNumber: 349,
+            lineNumber: 355,
             columnNumber: 7
           }, void 0)
         );
@@ -72751,7 +72755,7 @@ ${events}
           /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Card, { children: [
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(CardHeader, { label: "Store" }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-              lineNumber: 365,
+              lineNumber: 371,
               columnNumber: 9
             }, void 0),
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(CardBody, { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
@@ -72765,18 +72769,18 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-                lineNumber: 367,
+                lineNumber: 373,
                 columnNumber: 11
               },
               void 0
             ) }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-              lineNumber: 366,
+              lineNumber: 372,
               columnNumber: 9
             }, void 0)
           ] }, `sample-store-${id}`, true, {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
-            lineNumber: 364,
+            lineNumber: 370,
             columnNumber: 7
           }, void 0)
         );
