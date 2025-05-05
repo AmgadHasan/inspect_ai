@@ -71296,6 +71296,7 @@ ${events}
     };
     const SubtaskEventView = ({
       eventNode,
+      children: children2,
       className: className2
     }) => {
       const event = eventNode.event;
@@ -71306,21 +71307,21 @@ ${events}
           /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { title: "Summary", className: clsx(styles$f.summary), children: [
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-style-label"), children: "Inputs" }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SubtaskEventView.tsx",
-              lineNumber: 29,
+              lineNumber: 31,
               columnNumber: 9
             }, void 0),
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$f.summaryRendered), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Rendered, { values: event.input }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SubtaskEventView.tsx",
-              lineNumber: 31,
+              lineNumber: 33,
               columnNumber: 11
             }, void 0) }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SubtaskEventView.tsx",
-              lineNumber: 30,
+              lineNumber: 32,
               columnNumber: 9
             }, void 0)
           ] }, void 0, true, {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SubtaskEventView.tsx",
-            lineNumber: 28,
+            lineNumber: 30,
             columnNumber: 7
           }, void 0)
         );
@@ -71337,7 +71338,7 @@ ${events}
             false,
             {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SubtaskEventView.tsx",
-              lineNumber: 37,
+              lineNumber: 39,
               columnNumber: 7
             },
             void 0
@@ -71356,13 +71357,14 @@ ${events}
             event.working_time
           ),
           subTitle: formatTiming(event.timestamp, event.working_start),
+          childIds: children2.map((child) => child.id),
           children: body2
         },
         void 0,
         false,
         {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SubtaskEventView.tsx",
-          lineNumber: 48,
+          lineNumber: 50,
           columnNumber: 5
         },
         void 0
@@ -71371,36 +71373,27 @@ ${events}
     const SubtaskSummary = ({ input: input2, result: result2 }) => {
       const output2 = typeof result2 === "object" ? result2 : { result: result2 };
       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$f.subtaskSummary), children: [
-        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-style-label"), children: "Input" }, void 0, false, {
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-style-label", "text-size-small"), children: "Input" }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SubtaskEventView.tsx",
-          lineNumber: 74,
+          lineNumber: 77,
           columnNumber: 7
         }, void 0),
         /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-large", styles$f.subtaskLabel) }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SubtaskEventView.tsx",
-          lineNumber: 75,
+          lineNumber: 78,
           columnNumber: 7
         }, void 0),
-        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-style-label"), children: "Output" }, void 0, false, {
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-style-label", "text-size-small"), children: "Output" }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SubtaskEventView.tsx",
-          lineNumber: 76,
+          lineNumber: 79,
           columnNumber: 7
         }, void 0),
         input2 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Rendered, { values: input2 }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SubtaskEventView.tsx",
-          lineNumber: 77,
+          lineNumber: 80,
           columnNumber: 16
         }, void 0) : void 0,
         /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-title-secondary", styles$f.subtaskLabel), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: ApplicationIcons.arrows.right }, void 0, false, {
-          fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SubtaskEventView.tsx",
-          lineNumber: 79,
-          columnNumber: 9
-        }, void 0) }, void 0, false, {
-          fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SubtaskEventView.tsx",
-          lineNumber: 78,
-          columnNumber: 7
-        }, void 0),
-        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Rendered, { values: output2 }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SubtaskEventView.tsx",
           lineNumber: 82,
           columnNumber: 9
@@ -71408,10 +71401,19 @@ ${events}
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SubtaskEventView.tsx",
           lineNumber: 81,
           columnNumber: 7
+        }, void 0),
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Rendered, { values: output2 }, void 0, false, {
+          fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SubtaskEventView.tsx",
+          lineNumber: 85,
+          columnNumber: 9
+        }, void 0) }, void 0, false, {
+          fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SubtaskEventView.tsx",
+          lineNumber: 84,
+          columnNumber: 7
         }, void 0)
       ] }, void 0, true, {
         fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SubtaskEventView.tsx",
-        lineNumber: 73,
+        lineNumber: 76,
         columnNumber: 5
       }, void 0);
     };
@@ -71420,7 +71422,7 @@ ${events}
         return values.map((val) => {
           return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Rendered, { values: val }, void 0, false, {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SubtaskEventView.tsx",
-            lineNumber: 99,
+            lineNumber: 102,
             columnNumber: 14
           }, void 0);
         });
@@ -71428,13 +71430,13 @@ ${events}
         if (Object.keys(values).length === 0) {
           return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(None, {}, void 0, false, {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SubtaskEventView.tsx",
-            lineNumber: 103,
+            lineNumber: 106,
             columnNumber: 14
           }, void 0);
         } else {
           return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(MetaDataView, { entries: values }, void 0, false, {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SubtaskEventView.tsx",
-            lineNumber: 105,
+            lineNumber: 108,
             columnNumber: 14
           }, void 0);
         }
@@ -71445,7 +71447,7 @@ ${events}
     const None = () => {
       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: clsx("text-size-small", "text-style-secondary"), children: "[None]" }, void 0, false, {
         fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SubtaskEventView.tsx",
-        lineNumber: 114,
+        lineNumber: 117,
         columnNumber: 5
       }, void 0);
     };
@@ -71947,8 +71949,10 @@ ${events}
           const defaultCollapsedIds2 = /* @__PURE__ */ new Set();
           const findCollapsibleEvents = (nodes) => {
             for (const node2 of nodes) {
-              if ((node2.event.event === "step" || node2.event.event === "span_begin" || node2.event.event === "tool") && collapseFilters.some(
-                (filter) => filter(node2.event)
+              if ((node2.event.event === "step" || node2.event.event === "span_begin" || node2.event.event === "tool" || node2.event.event === "subtask") && collapseFilters.some(
+                (filter) => filter(
+                  node2.event
+                )
               )) {
                 defaultCollapsedIds2.add(node2.id);
               }
@@ -71980,7 +71984,7 @@ ${events}
           false,
           {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-            lineNumber: 112,
+            lineNumber: 119,
             columnNumber: 7
           },
           void 0
@@ -71995,7 +71999,8 @@ ${events}
         }
         return false;
       },
-      (event) => event.event === "tool"
+      (event) => event.event === "tool",
+      (event) => event.event === "subtask"
     ];
     const RenderedEventNode = reactExports.memo(
       ({ node: node2, className: className2 }) => {
@@ -72011,7 +72016,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 153,
+                lineNumber: 163,
                 columnNumber: 11
               },
               void 0
@@ -72027,7 +72032,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 161,
+                lineNumber: 171,
                 columnNumber: 11
               },
               void 0
@@ -72043,7 +72048,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 169,
+                lineNumber: 179,
                 columnNumber: 11
               },
               void 0
@@ -72059,7 +72064,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 177,
+                lineNumber: 187,
                 columnNumber: 11
               },
               void 0
@@ -72075,7 +72080,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 185,
+                lineNumber: 195,
                 columnNumber: 11
               },
               void 0
@@ -72091,7 +72096,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 193,
+                lineNumber: 203,
                 columnNumber: 11
               },
               void 0
@@ -72107,7 +72112,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 201,
+                lineNumber: 211,
                 columnNumber: 11
               },
               void 0
@@ -72124,7 +72129,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 209,
+                lineNumber: 219,
                 columnNumber: 11
               },
               void 0
@@ -72141,7 +72146,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 218,
+                lineNumber: 228,
                 columnNumber: 11
               },
               void 0
@@ -72157,7 +72162,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 227,
+                lineNumber: 237,
                 columnNumber: 11
               },
               void 0
@@ -72167,13 +72172,14 @@ ${events}
               SubtaskEventView,
               {
                 eventNode: node2,
-                className: className2
+                className: className2,
+                children: node2.children
               },
               void 0,
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 235,
+                lineNumber: 245,
                 columnNumber: 11
               },
               void 0
@@ -72190,7 +72196,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 243,
+                lineNumber: 254,
                 columnNumber: 11
               },
               void 0
@@ -72206,7 +72212,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 252,
+                lineNumber: 263,
                 columnNumber: 11
               },
               void 0
@@ -72222,7 +72228,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 260,
+                lineNumber: 271,
                 columnNumber: 11
               },
               void 0
@@ -72238,7 +72244,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 268,
+                lineNumber: 279,
                 columnNumber: 11
               },
               void 0
@@ -72254,7 +72260,7 @@ ${events}
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
-                lineNumber: 276,
+                lineNumber: 287,
                 columnNumber: 11
               },
               void 0
