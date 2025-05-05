@@ -32150,7 +32150,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     const circle$1 = "_circle_qymy9_1";
     const green$1 = "_green_qymy9_12";
     const red$1 = "_red_qymy9_18";
-    const styles$1m = {
+    const styles$1l = {
       circle: circle$1,
       green: green$1,
       red: red$1
@@ -32166,9 +32166,9 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             "span",
             {
               className: clsx(
-                styles$1m.circle,
+                styles$1l.circle,
                 "text-size-small",
-                score2 ? styles$1m.green : styles$1m.red
+                score2 ? styles$1l.green : styles$1l.red
               ),
               children: String(score2)
             },
@@ -32244,7 +32244,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     const container$k = "_container_1ramc_1";
     const key = "_key_1ramc_12";
     const value$3 = "_value_1ramc_16";
-    const styles$1l = {
+    const styles$1k = {
       container: container$k,
       key,
       value: value$3
@@ -32287,12 +32287,12 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             ) : String(value2);
             scores2.push(
               /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(jsxDevRuntimeExports.Fragment, { children: [
-                /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$1l.key, "text-size-smaller"), children: key2 }, void 0, false, {
+                /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$1k.key, "text-size-smaller"), children: key2 }, void 0, false, {
                   fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/descriptor/score/ObjectScoreDescriptor.tsx",
                   lineNumber: 56,
                   columnNumber: 13
                 }, void 0),
-                /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$1l.value, "text-size-base"), children: formattedValue }, void 0, false, {
+                /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$1k.value, "text-size-base"), children: formattedValue }, void 0, false, {
                   fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/descriptor/score/ObjectScoreDescriptor.tsx",
                   lineNumber: 57,
                   columnNumber: 13
@@ -32304,7 +32304,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
               }, void 0)
             );
           });
-          return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$1l.container), children: scores2 }, `score-value`, false, {
+          return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$1k.container), children: scores2 }, `score-value`, false, {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/descriptor/score/ObjectScoreDescriptor.tsx",
             lineNumber: 65,
             columnNumber: 9
@@ -32316,7 +32316,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     const hidden$2 = "_hidden_tm52u_5";
     const pills = "_pills_tm52u_9";
     const pill = "_pill_tm52u_9";
-    const styles$1k = {
+    const styles$1j = {
       visible,
       hidden: hidden$2,
       pills,
@@ -32355,7 +32355,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
           "div",
           {
-            className: ((_a2 = child["props"]) == null ? void 0 : _a2.title) === activeItem ? styles$1k.visible : styles$1k.hidden,
+            className: ((_a2 = child["props"]) == null ? void 0 : _a2.title) === activeItem ? styles$1j.visible : styles$1j.hidden,
             children: child
           },
           `nav-pill-container-${idx}`,
@@ -32372,7 +32372,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
           "ul",
           {
-            className: clsx("nav", "nav-pills", styles$1k.pills),
+            className: clsx("nav", "nav-pills", styles$1j.pills),
             role: "tablist",
             "aria-orientation": "horizontal",
             children: navPills
@@ -32420,7 +32420,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
               "nav-link",
               "text-style-label",
               active2 ? "active " : "",
-              styles$1k.pill
+              styles$1j.pill
             ),
             "data-target": title2,
             onClick: handleClick,
@@ -32473,7 +32473,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     const bordered = "_bordered_1c46w_24";
     const moreToggleContainer = "_moreToggleContainer_1c46w_28";
     const moreToggleButton = "_moreToggleButton_1c46w_39";
-    const styles$1j = {
+    const styles$1i = {
       expandableBordered,
       expandableCollapsed,
       moreToggle,
@@ -32513,9 +32513,9 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
               style: baseStyles,
               ref: contentRef,
               className: clsx(
-                styles$1j.expandablePanel,
-                collapsed ? styles$1j.expandableCollapsed : void 0,
-                border ? styles$1j.expandableBordered : void 0
+                styles$1i.expandablePanel,
+                collapsed ? styles$1i.expandableCollapsed : void 0,
+                border ? styles$1i.expandableBordered : void 0
               ),
               children: children2
             },
@@ -32565,15 +32565,15 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
         "div",
         {
-          className: clsx(styles$1j.moreToggle, border ? styles$1j.bordered : void 0),
+          className: clsx(styles$1i.moreToggle, border ? styles$1i.bordered : void 0),
           style: style2,
-          children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$1j.moreToggleContainer), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+          children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$1i.moreToggleContainer), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
             "button",
             {
-              className: clsx("btn", styles$1j.moreToggleButton, "text-size-smallest"),
+              className: clsx("btn", styles$1i.moreToggleButton, "text-size-smallest"),
               onClick: handleClick,
               children: [
-                /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: clsx(icon2, styles$1j.icon) }, void 0, false, {
+                /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: clsx(icon2, styles$1i.icon) }, void 0, false, {
                   fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/components/ExpandablePanel.tsx",
                   lineNumber: 116,
                   columnNumber: 11
@@ -32611,7 +32611,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     const messageGrid = "_messageGrid_1nz1x_16";
     const messageContents = "_messageContents_1nz1x_24";
     const indented = "_indented_1nz1x_29";
-    const styles$1i = {
+    const styles$1h = {
       message: message$1,
       padded: padded$2,
       systemRole,
@@ -37818,19 +37818,19 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       this.sizeMultiplier = multiplier;
     }
     Style$4.prototype.sup = function() {
-      return styles$1h[sup[this.id]];
+      return styles$1g[sup[this.id]];
     };
     Style$4.prototype.sub = function() {
-      return styles$1h[sub[this.id]];
+      return styles$1g[sub[this.id]];
     };
     Style$4.prototype.fracNum = function() {
-      return styles$1h[fracNum[this.id]];
+      return styles$1g[fracNum[this.id]];
     };
     Style$4.prototype.fracDen = function() {
-      return styles$1h[fracDen[this.id]];
+      return styles$1g[fracDen[this.id]];
     };
     Style$4.prototype.cramp = function() {
-      return styles$1h[cramp[this.id]];
+      return styles$1g[cramp[this.id]];
     };
     Style$4.prototype.cls = function() {
       return sizeNames[this.size] + (this.cramped ? " cramped" : " uncramped");
@@ -37858,7 +37858,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       "reset-scriptstyle",
       "reset-scriptscriptstyle"
     ];
-    var styles$1h = [
+    var styles$1g = [
       new Style$4(D, 0, 1, false),
       new Style$4(Dc, 0, 1, true),
       new Style$4(T, 1, 1, false),
@@ -37874,10 +37874,10 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     var fracDen = [Tc, Tc, Sc, Sc, SSc, SSc, SSc, SSc];
     var cramp = [Dc, Dc, Tc, Tc, Sc, Sc, SSc, SSc];
     var Style_1 = {
-      DISPLAY: styles$1h[D],
-      TEXT: styles$1h[T],
-      SCRIPT: styles$1h[S],
-      SCRIPTSCRIPT: styles$1h[SS]
+      DISPLAY: styles$1g[D],
+      TEXT: styles$1g[T],
+      SCRIPT: styles$1g[S],
+      SCRIPTSCRIPT: styles$1g[SS]
     };
     var nativeIndexOf = Array.prototype.indexOf;
     var indexOf = function(list2, elem) {
@@ -44662,7 +44662,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     }
     const contentImage = "_contentImage_61gdd_1";
     const reasoning = "_reasoning_61gdd_6";
-    const styles$1g = {
+    const styles$1f = {
       contentImage,
       reasoning
     };
@@ -44670,7 +44670,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     const output$1 = "_output_bv5nm_6";
     const textOutput = "_textOutput_bv5nm_10";
     const textCode = "_textCode_bv5nm_18";
-    const styles$1f = {
+    const styles$1e = {
       toolImage,
       output: output$1,
       textOutput,
@@ -44696,7 +44696,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                 /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
                   "img",
                   {
-                    className: clsx(styles$1f.toolImage),
+                    className: clsx(styles$1e.toolImage),
                     src: out.image
                   },
                   key2,
@@ -44727,14 +44727,14 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           }, void 0)
         );
       }
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$1f.output), children: outputs }, void 0, false, {
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$1e.output), children: outputs }, void 0, false, {
         fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/chat/tools/ToolOutput.tsx",
         lineNumber: 45,
         columnNumber: 10
       }, void 0);
     };
     const ToolTextOutput = ({ text: text2 }) => {
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("pre", { className: clsx(styles$1f.textOutput, "tool-output"), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("code", { className: clsx("sourceCode", styles$1f.textCode), children: text2.trim() }, void 0, false, {
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("pre", { className: clsx(styles$1e.textOutput, "tool-output"), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("code", { className: clsx("sourceCode", styles$1e.textCode), children: text2.trim() }, void 0, false, {
         fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/chat/tools/ToolOutput.tsx",
         lineNumber: 58,
         columnNumber: 7
@@ -44812,7 +44812,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           if (!r2.reasoning && !r2.redacted) {
             return void 0;
           }
-          return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$1g.reasoning, "text-size-small"), children: [
+          return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$1f.reasoning, "text-size-small"), children: [
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
               "div",
               {
@@ -44861,7 +44861,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         render: (key2, content2) => {
           const c2 = content2;
           if (c2.image.startsWith("data:")) {
-            return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("img", { src: c2.image, className: styles$1g.contentImage }, key2, false, {
+            return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("img", { src: c2.image, className: styles$1f.contentImage }, key2, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/chat/MessageContent.tsx",
               lineNumber: 141,
               columnNumber: 16
@@ -44987,14 +44987,14 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     };
     const output = "_output_1tv9l_1";
     const toolCallView = "_toolCallView_1tv9l_4";
-    const styles$1e = {
+    const styles$1d = {
       output,
       toolCallView
     };
     const outputPre = "_outputPre_s62go_1";
     const toolView = "_toolView_s62go_7";
     const outputCode = "_outputCode_s62go_15";
-    const styles$1d = {
+    const styles$1c = {
       outputPre,
       toolView,
       outputCode
@@ -45009,7 +45009,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           {
             markdown: toolCallView2.content,
             ref: prismParentRef,
-            className: clsx("tool-output", styles$1d.toolView)
+            className: clsx("tool-output", styles$1c.toolView)
           },
           void 0,
           false,
@@ -45025,7 +45025,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { ref: prismParentRef, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
         "pre",
         {
-          className: clsx("tool-output", styles$1d.outputPre, styles$1d.bottomMargin),
+          className: clsx("tool-output", styles$1c.outputPre, styles$1c.bottomMargin),
           children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
             "code",
             {
@@ -45033,7 +45033,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                 "source-code",
                 "sourceCode",
                 highlightLanguage ? `language-${highlightLanguage}` : void 0,
-                styles$1d.outputCode
+                styles$1c.outputCode
               ),
               children: formattedContent
             },
@@ -45063,18 +45063,18 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     };
     const image = "_image_a8byr_1";
     const toolTitle = "_toolTitle_a8byr_6";
-    const styles$1c = {
+    const styles$1b = {
       image,
       toolTitle
     };
     const ToolTitle = ({ title: title2 }) => {
       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(reactExports.Fragment, { children: [
-        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: clsx("bi", "bi-tools", styles$1c.image) }, void 0, false, {
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: clsx("bi", "bi-tools", styles$1b.image) }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/chat/tools/ToolTitle.tsx",
           lineNumber: 14,
           columnNumber: 7
         }, void 0),
-        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("code", { className: clsx("text-size-small", styles$1c.toolTitle), children: title2 }, void 0, false, {
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("code", { className: clsx("text-size-small", styles$1b.toolTitle), children: title2 }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/chat/tools/ToolTitle.tsx",
           lineNumber: 15,
           columnNumber: 7
@@ -45125,7 +45125,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         }
       });
       const contents2 = mode !== "compact" ? input2 : input2 || functionCall;
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$1e.toolCallView), children: [
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$1d.toolCallView), children: [
         /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: [
           mode !== "compact" && (!view || view.title) ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(ToolTitle, { title: (view == null ? void 0 : view.title) || functionCall }, void 0, false, {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/chat/tools/ToolCallView.tsx",
@@ -45160,7 +45160,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             collapse,
             border: true,
             lines: 15,
-            className: styles$1e.output,
+            className: styles$1d.output,
             children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(MessageContent, { contents: normalizedContent }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/chat/tools/ToolCallView.tsx",
               lineNumber: 130,
@@ -45202,7 +45202,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     };
     const content$2 = "_content_1b2jp_1";
     const codeCompact = "_codeCompact_1b2jp_5";
-    const styles$1b = {
+    const styles$1a = {
       content: content$2,
       codeCompact
     };
@@ -45228,7 +45228,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           }
           const resolvedToolOutput = resolveToolMessage(toolMessage);
           if (toolCallStyle === "compact") {
-            return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("code", { className: clsx(styles$1b.codeCompact), children: [
+            return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("code", { className: clsx(styles$1a.codeCompact), children: [
               "tool: ",
               functionCall
             ] }, void 0, true, {
@@ -45264,7 +45264,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           }
         });
         return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(reactExports.Fragment, { children: [
-          message2.content && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$1b.content, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(MessageContent, { contents: message2.content }, void 0, false, {
+          message2.content && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$1a.content, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(MessageContent, { contents: message2.content }, void 0, false, {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/chat/MessageContents.tsx",
             lineNumber: 82,
             columnNumber: 13
@@ -45431,12 +45431,12 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           className: clsx(
             message2.role,
             "text-size-base",
-            styles$1i.message,
-            padded2 ? styles$1i.padded : void 0,
-            message2.role === "system" ? styles$1i.systemRole : void 0
+            styles$1h.message,
+            padded2 ? styles$1h.padded : void 0,
+            message2.role === "system" ? styles$1h.systemRole : void 0
           ),
           children: [
-            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$1i.messageGrid, "text-style-label"), children: [
+            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$1h.messageGrid, "text-style-label"), children: [
               /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: iconForMsg(message2) }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/chat/ChatMessage.tsx",
                 lineNumber: 44,
@@ -45452,8 +45452,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
               "div",
               {
                 className: clsx(
-                  styles$1i.messageContents,
-                  indented2 ? styles$1i.indented : void 0
+                  styles$1h.messageContents,
+                  indented2 ? styles$1h.indented : void 0
                 ),
                 children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
                   ExpandablePanel,
@@ -45512,7 +45512,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     };
     const grid$7 = "_grid_140x5_1";
     const number$1 = "_number_140x5_7";
-    const styles$1a = {
+    const styles$19 = {
       grid: grid$7,
       number: number$1
     };
@@ -45525,14 +45525,14 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       padded: padded2
     }) => {
       if (number2) {
-        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$1a.grid, children: [
+        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$19.grid, children: [
           /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
             "div",
             {
               className: clsx(
                 "text-size-smaller",
                 "text-style-secondary",
-                styles$1a.number
+                styles$19.number
               ),
               children: number2
             },
@@ -47088,7 +47088,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     const compact = "_compact_1t3ts_15";
     const cellKey = "_cellKey_1t3ts_19";
     const cellValue = "_cellValue_1t3ts_31";
-    const styles$19 = {
+    const styles$18 = {
       table: table$2,
       cell: cell$3,
       compact,
@@ -47116,8 +47116,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             "td",
             {
               className: clsx(
-                styles$19.cell,
-                styles$19.cellKey,
+                styles$18.cell,
+                styles$18.cellKey,
                 "text-size-small",
                 "text-style-label"
               ),
@@ -47132,7 +47132,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             },
             void 0
           ),
-          /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("td", { className: clsx(styles$19.cell, styles$19.cellValue, "text-size-small"), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(RenderedContent, { id: id2, entry: entry2 }, void 0, false, {
+          /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("td", { className: clsx(styles$18.cell, styles$18.cellValue, "text-size-small"), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(RenderedContent, { id: id2, entry: entry2 }, void 0, false, {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/content/MetaDataView.tsx",
             lineNumber: 51,
             columnNumber: 11
@@ -47154,8 +47154,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           className: clsx(
             "table",
             tblClz,
-            styles$19.table,
-            compact2 ? styles$19.compact : void 0,
+            styles$18.table,
+            compact2 ? styles$18.compact : void 0,
             className2
           ),
           style: style2,
@@ -47255,7 +47255,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     const query = "_query_9u9bt_1";
     const summary$3 = "_summary_9u9bt_6";
     const preWrap = "_preWrap_9u9bt_10";
-    const styles$18 = {
+    const styles$17 = {
       query,
       summary: summary$3,
       preWrap
@@ -47442,7 +47442,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         render: (_id, entry2) => {
           const results = [];
           results.push(
-            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$18.query, children: [
+            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$17.query, children: [
               /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: ApplicationIcons.search }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/content/RenderedContent.tsx",
                 lineNumber: 193,
@@ -47470,7 +47470,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                 }, void 0)
               );
               results.push(
-                /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-smaller", styles$18.summary), children: result2.summary }, void 0, false, {
+                /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-smaller", styles$17.summary), children: result2.summary }, void 0, false, {
                   fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/content/RenderedContent.tsx",
                   lineNumber: 204,
                   columnNumber: 13
@@ -47491,7 +47491,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         },
         render: (_id, entry2) => {
           return {
-            rendered: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("pre", { className: styles$18.preWrap, children: entry2.value }, void 0, false, {
+            rendered: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("pre", { className: styles$17.preWrap, children: entry2.value }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/content/RenderedContent.tsx",
               lineNumber: 224,
               columnNumber: 19
@@ -47583,7 +47583,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     const green = "_green_1iagp_12";
     const red = "_red_1iagp_18";
     const orange = "_orange_1iagp_24";
-    const styles$17 = {
+    const styles$16 = {
       circle,
       green,
       red,
@@ -47624,7 +47624,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
               "span",
               {
-                className: clsx("text-size-small", styles$17.circle, styles$17.green),
+                className: clsx("text-size-small", styles$16.circle, styles$16.green),
                 children: "C"
               },
               void 0,
@@ -47637,7 +47637,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
               void 0
             );
           } else if (score2 === "I") {
-            return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: clsx("text-size-small", styles$17.circle, styles$17.red), children: "I" }, void 0, false, {
+            return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: clsx("text-size-small", styles$16.circle, styles$16.red), children: "I" }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/descriptor/score/PassFailScoreDescriptor.tsx",
               lineNumber: 49,
               columnNumber: 11
@@ -47646,7 +47646,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
               "span",
               {
-                className: clsx("text-size-small", styles$17.circle, styles$17.orange),
+                className: clsx("text-size-small", styles$16.circle, styles$16.orange),
                 children: "P"
               },
               void 0,
@@ -47659,7 +47659,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
               void 0
             );
           } else if (score2 === "N") {
-            return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: clsx("text-size-small", styles$17.circle, styles$17.red), children: "N" }, void 0, false, {
+            return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: clsx("text-size-small", styles$16.circle, styles$16.red), children: "N" }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/descriptor/score/PassFailScoreDescriptor.tsx",
               lineNumber: 63,
               columnNumber: 11
@@ -50641,7 +50641,7 @@ categories: ${categories.join(" ")}`;
     };
     const flex$1 = "_flex_1kye9_1";
     const label$7 = "_label_1kye9_5";
-    const styles$16 = {
+    const styles$15 = {
       flex: flex$1,
       label: label$7
     };
@@ -50675,7 +50675,7 @@ categories: ${categories.join(" ")}`;
         },
         [setSort]
       );
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$16.flex, children: [
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$15.flex, children: [
         /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
           "span",
           {
@@ -50684,7 +50684,7 @@ categories: ${categories.join(" ")}`;
               "text-size-smaller",
               "text-style-label",
               "text-style-secondary",
-              styles$16.label
+              styles$15.label
             ),
             children: "Sort:"
           },
@@ -51368,22 +51368,22 @@ categories: ${categories.join(" ")}`;
     const wrapper$4 = "_wrapper_1tajk_1";
     const container$j = "_container_1tajk_12";
     const animate = "_animate_1tajk_21";
-    const styles$15 = {
+    const styles$14 = {
       wrapper: wrapper$4,
       container: container$j,
       animate
     };
     const ProgressBar = ({ animating }) => {
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$15.wrapper), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$14.wrapper), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
         "div",
         {
-          className: clsx(styles$15.container),
+          className: clsx(styles$14.container),
           role: "progressbar",
           "aria-label": "Basic example",
           "aria-valuenow": 25,
           "aria-valuemin": 0,
           "aria-valuemax": 100,
-          children: animating && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$15.animate }, void 0, false, {
+          children: animating && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$14.animate }, void 0, false, {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/components/ProgressBar.tsx",
             lineNumber: 20,
             columnNumber: 23
@@ -51806,7 +51806,7 @@ categories: ${categories.join(" ")}`;
     }
     const dirname$1 = "_dirname_1qban_1";
     const directoryLink = "_directoryLink_1qban_7";
-    const styles$14 = {
+    const styles$13 = {
       dirname: dirname$1,
       directoryLink
     };
@@ -51822,7 +51822,7 @@ categories: ${categories.join(" ")}`;
       }, [offCanvas, setOffCanvas]);
       if (log_dir) {
         const displayDir = prettyDir(log_dir);
-        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Link, { to: "/logs", className: styles$14.directoryLink, onClick: handleClick, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { style: { display: "flex", flexDirection: "column" }, children: [
+        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Link, { to: "/logs", className: styles$13.directoryLink, onClick: handleClick, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { style: { display: "flex", flexDirection: "column" }, children: [
           /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
             "span",
             {
@@ -51846,7 +51846,7 @@ categories: ${categories.join(" ")}`;
             "span",
             {
               title: displayDir,
-              className: clsx("text-size-base", styles$14.dirname),
+              className: clsx("text-size-base", styles$13.dirname),
               children: offCanvas ? displayDir : ""
             },
             void 0,
@@ -51868,7 +51868,7 @@ categories: ${categories.join(" ")}`;
           columnNumber: 7
         }, void 0);
       } else {
-        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Link, { to: "/logs", className: styles$14.directoryLink, onClick: handleClick, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: clsx("text-size-title"), children: offCanvas ? "Log History" : "" }, void 0, false, {
+        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Link, { to: "/logs", className: styles$13.directoryLink, onClick: handleClick, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: clsx("text-size-title"), children: offCanvas ? "Log History" : "" }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/sidebar/LogDirectoryTitleView.tsx",
           lineNumber: 49,
           columnNumber: 9
@@ -51902,7 +51902,7 @@ categories: ${categories.join(" ")}`;
     const active = "_active_1essr_63";
     const item$1 = "_item_1essr_67";
     const logLink = "_logLink_1essr_72";
-    const styles$13 = {
+    const styles$12 = {
       sidebar,
       sidebarClosed,
       sidebarOpen,
@@ -51918,7 +51918,7 @@ categories: ${categories.join(" ")}`;
     const error$1 = "_error_srruf_1";
     const running = "_running_srruf_6";
     const cancelled = "_cancelled_srruf_13";
-    const styles$12 = {
+    const styles$11 = {
       error: error$1,
       running,
       cancelled
@@ -51949,7 +51949,7 @@ categories: ${categories.join(" ")}`;
     const metric = "_metric_1frsg_8";
     const metricName$1 = "_metricName_1frsg_17";
     const metricReducer$1 = "_metricReducer_1frsg_21";
-    const styles$11 = {
+    const styles$10 = {
       container: container$i,
       metric,
       metricName: metricName$1,
@@ -51957,8 +51957,8 @@ categories: ${categories.join(" ")}`;
     };
     const SidebarScoreView = ({ scorer: scorer2 }) => {
       const showReducer = !!scorer2.reducer;
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$11.container, children: Object.keys(scorer2.metrics).map((metric2) => {
-        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$11.metric, children: [
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$10.container, children: Object.keys(scorer2.metrics).map((metric2) => {
+        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$10.metric, children: [
           /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
             "div",
             {
@@ -51966,7 +51966,7 @@ categories: ${categories.join(" ")}`;
                 "text-style-secondary",
                 "text-style-label",
                 "text-size-small",
-                styles$11.metricName
+                styles$10.metricName
               ),
               children: metricDisplayName(scorer2.metrics[metric2])
             },
@@ -51979,7 +51979,7 @@ categories: ${categories.join(" ")}`;
             },
             void 0
           ),
-          showReducer ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-small", styles$11.metricReducer), children: scorer2.reducer || "default" }, void 0, false, {
+          showReducer ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-small", styles$10.metricReducer), children: scorer2.reducer || "default" }, void 0, false, {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/sidebar/SidebarScoreView.tsx",
             lineNumber: 30,
             columnNumber: 15
@@ -52006,7 +52006,7 @@ categories: ${categories.join(" ")}`;
     const metricReducer = "_metricReducer_5kpg1_22";
     const metricValues = "_metricValues_5kpg1_27";
     const metricValue = "_metricValue_5kpg1_27";
-    const styles$10 = {
+    const styles$$ = {
       container: container$h,
       scoreWrapper,
       metricName,
@@ -52016,10 +52016,10 @@ categories: ${categories.join(" ")}`;
     };
     const SidebarScoresView = ({ scores: scores2 }) => {
       const showReducer = scores2.findIndex((score2) => !!score2.reducer) !== -1;
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$10.container, children: scores2.map((score2, idx) => {
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$$.container, children: scores2.map((score2, idx) => {
         const name2 = score2.name;
         const reducer = score2.reducer;
-        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$10.scoreWrapper, children: [
+        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$$.scoreWrapper, children: [
           /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
             "div",
             {
@@ -52027,7 +52027,7 @@ categories: ${categories.join(" ")}`;
                 "text-style-secondary",
                 "text-style-label",
                 "text-size-small",
-                styles$10.metricName
+                styles$$.metricName
               ),
               children: name2
             },
@@ -52047,7 +52047,7 @@ categories: ${categories.join(" ")}`;
                 "text-size-small",
                 "text-style-label",
                 "text-style-secondary",
-                styles$10.metricReducer
+                styles$$.metricReducer
               ),
               children: reducer || "default"
             },
@@ -52060,7 +52060,7 @@ categories: ${categories.join(" ")}`;
             },
             void 0
           ) : "",
-          /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-small", styles$10.metricValues), children: Object.keys(score2.metrics).map((key2) => {
+          /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-small", styles$$.metricValues), children: Object.keys(score2.metrics).map((key2) => {
             const metric2 = score2.metrics[key2];
             return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(reactExports.Fragment, { children: [
               /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(), children: metricDisplayName(metric2) }, void 0, false, {
@@ -52068,7 +52068,7 @@ categories: ${categories.join(" ")}`;
                 lineNumber: 50,
                 columnNumber: 21
               }, void 0),
-              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$10.metricValue, children: formatPrettyDecimal(metric2.value) }, void 0, false, {
+              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$$.metricValue, children: formatPrettyDecimal(metric2.value) }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/sidebar/SidebarScoresView.tsx",
                 lineNumber: 51,
                 columnNumber: 21
@@ -52143,7 +52143,7 @@ categories: ${categories.join(" ")}`;
             "text-style-secondary",
             "text-style-label",
             "text-size-small",
-            styles$12.cancelled
+            styles$11.cancelled
           ),
           children: message2
         },
@@ -52165,7 +52165,7 @@ categories: ${categories.join(" ")}`;
             "text-style-secondary",
             "text-style-label",
             "text-size-small",
-            styles$12.running
+            styles$11.running
           ),
           children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: message2 }, void 0, false, {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/sidebar/EvalStatus.tsx",
@@ -52184,7 +52184,7 @@ categories: ${categories.join(" ")}`;
       );
     };
     const StatusError = ({ message: message2 }) => {
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$12.error, "text-size-small"), children: message2 }, void 0, false, {
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$11.error, "text-size-small"), children: message2 }, void 0, false, {
         fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/sidebar/EvalStatus.tsx",
         lineNumber: 71,
         columnNumber: 10
@@ -52195,7 +52195,7 @@ categories: ${categories.join(" ")}`;
     const task = "_task_12m5n_12";
     const params = "_params_12m5n_18";
     const scores$1 = "_scores_12m5n_22";
-    const styles$$ = {
+    const styles$_ = {
       entry,
       title: title$3,
       task,
@@ -52227,9 +52227,9 @@ categories: ${categories.join(" ")}`;
         minute: "2-digit"
       })}` : "";
       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(reactExports.Fragment, { children: [
-        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$$.entry, children: [
-          /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$$.title, children: [
-            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$$.task, "text-size-title-secondary"), children: ((_i = logHeader == null ? void 0 : logHeader.eval) == null ? void 0 : _i.task) || task2 }, void 0, false, {
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$_.entry, children: [
+          /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$_.title, children: [
+            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$_.task, "text-size-title-secondary"), children: ((_i = logHeader == null ? void 0 : logHeader.eval) == null ? void 0 : _i.task) || task2 }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/sidebar/SidebarLogEntry.tsx",
               lineNumber: 50,
               columnNumber: 11
@@ -52263,7 +52263,7 @@ categories: ${categories.join(" ")}`;
           lineNumber: 48,
           columnNumber: 7
         }, void 0),
-        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$$.params, "three-line-clamp"), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("small", { className: "mb-1", children: hyperparameters ? Object.keys(hyperparameters).map((key2) => {
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$_.params, "three-line-clamp"), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("small", { className: "mb-1", children: hyperparameters ? Object.keys(hyperparameters).map((key2) => {
           const val = hyperparameters[key2];
           if (Array.isArray(val) || typeof val === "object") {
             return `${key2}: ${JSON.stringify(val)}`;
@@ -52282,7 +52282,7 @@ categories: ${categories.join(" ")}`;
         (((_j = logHeader == null ? void 0 : logHeader.eval) == null ? void 0 : _j.dataset) || ((_k = logHeader == null ? void 0 : logHeader.results) == null ? void 0 : _k.scores)) && (logHeader == null ? void 0 : logHeader.status) === "success" ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
           "div",
           {
-            className: clsx("text-truncate", "text-size-small", styles$$.scores),
+            className: clsx("text-truncate", "text-size-small", styles$_.scores),
             children: [
               /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: [
                 "dataset: ",
@@ -52292,7 +52292,7 @@ categories: ${categories.join(" ")}`;
                 lineNumber: 86,
                 columnNumber: 11
               }, void 0),
-              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-truncate", styles$$.scoreInfo), children: [
+              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-truncate", styles$_.scoreInfo), children: [
                 scorerLabel,
                 ": ",
                 scorerNames || "(none)"
@@ -52343,7 +52343,7 @@ categories: ${categories.join(" ")}`;
         }
       }, [selectedIndex]);
       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(jsxRuntimeExports.Fragment, { children: [
-        offCanvas && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$13.backdrop, onClick: handleToggle }, void 0, false, {
+        offCanvas && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$12.backdrop, onClick: handleToggle }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/sidebar/Sidebar.tsx",
           lineNumber: 55,
           columnNumber: 21
@@ -52352,11 +52352,11 @@ categories: ${categories.join(" ")}`;
           "div",
           {
             className: clsx(
-              styles$13.sidebar,
-              offCanvas ? styles$13.sidebarOpen : styles$13.sidebarClosed
+              styles$12.sidebar,
+              offCanvas ? styles$12.sidebarOpen : styles$12.sidebarClosed
             ),
             children: [
-              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$13.header, children: [
+              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$12.header, children: [
                 /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(LogDirectoryTitleView, { log_dir: logs.log_dir }, void 0, false, {
                   fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/sidebar/Sidebar.tsx",
                   lineNumber: 64,
@@ -52366,7 +52366,7 @@ categories: ${categories.join(" ")}`;
                   "button",
                   {
                     onClick: handleToggle,
-                    className: clsx("btn", styles$13.toggle),
+                    className: clsx("btn", styles$12.toggle),
                     type: "button",
                     "aria-label": "Close sidebar",
                     children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: ApplicationIcons.close }, void 0, false, {
@@ -52389,7 +52389,7 @@ categories: ${categories.join(" ")}`;
                 lineNumber: 63,
                 columnNumber: 9
               }, void 0),
-              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$13.progress, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(ProgressBar, { animating: loading }, void 0, false, {
+              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$12.progress, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(ProgressBar, { animating: loading }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/sidebar/Sidebar.tsx",
                 lineNumber: 76,
                 columnNumber: 11
@@ -52402,7 +52402,7 @@ categories: ${categories.join(" ")}`;
                 "ul",
                 {
                   ref: sidebarContentsRef,
-                  className: clsx("list-group", styles$13.list),
+                  className: clsx("list-group", styles$12.list),
                   children: logs.files.map((file, index) => {
                     const logHeader = logHeaders[file.name];
                     return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
@@ -52414,15 +52414,15 @@ categories: ${categories.join(" ")}`;
                         className: clsx(
                           "list-group-item",
                           "list-group-item-action",
-                          styles$13.item,
-                          selectedIndex === index ? styles$13.active : void 0
+                          styles$12.item,
+                          selectedIndex === index ? styles$12.active : void 0
                         ),
                         "data-index": index,
                         children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
                           Link,
                           {
                             to: logUrl(file.name, logs.log_dir),
-                            className: styles$13.logLink,
+                            className: styles$12.logLink,
                             onClick: () => {
                               onSelectedIndexChanged(index);
                             },
@@ -52695,11 +52695,11 @@ categories: ${categories.join(" ")}`;
       });
     };
     const navbarWrapper = "_navbarWrapper_838qu_48";
-    const styles$_ = {
+    const styles$Z = {
       navbarWrapper
     };
     const copyButton = "_copyButton_1goi8_1";
-    const styles$Z = {
+    const styles$Y = {
       copyButton
     };
     const CopyButton = ({
@@ -52728,7 +52728,7 @@ categories: ${categories.join(" ")}`;
         "button",
         {
           type: "button",
-          className: clsx(styles$Z.copyButton, className2),
+          className: clsx(styles$Y.copyButton, className2),
           onClick: handleClick,
           "aria-label": ariaLabel,
           disabled: isCopied,
@@ -52791,7 +52791,7 @@ categories: ${categories.join(" ")}`;
     const taskModel = "_taskModel_291sb_36";
     const taskStatus = "_taskStatus_291sb_40";
     const secondaryContainer = "_secondaryContainer_291sb_47";
-    const styles$Y = {
+    const styles$X = {
       container: container$g,
       wrapper: wrapper$3,
       toggle,
@@ -52804,7 +52804,7 @@ categories: ${categories.join(" ")}`;
     };
     const button = "_button_12472_1";
     const label$6 = "_label_12472_14";
-    const styles$X = {
+    const styles$W = {
       button,
       label: label$6
     };
@@ -52820,14 +52820,14 @@ categories: ${categories.join(" ")}`;
         {
           id,
           onClick,
-          className: clsx(className2, styles$X.button, "text-size-smaller"),
+          className: clsx(className2, styles$W.button, "text-size-smaller"),
           children: [
             icon2 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: clsx(icon2) }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/components/LinkButton.tsx",
               lineNumber: 29,
               columnNumber: 15
             }, void 0) : void 0,
-            text2 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$X.label), children: text2 }, void 0, false, {
+            text2 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$W.label), children: text2 }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/components/LinkButton.tsx",
               lineNumber: 30,
               columnNumber: 15
@@ -52849,7 +52849,7 @@ categories: ${categories.join(" ")}`;
     const modalTitle = "_modalTitle_1tvha_18";
     const btnClose = "_btnClose_1tvha_22";
     const backdrop = "_backdrop_1tvha_28";
-    const styles$W = {
+    const styles$V = {
       modal: modal$1,
       header: header$2,
       modalTitle,
@@ -52865,7 +52865,7 @@ categories: ${categories.join(" ")}`;
       className: className2
     }) => {
       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(jsxDevRuntimeExports.Fragment, { children: [
-        showing && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$W.backdrop, onClick: () => setShowing(false) }, void 0, false, {
+        showing && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$V.backdrop, onClick: () => setShowing(false) }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/components/Modal.tsx",
           lineNumber: 25,
           columnNumber: 9
@@ -52877,15 +52877,15 @@ categories: ${categories.join(" ")}`;
             className: clsx("modal", "fade", showing ? "show" : "", className2),
             tabIndex: -1,
             style: { display: showing ? "block" : "none" },
-            children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("modal-dialog", styles$W.modal), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "modal-content", children: [
-              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("modal-header", styles$W.header), children: [
+            children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("modal-dialog", styles$V.modal), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: "modal-content", children: [
+              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("modal-header", styles$V.header), children: [
                 /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
                   "div",
                   {
                     className: clsx(
                       "modal-title",
                       "text-size-base",
-                      styles$W.modalTitle
+                      styles$V.modalTitle
                     ),
                     children: title2
                   },
@@ -52905,7 +52905,7 @@ categories: ${categories.join(" ")}`;
                     className: clsx(
                       "btn-close",
                       "text-size-smaller",
-                      styles$W.btnClose
+                      styles$V.btnClose
                     ),
                     "data-bs-dismiss": "modal",
                     "aria-label": "Close",
@@ -52988,7 +52988,7 @@ categories: ${categories.join(" ")}`;
     const moreButton = "_moreButton_yha6g_91";
     const metricsSummary = "_metricsSummary_yha6g_97";
     const modalScores = "_modalScores_yha6g_103";
-    const styles$V = {
+    const styles$U = {
       simpleMetricsRows,
       verticalMetricReducer,
       verticalMetricName,
@@ -53003,7 +53003,7 @@ categories: ${categories.join(" ")}`;
     const label$5 = "_label_1hgt6_11";
     const groupSeparator = "_groupSeparator_1hgt6_28";
     const tableBody = "_tableBody_1hgt6_33";
-    const styles$U = {
+    const styles$T = {
       table: table$1,
       scorer,
       value: value$2,
@@ -53035,7 +53035,7 @@ categories: ${categories.join(" ")}`;
                     "text-style-label",
                     "text-style-secondary",
                     "text-size-small",
-                    styles$U.label
+                    styles$T.label
                   ),
                   children: metrics2[i2].name
                 },
@@ -53057,7 +53057,7 @@ categories: ${categories.join(" ")}`;
             }, void 0));
           }
         }
-        const headerRow = /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("tr", { className: clsx(styles$U.headerRow), children: [
+        const headerRow = /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("tr", { className: clsx(styles$T.headerRow), children: [
           /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("td", {}, void 0, false, {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/log-view/navbar/ScoreGrid.tsx",
             lineNumber: 55,
@@ -53075,14 +53075,14 @@ categories: ${categories.join(" ")}`;
           for (let i2 = 0; i2 < columnCount; i2++) {
             if (metrics2.length > i2) {
               cells2.push(
-                /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("td", { className: clsx(styles$U.value, "text-size-small"), children: formatPrettyDecimal(g.metrics[i2].value) }, void 0, false, {
+                /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("td", { className: clsx(styles$T.value, "text-size-small"), children: formatPrettyDecimal(g.metrics[i2].value) }, void 0, false, {
                   fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/log-view/navbar/ScoreGrid.tsx",
                   lineNumber: 65,
                   columnNumber: 13
                 }, void 0)
               );
             } else {
-              cells2.push(/* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("td", { className: clsx(styles$U.value) }, void 0, false, {
+              cells2.push(/* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("td", { className: clsx(styles$T.value) }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/log-view/navbar/ScoreGrid.tsx",
                 lineNumber: 70,
                 columnNumber: 22
@@ -53091,7 +53091,7 @@ categories: ${categories.join(" ")}`;
           }
           rows.push(
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("tr", { children: [
-              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("th", { className: clsx(styles$U.scorer, "text-size-small"), children: [
+              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("th", { className: clsx(styles$T.scorer, "text-size-small"), children: [
                 g.scorer,
                 " ",
                 showReducer && g.reducer ? `(${g.reducer})` : void 0
@@ -53114,7 +53114,7 @@ categories: ${categories.join(" ")}`;
               "td",
               {
                 colSpan: columnCount + 1,
-                className: clsx(styles$U.groupSeparator)
+                className: clsx(styles$T.groupSeparator)
               },
               void 0,
               false,
@@ -53130,7 +53130,7 @@ categories: ${categories.join(" ")}`;
               columnNumber: 11
             }, void 0) : void 0,
             headerRow,
-            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("tbody", { className: clsx("table-group-divider", styles$U.tableBody), children: rows }, void 0, false, {
+            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("tbody", { className: clsx("table-group-divider", styles$T.tableBody), children: rows }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/log-view/navbar/ScoreGrid.tsx",
               lineNumber: 95,
               columnNumber: 9
@@ -53150,7 +53150,7 @@ categories: ${categories.join(" ")}`;
             className2,
             "table",
             striped ? "table-striped" : void 0,
-            styles$U.table,
+            styles$T.table,
             "table-bordered"
           ),
           children: subTables
@@ -53230,7 +53230,7 @@ categories: ${categories.join(" ")}`;
       if (scorers.length === 1) {
         const showReducer = !!scorers[0].reducer;
         const metrics2 = scorers[0].metrics;
-        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$V.simpleMetricsRows, children: metrics2.map((metric2, i2) => {
+        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$U.simpleMetricsRows, children: metrics2.map((metric2, i2) => {
           return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
             VerticalMetric,
             {
@@ -53265,7 +53265,7 @@ categories: ${categories.join(" ")}`;
             primaryResults = shorterResults;
           }
         }
-        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$V.metricsSummary), children: [
+        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$U.metricsSummary), children: [
           /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(ScoreGrid, { scoreGroups: [primaryResults], showReducer }, void 0, false, {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/log-view/navbar/ResultsPanel.tsx",
             lineNumber: 137,
@@ -53284,7 +53284,7 @@ categories: ${categories.join(" ")}`;
                   {
                     scoreGroups: grouped,
                     showReducer,
-                    className: styles$V.modalScores,
+                    className: styles$U.modalScores,
                     striped: false
                   },
                   void 0,
@@ -53309,7 +53309,7 @@ categories: ${categories.join(" ")}`;
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
               LinkButton,
               {
-                className: styles$V.moreButton,
+                className: styles$U.moreButton,
                 text: "All scoring...",
                 onClick: () => {
                   setShowing(true);
@@ -53365,7 +53365,7 @@ categories: ${categories.join(" ")}`;
               "vertical-metric-label",
               "text-style-label",
               "text-style-secondary",
-              styles$V.verticalMetricName
+              styles$U.verticalMetricName
             ),
             children: metricDisplayName(metric2)
           },
@@ -53384,7 +53384,7 @@ categories: ${categories.join(" ")}`;
             className: clsx(
               "text-style-label",
               "text-style-secondary",
-              styles$V.verticalMetricReducer
+              styles$U.verticalMetricReducer
             ),
             children: reducer || "default"
           },
@@ -53403,7 +53403,7 @@ categories: ${categories.join(" ")}`;
             className: clsx(
               "vertical-metric-value",
               "text-size-largest",
-              styles$V.verticalMetricValue
+              styles$U.verticalMetricValue
             ),
             children: metric2.value !== void 0 && metric2.value !== null ? formatPrettyDecimal(metric2.value) : "n/a"
           },
@@ -53426,15 +53426,15 @@ categories: ${categories.join(" ")}`;
     const status = "_status_1sckj_1";
     const statusText = "_statusText_1sckj_11";
     const icon$1 = "_icon_1sckj_24";
-    const styles$T = {
+    const styles$S = {
       statusContainer,
       status,
       statusText,
       icon: icon$1
     };
     const RunningStatusPanel = ({ sampleCount }) => {
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$T.statusContainer), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$T.status), children: [
-        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: clsx(ApplicationIcons.running, styles$T.icon) }, void 0, false, {
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$S.statusContainer), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$S.status), children: [
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: clsx(ApplicationIcons.running, styles$S.icon) }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/log-view/navbar/RunningStatusPanel.tsx",
           lineNumber: 18,
           columnNumber: 11
@@ -53443,7 +53443,7 @@ categories: ${categories.join(" ")}`;
           "div",
           {
             className: clsx(
-              styles$T.statusText,
+              styles$S.statusText,
               "text-style-label",
               "text-size-smaller"
             ),
@@ -53478,7 +53478,7 @@ categories: ${categories.join(" ")}`;
     };
     const statusPanel = "_statusPanel_66f9o_1";
     const statusIcon = "_statusIcon_66f9o_11";
-    const styles$S = {
+    const styles$R = {
       statusPanel,
       statusIcon
     };
@@ -53523,8 +53523,8 @@ categories: ${categories.join(" ")}`;
       status: status2,
       sampleCount
     }) => {
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$S.statusPanel, children: [
-        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: clsx(icon2, styles$S.statusIcon), style: {} }, void 0, false, {
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$R.statusPanel, children: [
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: clsx(icon2, styles$R.statusIcon), style: {} }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/log-view/navbar/StatusPanel.tsx",
           lineNumber: 53,
           columnNumber: 7
@@ -53559,7 +53559,7 @@ categories: ${categories.join(" ")}`;
     };
     const container$f = "_container_q17yq_1";
     const grid$6 = "_grid_q17yq_10";
-    const styles$R = {
+    const styles$Q = {
       container: container$f,
       grid: grid$6
     };
@@ -53574,7 +53574,7 @@ categories: ${categories.join(" ")}`;
           "div",
           {
             className: clsx(
-              singleLine ? styles$R.grid : void 0,
+              singleLine ? styles$Q.grid : void 0,
               "text-style-secondary",
               "text-size-smallest"
             ),
@@ -53604,7 +53604,7 @@ categories: ${categories.join(" ")}`;
           void 0
         );
       });
-      return modelEls.length > 0 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$R.container, children: modelEls }, void 0, false, {
+      return modelEls.length > 0 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$Q.container, children: modelEls }, void 0, false, {
         fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/log-view/navbar/ModelRolesView.tsx",
         lineNumber: 41,
         columnNumber: 5
@@ -53629,7 +53629,7 @@ categories: ${categories.join(" ")}`;
         setOffCanvas(!offCanvas);
       }, [offCanvas, setOffCanvas]);
       const hasRunningMetrics = runningMetrics && runningMetrics.length > 0;
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$Y.wrapper), children: [
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$X.wrapper), children: [
         /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
           "div",
           {
@@ -53637,7 +53637,7 @@ categories: ${categories.join(" ")}`;
               "navbar-brand",
               "navbar-text",
               "mb-0",
-              styles$Y.container
+              styles$X.container
             ),
             children: [
               showToggle ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
@@ -53648,7 +53648,7 @@ categories: ${categories.join(" ")}`;
                   className: clsx(
                     "btn",
                     offCanvas ? "d-md-none" : void 0,
-                    styles$Y.toggle
+                    styles$X.toggle
                   ),
                   type: "button",
                   children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: ApplicationIcons.menu }, void 0, false, {
@@ -53666,13 +53666,13 @@ categories: ${categories.join(" ")}`;
                 },
                 void 0
               ) : "",
-              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$Y.body, children: [
-                /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$Y.bodyContainer, children: [
+              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$X.body, children: [
+                /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$X.bodyContainer, children: [
                   /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
                     "div",
                     {
                       id: "task-title",
-                      className: clsx("task-title", "text-truncate", styles$Y.taskTitle),
+                      className: clsx("task-title", "text-truncate", styles$X.taskTitle),
                       title: evalSpec == null ? void 0 : evalSpec.task,
                       children: evalSpec == null ? void 0 : evalSpec.task
                     },
@@ -53692,7 +53692,7 @@ categories: ${categories.join(" ")}`;
                       className: clsx(
                         "task-model",
                         "text-truncate",
-                        styles$Y.taskModel,
+                        styles$X.taskModel,
                         "text-size-base"
                       ),
                       title: evalSpec == null ? void 0 : evalSpec.model,
@@ -53717,7 +53717,7 @@ categories: ${categories.join(" ")}`;
                   lineNumber: 105,
                   columnNumber: 13
                 }, void 0) : void 0,
-                /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-small", styles$Y.secondaryContainer), children: [
+                /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-small", styles$X.secondaryContainer), children: [
                   /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("navbar-secondary-text", "text-truncate"), children: logFileName }, void 0, false, {
                     fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/log-view/navbar/PrimaryBar.tsx",
                     lineNumber: 109,
@@ -53749,7 +53749,7 @@ categories: ${categories.join(" ")}`;
           },
           void 0
         ),
-        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$Y.taskStatus, "navbar-text"), children: [
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$X.taskStatus, "navbar-text"), children: [
           status2 === "success" || status2 === "started" && streamSamples && hasRunningMetrics ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
             ResultsPanel,
             {
@@ -53853,7 +53853,7 @@ categories: ${categories.join(" ")}`;
     const justifyRight = "_justifyRight_xzzhl_13";
     const valueGrid = "_valueGrid_xzzhl_17";
     const container$e = "_container_xzzhl_25";
-    const styles$Q = {
+    const styles$P = {
       staticCol,
       justifyLeft,
       justifyCenter,
@@ -53886,7 +53886,7 @@ categories: ${categories.join(" ")}`;
           LabeledValue,
           {
             label: "Dataset",
-            className: clsx(styles$Q.staticCol, "text-size-small"),
+            className: clsx(styles$P.staticCol, "text-size-small"),
             children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
               DatasetSummary,
               {
@@ -53922,8 +53922,8 @@ categories: ${categories.join(" ")}`;
           {
             label: label2,
             className: clsx(
-              styles$Q.staticCol,
-              hasConfig ? styles$Q.justifyLeft : styles$Q.justifyCenter,
+              styles$P.staticCol,
+              hasConfig ? styles$P.justifyLeft : styles$P.justifyCenter,
               "text-size-small"
             ),
             children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(ScorerSummary, { evalDescriptor }, void 0, false, {
@@ -53949,7 +53949,7 @@ categories: ${categories.join(" ")}`;
             LabeledValue,
             {
               label: "Config",
-              className: clsx(styles$Q.justifyRight, "text-size-small"),
+              className: clsx(styles$P.justifyRight, "text-size-small"),
               children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(ParamSummary, { params: hyperparameters }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/log-view/navbar/SecondaryBar.tsx",
                 lineNumber: 97,
@@ -53978,7 +53978,7 @@ categories: ${categories.join(" ")}`;
             LabeledValue,
             {
               label: "Duration",
-              className: clsx(styles$Q.justifyRight, "text-size-small"),
+              className: clsx(styles$P.justifyRight, "text-size-small"),
               children: totalDuration
             },
             "sb-duration",
@@ -53996,13 +53996,13 @@ categories: ${categories.join(" ")}`;
         ExpandablePanel,
         {
           id: "secondary-nav-bar",
-          className: clsx(styles$Q.container, "text-size-small"),
+          className: clsx(styles$P.container, "text-size-small"),
           collapse: true,
           lines: 5,
           children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
             "div",
             {
-              className: styles$Q.valueGrid,
+              className: styles$P.valueGrid,
               style: {
                 gridTemplateColumns: `${values.map((val) => {
                   return val.size;
@@ -54100,7 +54100,7 @@ categories: ${categories.join(" ")}`;
       runningMetrics
     }) => {
       const totalSampleCount = useTotalSampleCount();
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("nav", { className: clsx("navbar", "sticky-top", styles$_.navbarWrapper), children: [
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("nav", { className: clsx("navbar", "sticky-top", styles$Z.navbarWrapper), children: [
         /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
           PrimaryBar,
           {
@@ -54281,7 +54281,7 @@ categories: ${categories.join(" ")}`;
     const tabSet = "_tabSet_1r3mu_14";
     const tabs = "_tabs_1r3mu_21";
     const tabPanels = "_tabPanels_1r3mu_29";
-    const styles$P = {
+    const styles$O = {
       workspace,
       tabContainer,
       tabSet,
@@ -54388,7 +54388,7 @@ categories: ${categories.join(" ")}`;
       }, void 0);
     };
     const item = "_item_1uzhd_1";
-    const styles$O = {
+    const styles$N = {
       item
     };
     const DatasetDetailView = ({
@@ -54399,7 +54399,7 @@ categories: ${categories.join(" ")}`;
         Object.entries(dataset).filter(([key2]) => key2 !== "sample_ids")
       );
       if (!dataset || Object.keys(filtered).length === 0) {
-        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: clsx("text-size-base", styles$O.item), style: style2, children: "No dataset information available" }, void 0, false, {
+        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: clsx("text-size-base", styles$N.item), style: style2, children: "No dataset information available" }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/plan/DatasetDetailView.tsx",
           lineNumber: 24,
           columnNumber: 7
@@ -54408,7 +54408,7 @@ categories: ${categories.join(" ")}`;
       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
         MetaDataView,
         {
-          className: clsx("text-size-base", styles$O.item),
+          className: clsx("text-size-base", styles$N.item),
           entries: filtered,
           tableOptions: "borderless,sm",
           style: style2
@@ -54426,7 +54426,7 @@ categories: ${categories.join(" ")}`;
     const grid$5 = "_grid_ax2xo_1";
     const cell$2 = "_cell_ax2xo_8";
     const value$1 = "_value_ax2xo_13";
-    const styles$N = {
+    const styles$M = {
       grid: grid$5,
       cell: cell$2,
       value: value$1
@@ -54464,7 +54464,7 @@ categories: ${categories.join(" ")}`;
             {
               className: clsx(
                 `${baseId}-key`,
-                styles$N.cell,
+                styles$M.cell,
                 "text-style-label",
                 "text-style-secondary",
                 "text-size-smaller"
@@ -54483,7 +54483,7 @@ categories: ${categories.join(" ")}`;
           /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
             "div",
             {
-              className: clsx(styles$N.value, `${baseId}-value`, "text-size-smaller"),
+              className: clsx(styles$M.value, `${baseId}-value`, "text-size-smaller"),
               children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(RenderedContent, { id: id2, entry: entry2 }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/content/MetaDataGrid.tsx",
                 lineNumber: 52,
@@ -54505,7 +54505,7 @@ categories: ${categories.join(" ")}`;
           columnNumber: 7
         }, void 0);
       });
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { id, className: clsx(className2, styles$N.grid), style: style2, children: entryEls }, void 0, false, {
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { id, className: clsx(className2, styles$M.grid), style: style2, children: entryEls }, void 0, false, {
         fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/content/MetaDataGrid.tsx",
         lineNumber: 59,
         columnNumber: 5
@@ -54526,7 +54526,7 @@ categories: ${categories.join(" ")}`;
     const icon = "_icon_59zaz_1";
     const container$d = "_container_59zaz_5";
     const metadata$2 = "_metadata_59zaz_11";
-    const styles$M = {
+    const styles$L = {
       icon,
       container: container$d,
       metadata: metadata$2
@@ -54537,7 +54537,7 @@ categories: ${categories.join(" ")}`;
       params: params2,
       className: className2
     }) => {
-      const iconHtml = icon2 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: clsx(icon2, styles$M.icon) }, void 0, false, {
+      const iconHtml = icon2 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: clsx(icon2, styles$L.icon) }, void 0, false, {
         fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/plan/DetailStep.tsx",
         lineNumber: 19,
         columnNumber: 27
@@ -54546,11 +54546,11 @@ categories: ${categories.join(" ")}`;
         iconHtml,
         " ",
         name2,
-        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$M.container, children: params2 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$L.container, children: params2 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
           MetaDataGrid,
           {
             entries: params2,
-            className: clsx("text-size-small", styles$M.metadata)
+            className: clsx("text-size-small", styles$L.metadata)
           },
           void 0,
           false,
@@ -54585,7 +54585,7 @@ categories: ${categories.join(" ")}`;
           icon: ApplicationIcons.scorer,
           name: name2,
           params: params2,
-          className: clsx(styles$O.item, "text-size-base")
+          className: clsx(styles$N.item, "text-size-base")
         },
         void 0,
         false,
@@ -54599,12 +54599,12 @@ categories: ${categories.join(" ")}`;
     };
     const container$c = "_container_12j2k_1";
     const separator$4 = "_separator_12j2k_11";
-    const styles$L = {
+    const styles$K = {
       container: container$c,
       separator: separator$4
     };
     const SolversDetailView = ({ steps }) => {
-      const separator2 = /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$L.items, "text-size-small", styles$L.separator), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: ApplicationIcons.arrows.right }, void 0, false, {
+      const separator2 = /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$K.items, "text-size-small", styles$K.separator), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: ApplicationIcons.arrows.right }, void 0, false, {
         fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/plan/SolverDetailView.tsx",
         lineNumber: 15,
         columnNumber: 7
@@ -54619,7 +54619,7 @@ categories: ${categories.join(" ")}`;
             DetailStep,
             {
               name: step.solver,
-              className: clsx(styles$L.items, "text-size-small")
+              className: clsx(styles$K.items, "text-size-small")
             },
             void 0,
             false,
@@ -54637,7 +54637,7 @@ categories: ${categories.join(" ")}`;
           columnNumber: 7
         }, void 0);
       });
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$L.container, children: details }, void 0, false, {
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$K.container, children: details }, void 0, false, {
         fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/plan/SolverDetailView.tsx",
         lineNumber: 31,
         columnNumber: 10
@@ -54648,7 +54648,7 @@ categories: ${categories.join(" ")}`;
     const planCol = "_planCol_1y1hk_24";
     const container$b = "_container_1y1hk_28";
     const grid$4 = "_grid_1y1hk_34";
-    const styles$K = {
+    const styles$J = {
       floatingCol,
       wideCol,
       planCol,
@@ -54667,7 +54667,7 @@ categories: ${categories.join(" ")}`;
       const taskColumns = [];
       taskColumns.push({
         title: "Dataset",
-        className: styles$K.floatingCol,
+        className: styles$J.floatingCol,
         contents: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(DatasetDetailView, { dataset: evaluation.dataset }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/plan/PlanDetailView.tsx",
           lineNumber: 35,
@@ -54677,7 +54677,7 @@ categories: ${categories.join(" ")}`;
       if (steps) {
         taskColumns.push({
           title: "Solvers",
-          className: styles$K.wideCol,
+          className: styles$J.wideCol,
           contents: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(SolversDetailView, { steps }, void 0, false, {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/plan/PlanDetailView.tsx",
             lineNumber: 42,
@@ -54722,15 +54722,15 @@ categories: ${categories.join(" ")}`;
           });
           taskColumns.push({
             title: label2,
-            className: styles$K.floatingCol,
+            className: styles$J.floatingCol,
             contents: scorerPanels
           });
         }
       }
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$K.container, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$J.container, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
         "div",
         {
-          className: styles$K.grid,
+          className: styles$J.grid,
           style: {
             gridTemplateColumns: `repeat(${taskColumns.length}, fit-content(50%))`
           },
@@ -54777,7 +54777,7 @@ categories: ${categories.join(" ")}`;
               "text-size-small",
               "text-style-label",
               "text-style-secondary",
-              styles$K.planCol
+              styles$J.planCol
             ),
             children: title2
           },
@@ -54868,7 +54868,7 @@ categories: ${categories.join(" ")}`;
         columnNumber: 5
       }, void 0);
     };
-    const styles$J = {
+    const styles$I = {
       "task-error-display": "_task-error-display_1624b_1"
     };
     const TaskErrorCard = ({ error: error2 }) => {
@@ -54892,7 +54892,7 @@ categories: ${categories.join(" ")}`;
           ANSIDisplay,
           {
             output: error2.traceback_ansi,
-            className: styles$J["task-error-display"]
+            className: styles$I["task-error-display"]
           },
           void 0,
           false,
@@ -56999,7 +56999,7 @@ self.onmessage = function (e) {
     );
     ToolButton.displayName = "ToolButton";
     const jsonTab = "_jsonTab_6pq03_1";
-    const styles$I = {
+    const styles$H = {
       jsonTab
     };
     const kJsonMaxSize = 1e7;
@@ -57085,7 +57085,7 @@ self.onmessage = function (e) {
       const downloadFiles = useStore((state) => state.capabilities.downloadFiles);
       if (logFile && json.length > kJsonMaxSize && downloadFiles) {
         const file = `${filename(logFile)}.json`;
-        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$I.jsonTab, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$H.jsonTab, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
           DownloadPanel,
           {
             message: "The JSON for this log file is too large to render.",
@@ -57107,7 +57107,7 @@ self.onmessage = function (e) {
           columnNumber: 7
         }, void 0);
       } else {
-        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$I.jsonTab, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(JSONPanel, { id: "task-json-contents", json, simple: true }, void 0, false, {
+        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$H.jsonTab, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(JSONPanel, { id: "task-json-contents", json, simple: true }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/log-view/tabs/JsonTab.tsx",
           lineNumber: 132,
           columnNumber: 9
@@ -57121,7 +57121,7 @@ self.onmessage = function (e) {
     const container$a = "_container_304w9_1";
     const modelInfo = "_modelInfo_304w9_8";
     const role = "_role_304w9_14";
-    const styles$H = {
+    const styles$G = {
       container: container$a,
       modelInfo,
       role
@@ -57150,18 +57150,18 @@ self.onmessage = function (e) {
           lineNumber: 35,
           columnNumber: 7
         }, void 0),
-        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(CardBody, { id: "task-model-card-body", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$H.container, children: Object.keys(modelsInfo || {}).map((modelKey) => {
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(CardBody, { id: "task-model-card-body", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$G.container, children: Object.keys(modelsInfo || {}).map((modelKey) => {
           const modelInfo2 = modelsInfo[modelKey];
           return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
             "div",
             {
-              className: clsx(styles$H.modelInfo, "text-size-small"),
+              className: clsx(styles$G.modelInfo, "text-size-small"),
               children: [
                 /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
                   "div",
                   {
                     className: clsx(
-                      styles$H.role,
+                      styles$G.role,
                       "text-style-label",
                       "text-style-secondary"
                     ),
@@ -57274,7 +57274,7 @@ self.onmessage = function (e) {
     const col3$1 = "_col3_sq96g_16";
     const separator$3 = "_separator_sq96g_20";
     const padded$1 = "_padded_sq96g_26";
-    const styles$G = {
+    const styles$F = {
       wrapper: wrapper$2,
       col2: col2$2,
       col1_3: col1_3$1,
@@ -57336,14 +57336,14 @@ self.onmessage = function (e) {
         value: usage.total_tokens,
         secondary: false
       });
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-small", styles$G.wrapper, className2), children: rows.map((row2, idx) => {
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-small", styles$F.wrapper, className2), children: rows.map((row2, idx) => {
         if (row2.label === "---") {
           return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
             "div",
             {
               className: clsx(
-                styles$G.separator,
-                row2.padded ? styles$G.padded : void 0
+                styles$F.separator,
+                row2.padded ? styles$F.padded : void 0
               )
             },
             `$usage-sep-${idx}`,
@@ -57363,7 +57363,7 @@ self.onmessage = function (e) {
                 className: clsx(
                   "text-style-label",
                   "text-style-secondary",
-                  row2.secondary ? styles$G.col2 : styles$G.col1_3
+                  row2.secondary ? styles$F.col2 : styles$F.col1_3
                 ),
                 children: row2.label
               },
@@ -57376,7 +57376,7 @@ self.onmessage = function (e) {
               },
               void 0
             ),
-            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$G.col3, children: row2.value ? formatNumber(row2.value) : "" }, void 0, false, {
+            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$F.col3, children: row2.value ? formatNumber(row2.value) : "" }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/usage/ModelUsagePanel.tsx",
               lineNumber: 112,
               columnNumber: 15
@@ -57398,7 +57398,7 @@ self.onmessage = function (e) {
     const tableH = "_tableH_z217i_9";
     const model = "_model_z217i_14";
     const cellContents = "_cellContents_z217i_18";
-    const styles$F = {
+    const styles$E = {
       table,
       tableTokens,
       tableH,
@@ -57413,7 +57413,7 @@ self.onmessage = function (e) {
             "table",
             "table-sm",
             "text-size-smaller",
-            styles$F.table,
+            styles$E.table,
             className2
           ),
           children: children2
@@ -57442,7 +57442,7 @@ self.onmessage = function (e) {
               colSpan: 3,
               className: clsx(
                 "card-subheading",
-                styles$F.tableTokens,
+                styles$E.tableTokens,
                 "text-size-small",
                 "text-style-label",
                 "text-style-secondary"
@@ -57469,7 +57469,7 @@ self.onmessage = function (e) {
             "th",
             {
               className: clsx(
-                styles$F.tableH,
+                styles$E.tableH,
                 "text-sixe-small",
                 "text-style-label",
                 "text-style-secondary"
@@ -57489,7 +57489,7 @@ self.onmessage = function (e) {
             "th",
             {
               className: clsx(
-                styles$F.tableH,
+                styles$E.tableH,
                 "text-sixe-small",
                 "text-style-label",
                 "text-style-secondary"
@@ -57518,7 +57518,7 @@ self.onmessage = function (e) {
     };
     const TokenRow = ({ model: model2, usage }) => {
       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("tr", { children: [
-        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("td", { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$F.model, styles$F.cellContents), children: model2 }, void 0, false, {
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("td", { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$E.model, styles$E.cellContents), children: model2 }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/usage/TokenTable.tsx",
           lineNumber: 82,
           columnNumber: 9
@@ -57527,7 +57527,7 @@ self.onmessage = function (e) {
           lineNumber: 81,
           columnNumber: 7
         }, void 0),
-        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("td", { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(ModelUsagePanel, { usage, className: clsx(styles$F.cellContents) }, void 0, false, {
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("td", { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(ModelUsagePanel, { usage, className: clsx(styles$E.cellContents) }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/usage/TokenTable.tsx",
           lineNumber: 85,
           columnNumber: 9
@@ -57571,7 +57571,7 @@ self.onmessage = function (e) {
     };
     const wrapper$1 = "_wrapper_14r3b_1";
     const col2$1 = "_col2_14r3b_16";
-    const styles$E = {
+    const styles$D = {
       wrapper: wrapper$1,
       col2: col2$1
     };
@@ -57586,7 +57586,7 @@ self.onmessage = function (e) {
           lineNumber: 24,
           columnNumber: 7
         }, void 0),
-        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(CardBody, { id: kUsageCardBodyId, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$E.wrapper, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$E.col2, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(ModelTokenTable, { model_usage: stats.model_usage }, void 0, false, {
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(CardBody, { id: kUsageCardBodyId, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$D.wrapper, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$D.col2, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(ModelTokenTable, { model_usage: stats.model_usage }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/usage/UsageCard.tsx",
           lineNumber: 28,
           columnNumber: 13
@@ -57655,12 +57655,12 @@ self.onmessage = function (e) {
     }
     const panel$2 = "_panel_twp3v_1";
     const container$9 = "_container_twp3v_7";
-    const styles$D = {
+    const styles$C = {
       panel: panel$2,
       container: container$9
     };
     const NoContentsPanel = ({ text: text2 }) => {
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$D.panel), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$D.container, "text-size-smaller"), children: [
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$C.panel), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$C.container, "text-size-smaller"), children: [
         /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: ApplicationIcons.noSamples }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/components/NoContentsPanel.tsx",
           lineNumber: 15,
@@ -60800,7 +60800,7 @@ self.onmessage = function (e) {
     const subtle = "_subtle_1rer0_36";
     const primary = "_primary_1rer0_40";
     const visuallyHidden = "_visuallyHidden_1rer0_59";
-    const styles$C = {
+    const styles$B = {
       container: container$8,
       dotsContainer,
       small,
@@ -60821,17 +60821,17 @@ self.onmessage = function (e) {
         "div",
         {
           className: clsx(
-            styles$C.container,
-            size === "small" ? styles$C.small : size === "medium" ? styles$C.medium : styles$C.large
+            styles$B.container,
+            size === "small" ? styles$B.small : size === "medium" ? styles$B.medium : styles$B.large
           ),
           role: "status",
           children: [
-            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$C.dotsContainer, children: [...Array(dotsCount)].map((_, index) => /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$B.dotsContainer, children: [...Array(dotsCount)].map((_, index) => /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
               "div",
               {
                 className: clsx(
-                  styles$C.dot,
-                  subtle2 ? styles$C.subtle : styles$C.primary
+                  styles$B.dot,
+                  subtle2 ? styles$B.subtle : styles$B.primary
                 ),
                 style: { animationDelay: `${index * 0.15}s` }
               },
@@ -60848,7 +60848,7 @@ self.onmessage = function (e) {
               lineNumber: 30,
               columnNumber: 7
             }, void 0),
-            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: styles$C.visuallyHidden, children: text2 }, void 0, false, {
+            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("span", { className: styles$B.visuallyHidden, children: text2 }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/components/PulsingDots.tsx",
               lineNumber: 42,
               columnNumber: 7
@@ -60866,7 +60866,7 @@ self.onmessage = function (e) {
       );
     };
     const progressContainer = "_progressContainer_1cjjr_1";
-    const styles$B = {
+    const styles$A = {
       progressContainer
     };
     const LiveVirtualList = ({
@@ -60945,7 +60945,7 @@ self.onmessage = function (e) {
       const [, forceRender] = reactExports.useState({});
       const forceUpdate = reactExports.useCallback(() => forceRender({}), []);
       const Footer = () => {
-        return showProgress ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$B.progressContainer), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(PulsingDots, { subtle: false, size: "medium" }, void 0, false, {
+        return showProgress ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$A.progressContainer), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(PulsingDots, { subtle: false, size: "medium" }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/components/LiveVirtualList.tsx",
           lineNumber: 148,
           columnNumber: 9
@@ -61081,7 +61081,7 @@ self.onmessage = function (e) {
     const noTop = "_noTop_1p5e1_31";
     const timePanel = "_timePanel_1p5e1_35";
     const chat = "_chat_1p5e1_43";
-    const styles$A = {
+    const styles$z = {
       tabPanel,
       fullWidth: fullWidth$1,
       padded,
@@ -61094,7 +61094,7 @@ self.onmessage = function (e) {
     const flatBody = "_flatBody_1uw6w_1";
     const iconSmall$1 = "_iconSmall_1uw6w_9";
     const lineBase = "_lineBase_1uw6w_15";
-    const styles$z = {
+    const styles$y = {
       flatBody,
       iconSmall: iconSmall$1,
       lineBase
@@ -61109,13 +61109,13 @@ self.onmessage = function (e) {
       return "Error";
     };
     const FlatSampleError = ({ message: message2 }) => {
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$z.flatBody), children: [
-        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: clsx(ApplicationIcons.error, styles$z.iconSmall) }, void 0, false, {
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$y.flatBody), children: [
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: clsx(ApplicationIcons.error, styles$y.iconSmall) }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/error/FlatSampleErrorView.tsx",
           lineNumber: 17,
           columnNumber: 7
         }, void 0),
-        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$z.lineBase, "text-truncate"), children: errorType(message2) }, void 0, false, {
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$y.lineBase, "text-truncate"), children: errorType(message2) }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/error/FlatSampleErrorView.tsx",
           lineNumber: 18,
           columnNumber: 7
@@ -61134,7 +61134,7 @@ self.onmessage = function (e) {
     const wrap = "_wrap_1s9n0_27";
     const titled = "_titled_1s9n0_31";
     const value = "_value_1s9n0_35";
-    const styles$y = {
+    const styles$x = {
       target,
       answer,
       grid: grid$3,
@@ -61217,7 +61217,7 @@ self.onmessage = function (e) {
             MarkdownDiv,
             {
               markdown: arrayToString((fields == null ? void 0 : fields.target) || "none"),
-              className: clsx("no-last-para-padding", styles$y.target)
+              className: clsx("no-last-para-padding", styles$x.target)
             },
             void 0,
             false,
@@ -61239,7 +61239,7 @@ self.onmessage = function (e) {
             MarkdownDiv,
             {
               markdown: fields.answer || "",
-              className: clsx("no-last-para-padding", styles$y.answer)
+              className: clsx("no-last-para-padding", styles$x.answer)
             },
             void 0,
             false,
@@ -61299,7 +61299,7 @@ self.onmessage = function (e) {
         "div",
         {
           id: `sample-heading-${parent_id}`,
-          className: clsx(styles$y.grid, "text-size-base"),
+          className: clsx(styles$x.grid, "text-size-base"),
           style: {
             gridTemplateColumns: `${columns.map((col) => {
               return col.size;
@@ -61314,8 +61314,8 @@ self.onmessage = function (e) {
                     "text-style-label",
                     "text-style-secondary",
                     "text-size-base",
-                    col.title ? styles$y.titled : void 0,
-                    col.center ? styles$y.centerLabel : void 0
+                    col.title ? styles$x.titled : void 0,
+                    col.center ? styles$x.centerLabel : void 0
                   ),
                   title: col.title,
                   children: col.label
@@ -61335,10 +61335,10 @@ self.onmessage = function (e) {
                 "div",
                 {
                   className: clsx(
-                    styles$y.value,
-                    styles$y.wrap,
+                    styles$x.value,
+                    styles$x.wrap,
                     col.clamp ? "three-line-clamp" : void 0,
-                    col.center ? styles$y.centerValue : void 0
+                    col.center ? styles$x.centerValue : void 0
                   ),
                   children: col.value
                 },
@@ -61382,7 +61382,7 @@ self.onmessage = function (e) {
     const separator$2 = "_separator_8i3m0_25";
     const separatorPadded = "_separatorPadded_8i3m0_30";
     const headerSep = "_headerSep_8i3m0_35";
-    const styles$x = {
+    const styles$w = {
       container: container$7,
       cell: cell$1,
       fullWidth,
@@ -61402,7 +61402,7 @@ self.onmessage = function (e) {
           columnNumber: 12
         }, void 0);
       }
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(className2, styles$x.container), children: [
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(className2, styles$w.container), children: [
         /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
           "div",
           {
@@ -61482,7 +61482,7 @@ self.onmessage = function (e) {
         /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
           "div",
           {
-            className: clsx(styles$x.separator, styles$x.fullWidth, styles$x.headerSep)
+            className: clsx(styles$w.separator, styles$w.fullWidth, styles$w.headerSep)
           },
           void 0,
           false,
@@ -61502,17 +61502,17 @@ self.onmessage = function (e) {
           const answer2 = scoreData.answer;
           let metadata2 = scoreData.metadata || {};
           return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(reactExports.Fragment, { children: [
-            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-base", styles$x.cell), children: scorer2 }, void 0, false, {
+            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-base", styles$w.cell), children: scorer2 }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/scores/SampleScoresGrid.tsx",
               lineNumber: 78,
               columnNumber: 13
             }, void 0),
-            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$x.cell, "text-size-base"), children: answer2 }, void 0, false, {
+            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$w.cell, "text-size-base"), children: answer2 }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/scores/SampleScoresGrid.tsx",
               lineNumber: 79,
               columnNumber: 13
             }, void 0),
-            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$x.cell, "text-size-base"), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$w.cell, "text-size-base"), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
               SampleScores,
               {
                 sample: evalSample,
@@ -61531,7 +61531,7 @@ self.onmessage = function (e) {
               lineNumber: 80,
               columnNumber: 13
             }, void 0),
-            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-base", styles$x.cell), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(MarkdownDiv, { markdown: explanation2 }, void 0, false, {
+            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-base", styles$w.cell), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(MarkdownDiv, { markdown: explanation2 }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/scores/SampleScoresGrid.tsx",
               lineNumber: 87,
               columnNumber: 15
@@ -61548,7 +61548,7 @@ self.onmessage = function (e) {
                     "text-size-smaller",
                     "text-style-label",
                     "text-style-secondary",
-                    styles$x.fullWidth
+                    styles$w.fullWidth
                   ),
                   children: "Metadata"
                 },
@@ -61561,7 +61561,7 @@ self.onmessage = function (e) {
                 },
                 void 0
               ),
-              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$x.fullWidth), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(MetaDataGrid, { entries: metadata2 }, void 0, false, {
+              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$w.fullWidth), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(MetaDataGrid, { entries: metadata2 }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/scores/SampleScoresGrid.tsx",
                 lineNumber: 103,
                 columnNumber: 19
@@ -61574,9 +61574,9 @@ self.onmessage = function (e) {
                 "div",
                 {
                   className: clsx(
-                    styles$x.separator,
-                    styles$x.separatorPadded,
-                    styles$x.fullWidth
+                    styles$w.separator,
+                    styles$w.separatorPadded,
+                    styles$w.fullWidth
                   )
                 },
                 void 0,
@@ -61609,7 +61609,7 @@ self.onmessage = function (e) {
     const wordBreak = "_wordBreak_w4jj8_15";
     const scoreCard = "_scoreCard_w4jj8_56";
     const scores = "_scores_w4jj8_60";
-    const styles$w = {
+    const styles$v = {
       container: container$6,
       wordBreak,
       scoreCard,
@@ -61642,9 +61642,9 @@ self.onmessage = function (e) {
             "container-fluid",
             className2,
             "font-size-base",
-            styles$w.container
+            styles$v.container
           ),
-          children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Card, { className: clsx(styles$w.scoreCard), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(CardBody, { children: [
+          children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Card, { className: clsx(styles$v.scoreCard), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(CardBody, { children: [
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
               "div",
               {
@@ -61674,7 +61674,7 @@ self.onmessage = function (e) {
                   MarkdownDiv,
                   {
                     markdown: scoreInput.join("\n"),
-                    className: clsx(styles$w.wordBreak, "text-size-base")
+                    className: clsx(styles$v.wordBreak, "text-size-base")
                   },
                   void 0,
                   false,
@@ -61699,7 +61699,7 @@ self.onmessage = function (e) {
               SampleScoresGrid,
               {
                 evalSample: sample2,
-                className: clsx(styles$w.scores)
+                className: clsx(styles$v.scores)
               },
               void 0,
               false,
@@ -61732,7 +61732,7 @@ self.onmessage = function (e) {
     };
     const title$2 = "_title_19l1b_1";
     const contents = "_contents_19l1b_8";
-    const styles$v = {
+    const styles$u = {
       title: title$2,
       contents
     };
@@ -61742,7 +61742,7 @@ self.onmessage = function (e) {
       className: className2,
       children: children2
     }) => {
-      const contentEl = title2 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-small", styles$v.title, className2), children: [
+      const contentEl = title2 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-small", styles$u.title, className2), children: [
         /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: icon2 || ApplicationIcons.metadata }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/event/EventRow.tsx",
           lineNumber: 23,
@@ -61763,7 +61763,7 @@ self.onmessage = function (e) {
         lineNumber: 22,
         columnNumber: 5
       }, void 0) : "";
-      const card2 = /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("card", styles$v.contents), children: contentEl }, void 0, false, {
+      const card2 = /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("card", styles$u.contents), children: contentEl }, void 0, false, {
         fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/event/EventRow.tsx",
         lineNumber: 31,
         columnNumber: 16
@@ -61771,10 +61771,10 @@ self.onmessage = function (e) {
       return card2;
     };
     const ApprovalEventView = ({
-      eventNode: eventNode2,
+      eventNode,
       className: className2
     }) => {
-      const event = eventNode2.event;
+      const event = eventNode.event;
       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
         EventRow,
         {
@@ -61826,7 +61826,7 @@ self.onmessage = function (e) {
       }
     };
     const tab = "_tab_1je38_1";
-    const styles$u = {
+    const styles$t = {
       tab
     };
     const EventNav = ({
@@ -61851,7 +61851,7 @@ self.onmessage = function (e) {
             active2 ? "active " : "",
             "text-style-label",
             "text-size-small",
-            styles$u.tab
+            styles$t.tab
           ),
           onClick: handleClick,
           children: title2
@@ -61871,7 +61871,7 @@ self.onmessage = function (e) {
       }, void 0);
     };
     const navs$1 = "_navs_1vm6p_1";
-    const styles$t = {
+    const styles$s = {
       navs: navs$1
     };
     const EventNavs = ({
@@ -61882,7 +61882,7 @@ self.onmessage = function (e) {
       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
         "ul",
         {
-          className: clsx("nav", "nav-pills", styles$t.navs),
+          className: clsx("nav", "nav-pills", styles$s.navs),
           role: "tablist",
           "aria-orientation": "horizontal",
           children: navs2.map((nav2) => {
@@ -61915,12 +61915,12 @@ self.onmessage = function (e) {
         void 0
       );
     };
-    const label$4 = "_label_k00v4_1";
-    const navs = "_navs_k00v4_6";
-    const card = "_card_k00v4_12";
-    const cardContent = "_cardContent_k00v4_18";
-    const hidden$1 = "_hidden_k00v4_23";
-    const styles$s = {
+    const label$4 = "_label_r6hol_1";
+    const navs = "_navs_r6hol_6";
+    const card = "_card_r6hol_12";
+    const cardContent = "_cardContent_r6hol_19";
+    const hidden$1 = "_hidden_r6hol_24";
+    const styles$r = {
       label: label$4,
       navs,
       card,
@@ -62033,7 +62033,7 @@ self.onmessage = function (e) {
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
               "div",
               {
-                className: clsx("text-style-secondary", styles$s.label),
+                className: clsx("text-style-secondary", styles$r.label),
                 onClick: toggleCollapse,
                 children: collapsed ? text2 : ""
               },
@@ -62046,7 +62046,7 @@ self.onmessage = function (e) {
               },
               void 0
             ),
-            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$s.navs, children: (!isCollapsible || !collapsed) && filteredArrChildren && filteredArrChildren.length > 1 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$r.navs, children: (!isCollapsible || !collapsed) && filteredArrChildren && filteredArrChildren.length > 1 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
               EventNavs,
               {
                 navs: filteredArrChildren.map((child, index) => {
@@ -62085,15 +62085,15 @@ self.onmessage = function (e) {
         },
         void 0
       ) : "";
-      const card2 = /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { id, className: clsx(className2, styles$s.card), children: [
+      const card2 = /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { id, className: clsx(className2, styles$r.card), children: [
         titleEl,
         /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
           "div",
           {
             className: clsx(
               "tab-content",
-              styles$s.cardContent,
-              isCollapsible && collapsed ? styles$s.hidden : void 0
+              styles$r.cardContent,
+              isCollapsible && collapsed ? styles$r.hidden : void 0
             ),
             children: filteredArrChildren == null ? void 0 : filteredArrChildren.map((child, index) => {
               const id2 = pillId(index);
@@ -62136,11 +62136,11 @@ self.onmessage = function (e) {
       return reactExports.isValidElement(node2) && node2.props !== null && typeof node2.props === "object" && "data-default" in node2.props;
     }
     const ErrorEventView = ({
-      eventNode: eventNode2,
+      eventNode,
       className: className2
     }) => {
-      const event = eventNode2.event;
-      const id = eventNode2.id;
+      const event = eventNode.event;
+      const id = eventNode.id;
       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
         EventPanel,
         {
@@ -62179,23 +62179,23 @@ self.onmessage = function (e) {
       );
     };
     const panel$1 = "_panel_8zdtn_1";
-    const styles$r = {
+    const styles$q = {
       panel: panel$1
     };
     const InfoEventView = ({
-      eventNode: eventNode2,
+      eventNode,
       className: className2
     }) => {
-      const event = eventNode2.event;
+      const event = eventNode.event;
       const panels = [];
       if (typeof event.data === "string") {
-        panels.push(/* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(MarkdownDiv, { markdown: event.data, className: styles$r.panel }, void 0, false, {
+        panels.push(/* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(MarkdownDiv, { markdown: event.data, className: styles$q.panel }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/InfoEventView.tsx",
           lineNumber: 26,
           columnNumber: 17
         }, void 0));
       } else {
-        panels.push(/* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(JSONPanel, { data: event.data, className: styles$r.panel }, void 0, false, {
+        panels.push(/* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(JSONPanel, { data: event.data, className: styles$q.panel }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/InfoEventView.tsx",
           lineNumber: 28,
           columnNumber: 17
@@ -62204,7 +62204,7 @@ self.onmessage = function (e) {
       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
         EventPanel,
         {
-          id: eventNode2.id,
+          id: eventNode.id,
           title: "Info" + (event.source ? ": " + event.source : ""),
           className: className2,
           subTitle: formatDateTime(new Date(event.timestamp)),
@@ -62222,11 +62222,11 @@ self.onmessage = function (e) {
       );
     };
     const InputEventView = ({
-      eventNode: eventNode2,
+      eventNode,
       className: className2
     }) => {
-      const event = eventNode2.event;
-      const id = eventNode2.id;
+      const event = eventNode.event;
+      const id = eventNode.id;
       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
         EventPanel,
         {
@@ -62262,14 +62262,14 @@ self.onmessage = function (e) {
       );
     };
     const grid$2 = "_grid_1eq5o_1";
-    const styles$q = {
+    const styles$p = {
       grid: grid$2
     };
     const LoggerEventView = ({
-      eventNode: eventNode2,
+      eventNode,
       className: className2
     }) => {
-      const event = eventNode2.event;
+      const event = eventNode.event;
       const obj = parsedJson(event.message.message);
       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
         EventRow,
@@ -62277,7 +62277,7 @@ self.onmessage = function (e) {
           className: className2,
           title: event.message.level,
           icon: ApplicationIcons.logging[event.message.level.toLowerCase()],
-          children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-base", styles$q.grid), children: [
+          children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-base", styles$p.grid), children: [
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-smaller"), children: obj !== void 0 && obj !== null ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(MetaDataGrid, { entries: obj }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/LoggerEventView.tsx",
               lineNumber: 35,
@@ -62314,7 +62314,7 @@ self.onmessage = function (e) {
     };
     const container$5 = "_container_1brs9_1";
     const title$1 = "_title_1brs9_5";
-    const styles$p = {
+    const styles$o = {
       container: container$5,
       title: title$1
     };
@@ -62323,11 +62323,11 @@ self.onmessage = function (e) {
       children: children2,
       className: className2
     }) => {
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$p.container, className2), children: [
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$o.container, className2), children: [
         /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
           "div",
           {
-            className: clsx("text-size-small", "text-style-label", styles$p.title),
+            className: clsx("text-size-small", "text-style-label", styles$o.title),
             children: title2
           },
           void 0,
@@ -62354,7 +62354,7 @@ self.onmessage = function (e) {
     const progress$1 = "_progress_11njc_34";
     const toolConfig = "_toolConfig_11njc_38";
     const toolChoice = "_toolChoice_11njc_46";
-    const styles$o = {
+    const styles$n = {
       container: container$4,
       all,
       tableSelection,
@@ -62370,7 +62370,7 @@ self.onmessage = function (e) {
     const col3 = "_col3_45f60_16";
     const separator$1 = "_separator_45f60_20";
     const topMargin = "_topMargin_45f60_26";
-    const styles$n = {
+    const styles$m = {
       wrapper,
       col2,
       col1_3,
@@ -62438,9 +62438,9 @@ self.onmessage = function (e) {
           });
         }
       }
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-small", styles$n.wrapper), children: rows.map((row2, idx) => {
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-small", styles$m.wrapper), children: rows.map((row2, idx) => {
         if (row2.label === "---") {
-          return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$n.separator }, `$usage-sep-${idx}`, false, {
+          return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$m.separator }, `$usage-sep-${idx}`, false, {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/event/EventTimingPanel.tsx",
             lineNumber: 93,
             columnNumber: 13
@@ -62453,8 +62453,8 @@ self.onmessage = function (e) {
                 className: clsx(
                   "text-style-label",
                   "text-style-secondary",
-                  row2.secondary ? styles$n.col2 : styles$n.col1_3,
-                  row2.topMargin ? styles$n.topMargin : void 0
+                  row2.secondary ? styles$m.col2 : styles$m.col1_3,
+                  row2.topMargin ? styles$m.topMargin : void 0
                 ),
                 children: row2.label
               },
@@ -62467,7 +62467,7 @@ self.onmessage = function (e) {
               },
               void 0
             ),
-            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$n.col3, children: row2.value ? row2.value : "" }, void 0, false, {
+            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$m.col3, children: row2.value ? row2.value : "" }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/event/EventTimingPanel.tsx",
               lineNumber: 108,
               columnNumber: 15
@@ -62504,11 +62504,11 @@ self.onmessage = function (e) {
       return `${title2}${subtitle}`;
     };
     const ModelEventView = ({
-      eventNode: eventNode2,
+      eventNode,
       className: className2
     }) => {
       var _a2, _b2;
-      const event = eventNode2.event;
+      const event = eventNode.event;
       const totalUsage = (_a2 = event.output.usage) == null ? void 0 : _a2.total_tokens;
       const callTime = event.output.time;
       const outputMessages = (_b2 = event.output.choices) == null ? void 0 : _b2.map((choice) => {
@@ -62528,17 +62528,17 @@ self.onmessage = function (e) {
       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
         EventPanel,
         {
-          id: eventNode2.id,
+          id: eventNode.id,
           className: className2,
           title: formatTitle(panelTitle, totalUsage, callTime),
           subTitle: formatTiming(event.timestamp, event.working_start),
           icon: ApplicationIcons.model,
           children: [
-            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { "data-name": "Summary", className: styles$o.container, children: [
+            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { "data-name": "Summary", className: styles$n.container, children: [
               /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
                 ChatView,
                 {
-                  id: `${eventNode2.id}-model-output`,
+                  id: `${eventNode.id}-model-output`,
                   messages: [...userMessages, ...outputMessages || []],
                   numbered: false,
                   toolCallStyle: "omit"
@@ -62552,7 +62552,7 @@ self.onmessage = function (e) {
                 },
                 void 0
               ),
-              event.pending ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$o.progress), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(PulsingDots, { subtle: false, size: "medium" }, void 0, false, {
+              event.pending ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$n.progress), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(PulsingDots, { subtle: false, size: "medium" }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ModelEventView.tsx",
                 lineNumber: 87,
                 columnNumber: 13
@@ -62566,13 +62566,13 @@ self.onmessage = function (e) {
               lineNumber: 78,
               columnNumber: 7
             }, void 0),
-            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { "data-name": "All", className: styles$o.container, children: [
-              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$o.all, children: [
+            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { "data-name": "All", className: styles$n.container, children: [
+              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$n.all, children: [
                 Object.keys(entries).length > 0 && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
                   EventSection,
                   {
                     title: "Configuration",
-                    className: styles$o.tableSelection,
+                    className: styles$n.tableSelection,
                     children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(MetaDataGrid, { entries, plain: true }, void 0, false, {
                       fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ModelEventView.tsx",
                       lineNumber: 98,
@@ -62588,7 +62588,7 @@ self.onmessage = function (e) {
                   },
                   void 0
                 ),
-                /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(EventSection, { title: "Usage", className: styles$o.tableSelection, children: event.output.usage !== null ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(ModelUsagePanel, { usage: event.output.usage }, void 0, false, {
+                /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(EventSection, { title: "Usage", className: styles$n.tableSelection, children: event.output.usage !== null ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(ModelUsagePanel, { usage: event.output.usage }, void 0, false, {
                   fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ModelEventView.tsx",
                   lineNumber: 104,
                   columnNumber: 15
@@ -62597,7 +62597,7 @@ self.onmessage = function (e) {
                   lineNumber: 102,
                   columnNumber: 11
                 }, void 0),
-                /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(EventSection, { title: "Timing", className: styles$o.tableSelection, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+                /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(EventSection, { title: "Timing", className: styles$n.tableSelection, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
                   EventTimingPanel,
                   {
                     timestamp: event.timestamp,
@@ -62626,7 +62626,7 @@ self.onmessage = function (e) {
               /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(EventSection, { title: "Messages", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
                 ChatView,
                 {
-                  id: `${eventNode2.id}-model-input-full`,
+                  id: `${eventNode.id}-model-input-full`,
                   messages: [...event.input, ...outputMessages || []]
                 },
                 void 0,
@@ -62647,7 +62647,7 @@ self.onmessage = function (e) {
               lineNumber: 91,
               columnNumber: 7
             }, void 0),
-            event.tools.length > 1 && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { "data-name": "Tools", className: styles$o.container, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(ToolsConfig, { tools: event.tools, toolChoice: event.tool_choice }, void 0, false, {
+            event.tools.length > 1 && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { "data-name": "Tools", className: styles$n.container, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(ToolsConfig, { tools: event.tools, toolChoice: event.tool_choice }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ModelEventView.tsx",
               lineNumber: 128,
               columnNumber: 11
@@ -62661,7 +62661,7 @@ self.onmessage = function (e) {
               {
                 "data-name": "API",
                 call: event.call,
-                className: styles$o.container
+                className: styles$n.container
               },
               void 0,
               false,
@@ -62721,11 +62721,11 @@ self.onmessage = function (e) {
       if (!contents2) {
         return null;
       }
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { ref: prismParentRef, className: clsx("model-call"), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("pre", { className: clsx(styles$o.codePre), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { ref: prismParentRef, className: clsx("model-call"), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("pre", { className: clsx(styles$n.codePre), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
         "code",
         {
           id,
-          className: clsx("language-json", styles$o.code, "text-size-small"),
+          className: clsx("language-json", styles$n.code, "text-size-small"),
           children: sourceCode
         },
         void 0,
@@ -62766,12 +62766,12 @@ self.onmessage = function (e) {
         }, void 0);
       });
       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(jsxDevRuntimeExports.Fragment, { children: [
-        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$o.toolConfig, children: toolEls }, void 0, false, {
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$n.toolConfig, children: toolEls }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ModelEventView.tsx",
           lineNumber: 215,
           columnNumber: 7
         }, void 0),
-        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$o.toolChoice, children: [
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$n.toolChoice, children: [
           /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-style-label", "text-style-secondary"), children: "Tool Choice" }, void 0, false, {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ModelEventView.tsx",
             lineNumber: 217,
@@ -62817,7 +62817,7 @@ self.onmessage = function (e) {
     const sample = "_sample_1a3fk_10";
     const section = "_section_1a3fk_14";
     const metadata$1 = "_metadata_1a3fk_21";
-    const styles$m = {
+    const styles$l = {
       noMargin,
       code: code$1,
       sample,
@@ -62825,21 +62825,21 @@ self.onmessage = function (e) {
       metadata: metadata$1
     };
     const SampleInitEventView = ({
-      eventNode: eventNode2,
+      eventNode,
       className: className2
     }) => {
-      const event = eventNode2.event;
+      const event = eventNode.event;
       const stateObj = event.state;
       const sections = [];
       if (event.sample.files && Object.keys(event.sample.files).length > 0) {
         sections.push(
           /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(EventSection, { title: "Files", children: Object.keys(event.sample.files).map((file) => {
-            return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("pre", { className: styles$m.noMargin, children: file }, `sample-init-file-${file}`, false, {
+            return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("pre", { className: styles$l.noMargin, children: file }, `sample-init-file-${file}`, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SampleInitEventView.tsx",
               lineNumber: 38,
               columnNumber: 13
             }, void 0);
-          }) }, `event-${eventNode2.id}`, false, {
+          }) }, `event-${eventNode.id}`, false, {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SampleInitEventView.tsx",
             lineNumber: 35,
             columnNumber: 7
@@ -62848,7 +62848,7 @@ self.onmessage = function (e) {
       }
       if (event.sample.setup) {
         sections.push(
-          /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(EventSection, { title: "Setup", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("pre", { className: styles$m.code, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("code", { className: "sourceCode", children: event.sample.setup }, void 0, false, {
+          /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(EventSection, { title: "Setup", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("pre", { className: styles$l.code, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("code", { className: "sourceCode", children: event.sample.setup }, void 0, false, {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SampleInitEventView.tsx",
             lineNumber: 51,
             columnNumber: 11
@@ -62856,7 +62856,7 @@ self.onmessage = function (e) {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SampleInitEventView.tsx",
             lineNumber: 50,
             columnNumber: 9
-          }, void 0) }, `${eventNode2.id}-section-setup`, false, {
+          }, void 0) }, `${eventNode.id}-section-setup`, false, {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SampleInitEventView.tsx",
             lineNumber: 49,
             columnNumber: 7
@@ -62866,13 +62866,13 @@ self.onmessage = function (e) {
       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
         EventPanel,
         {
-          id: eventNode2.id,
+          id: eventNode.id,
           className: className2,
           title: "Sample",
           icon: ApplicationIcons.sample,
           subTitle: formatDateTime(new Date(event.timestamp)),
           children: [
-            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { "data-name": "Sample", className: styles$m.sample, children: [
+            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { "data-name": "Sample", className: styles$l.sample, children: [
               /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(ChatView, { messages: stateObj["messages"] }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SampleInitEventView.tsx",
                 lineNumber: 66,
@@ -62890,7 +62890,7 @@ self.onmessage = function (e) {
                     columnNumber: 19
                   }, void 0);
                 }) : "",
-                sections.length > 0 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$m.section, children: sections }, void 0, false, {
+                sections.length > 0 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$l.section, children: sections }, void 0, false, {
                   fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SampleInitEventView.tsx",
                   lineNumber: 78,
                   columnNumber: 13
@@ -62920,7 +62920,7 @@ self.onmessage = function (e) {
               MetaDataGrid,
               {
                 "data-name": "Metadata",
-                className: styles$m.metadata,
+                className: styles$l.metadata,
                 entries: event.sample.metadata
               },
               void 0,
@@ -62945,7 +62945,7 @@ self.onmessage = function (e) {
       );
     };
     const SampleLimitEventView = ({
-      eventNode: eventNode2,
+      eventNode,
       className: className2
     }) => {
       const resolve_title = (type) => {
@@ -62980,16 +62980,16 @@ self.onmessage = function (e) {
             return ApplicationIcons.limits.execution;
         }
       };
-      const title2 = resolve_title(eventNode2.event.type);
-      const icon2 = resolve_icon(eventNode2.event.type);
+      const title2 = resolve_title(eventNode.event.type);
+      const icon2 = resolve_icon(eventNode.event.type);
       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
         EventPanel,
         {
-          id: eventNode2.id,
+          id: eventNode.id,
           title: title2,
           icon: icon2,
           className: className2,
-          children: eventNode2.event.message
+          children: eventNode.event.message
         },
         void 0,
         false,
@@ -63006,7 +63006,7 @@ self.onmessage = function (e) {
     const result = "_result_1irga_19";
     const fileLabel = "_fileLabel_1irga_23";
     const wrapPre = "_wrapPre_1irga_28";
-    const styles$l = {
+    const styles$k = {
       twoColumn,
       exec,
       result,
@@ -63014,11 +63014,11 @@ self.onmessage = function (e) {
       wrapPre
     };
     const SandboxEventView = ({
-      eventNode: eventNode2,
+      eventNode,
       className: className2
     }) => {
-      const event = eventNode2.event;
-      const id = eventNode2.id;
+      const event = eventNode.event;
+      const id = eventNode.id;
       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
         EventPanel,
         {
@@ -63060,14 +63060,14 @@ self.onmessage = function (e) {
       const input2 = event.input;
       const result2 = event.result;
       const output2 = event.output;
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$l.exec), children: [
-        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(EventSection, { title: `Command`, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$l.twoColumn), children: [
-          /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("pre", { className: clsx(styles$l.wrapPre), children: cmd2 }, void 0, false, {
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$k.exec), children: [
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(EventSection, { title: `Command`, children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$k.twoColumn), children: [
+          /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("pre", { className: clsx(styles$k.wrapPre), children: cmd2 }, void 0, false, {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SandboxEventView.tsx",
             lineNumber: 67,
             columnNumber: 11
           }, void 0),
-          /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("pre", { className: clsx(styles$l.wrapPre), children: input2 !== null ? input2 == null ? void 0 : input2.trim() : void 0 }, void 0, false, {
+          /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("pre", { className: clsx(styles$k.wrapPre), children: input2 !== null ? input2 == null ? void 0 : input2.trim() : void 0 }, void 0, false, {
             fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SandboxEventView.tsx",
             lineNumber: 68,
             columnNumber: 11
@@ -63110,7 +63110,7 @@ self.onmessage = function (e) {
             lineNumber: 84,
             columnNumber: 11
           }, void 0) : void 0,
-          result2 !== 0 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$l.result), children: [
+          result2 !== 0 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$k.result), children: [
             "Exited with code ",
             result2
           ] }, void 0, true, {
@@ -63155,7 +63155,7 @@ self.onmessage = function (e) {
     };
     const FileView = ({ id, file, contents: contents2 }) => {
       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: [
-        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(EventSection, { title: "File", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("pre", { className: clsx(styles$l.fileLabel), children: file }, void 0, false, {
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(EventSection, { title: "File", children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("pre", { className: clsx(styles$k.fileLabel), children: file }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SandboxEventView.tsx",
           lineNumber: 135,
           columnNumber: 9
@@ -63186,29 +63186,29 @@ self.onmessage = function (e) {
     const explanation = "_explanation_1ww42_1";
     const separator = "_separator_1ww42_8";
     const metadata = "_metadata_1ww42_13";
-    const styles$k = {
+    const styles$j = {
       explanation,
       separator,
       metadata
     };
     const ScoreEventView = ({
-      eventNode: eventNode2,
+      eventNode,
       className: className2
     }) => {
-      const event = eventNode2.event;
+      const event = eventNode.event;
       const resolvedTarget = event.target ? Array.isArray(event.target) ? event.target.join("\n") : event.target : void 0;
       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
         EventPanel,
         {
-          id: eventNode2.id,
+          id: eventNode.id,
           title: (event.intermediate ? "Intermediate " : "") + "Score",
           className: clsx(className2, "text-size-small"),
           subTitle: formatDateTime(new Date(event.timestamp)),
           icon: ApplicationIcons.scorer,
           children: [
-            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { "data-name": "Explanation", className: clsx(styles$k.explanation), children: [
+            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { "data-name": "Explanation", className: clsx(styles$j.explanation), children: [
               event.target ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(reactExports.Fragment, { children: [
-                /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$k.separator) }, void 0, false, {
+                /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$j.separator) }, void 0, false, {
                   fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
                   lineNumber: 43,
                   columnNumber: 13
@@ -63232,7 +63232,7 @@ self.onmessage = function (e) {
                 lineNumber: 42,
                 columnNumber: 11
               }, void 0) : "",
-              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$k.separator) }, void 0, false, {
+              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$j.separator) }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
                 lineNumber: 52,
                 columnNumber: 9
@@ -63251,7 +63251,7 @@ self.onmessage = function (e) {
                 lineNumber: 54,
                 columnNumber: 9
               }, void 0),
-              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$k.separator) }, void 0, false, {
+              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$j.separator) }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
                 lineNumber: 57,
                 columnNumber: 9
@@ -63270,7 +63270,7 @@ self.onmessage = function (e) {
                 lineNumber: 59,
                 columnNumber: 9
               }, void 0),
-              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$k.separator) }, void 0, false, {
+              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$j.separator) }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
                 lineNumber: 62,
                 columnNumber: 9
@@ -63285,7 +63285,7 @@ self.onmessage = function (e) {
                 lineNumber: 64,
                 columnNumber: 9
               }, void 0),
-              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$k.separator) }, void 0, false, {
+              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$j.separator) }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ScoreEventView.tsx",
                 lineNumber: 65,
                 columnNumber: 9
@@ -63299,7 +63299,7 @@ self.onmessage = function (e) {
               MetaDataGrid,
               {
                 entries: event.score.metadata,
-                className: styles$k.metadata
+                className: styles$j.metadata
               },
               void 0,
               false,
@@ -70084,7 +70084,7 @@ ${events}
     const lightboxButtonCloseWrapper = "_lightboxButtonCloseWrapper_1mvg8_45";
     const lightboxButtonClose = "_lightboxButtonClose_1mvg8_45";
     const lightboxPreviewButton = "_lightboxPreviewButton_1mvg8_63";
-    const styles$j = {
+    const styles$i = {
       carouselThumbs,
       carouselThumb,
       carouselPlayIcon,
@@ -70153,12 +70153,12 @@ ${events}
         [openLightbox]
       );
       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("lightbox-carousel-container"), children: [
-        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$j.carouselThumbs), children: slides.map((slide, index) => {
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$i.carouselThumbs), children: slides.map((slide, index) => {
           return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
             "div",
             {
               "data-index": index,
-              className: clsx(styles$j.carouselThumb),
+              className: clsx(styles$i.carouselThumb),
               onClick: handleThumbClick,
               children: [
                 /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { children: slide.label }, void 0, false, {
@@ -70171,7 +70171,7 @@ ${events}
                   {
                     className: clsx(
                       ApplicationIcons.play,
-                      styles$j.carouselPlayIcon
+                      styles$i.carouselPlayIcon
                     )
                   },
                   void 0,
@@ -70206,12 +70206,12 @@ ${events}
         showOverlay && /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
           "div",
           {
-            className: clsx(styles$j.lightboxOverlay, isOpen ? "open" : "closed"),
+            className: clsx(styles$i.lightboxOverlay, isOpen ? "open" : "closed"),
             children: [
-              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$j.lightboxButtonCloseWrapper), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$i.lightboxButtonCloseWrapper), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
                 "button",
                 {
-                  className: styles$j.lightboxButtonClose,
+                  className: styles$i.lightboxButtonClose,
                   onClick: closeLightbox,
                   children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: ApplicationIcons.close }, void 0, false, {
                     fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/components/LightboxCarousel.tsx",
@@ -70235,7 +70235,7 @@ ${events}
               slides.length > 1 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
                 "button",
                 {
-                  className: clsx(styles$j.lightboxPreviewButton, "prev"),
+                  className: clsx(styles$i.lightboxPreviewButton, "prev"),
                   onClick: showPrev,
                   children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: ApplicationIcons.previous }, void 0, false, {
                     fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/components/LightboxCarousel.tsx",
@@ -70255,7 +70255,7 @@ ${events}
               slides.length > 1 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
                 "button",
                 {
-                  className: clsx(styles$j.lightboxPreviewButton, "next"),
+                  className: clsx(styles$i.lightboxPreviewButton, "next"),
                   onClick: showNext,
                   children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: ApplicationIcons.next }, void 0, false, {
                     fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/components/LightboxCarousel.tsx",
@@ -70275,7 +70275,7 @@ ${events}
               /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
                 "div",
                 {
-                  className: clsx(styles$j.lightboxContent, isOpen ? "open" : "closed"),
+                  className: clsx(styles$i.lightboxContent, isOpen ? "open" : "closed"),
                   children: slides[currentIndex].render()
                 },
                 `carousel-slide-${currentIndex}`,
@@ -70469,7 +70469,7 @@ ${events}
     const toolsGrid = "_toolsGrid_1qqm2_1";
     const tools = "_tools_1qqm2_1";
     const tool = "_tool_1qqm2_1";
-    const styles$i = {
+    const styles$h = {
       toolsGrid,
       tools,
       tool
@@ -70632,7 +70632,7 @@ ${events}
           }, void 0);
         }
       }
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$i.tools), children: Object.keys(toolsInfo).map((key2) => {
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$h.tools), children: Object.keys(toolsInfo).map((key2) => {
         return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(reactExports.Fragment, { children: [
           /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
             "div",
@@ -70708,7 +70708,7 @@ ${events}
       human_baseline_session
     ];
     const Tools = ({ toolDefinitions }) => {
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$i.toolsGrid, children: toolDefinitions.map((toolDefinition, idx) => {
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: styles$h.toolsGrid, children: toolDefinitions.map((toolDefinition, idx) => {
         var _a2;
         const toolName = toolDefinition.name;
         const toolArgs = ((_a2 = toolDefinition.parameters) == null ? void 0 : _a2.properties) ? Object.keys(toolDefinition.parameters.properties) : [];
@@ -70735,7 +70735,7 @@ ${events}
     };
     const Tool = ({ toolName, toolArgs }) => {
       const functionCall = toolArgs && toolArgs.length > 0 ? `${toolName}(${toolArgs.join(", ")})` : toolName;
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("code", { className: clsx("text-size-smallest", styles$i.tool), children: functionCall }, void 0, false, {
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("code", { className: clsx("text-size-smallest", styles$h.tool), children: functionCall }, void 0, false, {
         fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/state/StateEventRenderers.tsx",
         lineNumber: 311,
         columnNumber: 5
@@ -70743,16 +70743,16 @@ ${events}
     };
     const diff = "_diff_eobja_1";
     const summary$2 = "_summary_eobja_6";
-    const styles$h = {
+    const styles$g = {
       diff,
       summary: summary$2
     };
     const StateEventView = ({
-      eventNode: eventNode2,
+      eventNode,
       className: className2
     }) => {
-      const event = eventNode2.event;
-      const id = eventNode2.id;
+      const event = eventNode.event;
+      const id = eventNode.id;
       const summary2 = reactExports.useMemo(() => {
         return summarizeChanges(event.changes);
       }, [event.changes]);
@@ -70768,7 +70768,7 @@ ${events}
         }
       }, [event.changes]);
       const changePreview = reactExports.useMemo(() => {
-        const isStore = eventNode2.event.event === "store";
+        const isStore = eventNode.event.event === "store";
         return generatePreview(event.changes, structuredClone(after), isStore);
       }, [event.changes, after]);
       const title2 = event.event === "state" ? "State Updated" : "Store Updated";
@@ -70787,7 +70787,7 @@ ${events}
           subTitle: formatDateTime(new Date(event.timestamp)),
           text: !changePreview ? summary2 : void 0,
           children: [
-            changePreview ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { "data-name": "Summary", className: clsx(styles$h.summary), children: changePreview }, void 0, false, {
+            changePreview ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { "data-name": "Summary", className: clsx(styles$g.summary), children: changePreview }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/state/StateEventView.tsx",
               lineNumber: 83,
               columnNumber: 9
@@ -70798,7 +70798,7 @@ ${events}
                 before,
                 after,
                 "data-name": "Diff",
-                className: clsx(styles$h.diff)
+                className: clsx(styles$g.diff)
               },
               void 0,
               false,
@@ -71154,12 +71154,12 @@ ${events}
       };
     };
     const StepEventView = ({
-      eventNode: eventNode2,
+      eventNode,
       children: children2,
       className: className2
     }) => {
-      const event = eventNode2.event;
-      const id = eventNode2.id;
+      const event = eventNode.event;
+      const id = eventNode.id;
       const descriptor = stepDescriptor(event);
       const title2 = descriptor.name || `${event.type ? event.type + ": " : "Step: "}${event.name}`;
       const text2 = summarize$1(children2);
@@ -71172,28 +71172,13 @@ ${events}
           title: title2,
           subTitle: formatDateTime(new Date(event.timestamp)),
           icon: descriptor.icon,
-          text: text2,
-          children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
-            TranscriptComponent,
-            {
-              id: `step|${event.name}|${id}`,
-              eventNodes: children2
-            },
-            void 0,
-            false,
-            {
-              fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/StepEventView.tsx",
-              lineNumber: 43,
-              columnNumber: 7
-            },
-            void 0
-          )
+          text: text2
         },
         void 0,
         false,
         {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/StepEventView.tsx",
-          lineNumber: 34,
+          lineNumber: 33,
           columnNumber: 5
         },
         void 0
@@ -71300,28 +71285,28 @@ ${events}
     const summaryRendered = "_summaryRendered_ac4z2_6";
     const subtaskSummary = "_subtaskSummary_ac4z2_10";
     const subtaskLabel = "_subtaskLabel_ac4z2_17";
-    const styles$g = {
+    const styles$f = {
       summary: summary$1,
       summaryRendered,
       subtaskSummary,
       subtaskLabel
     };
     const SubtaskEventView = ({
-      eventNode: eventNode2,
+      eventNode,
       className: className2
     }) => {
-      const event = eventNode2.event;
-      const id = eventNode2.id;
+      const event = eventNode.event;
+      const id = eventNode.id;
       const body2 = [];
       if (event.type === "fork") {
         body2.push(
-          /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { title: "Summary", className: clsx(styles$g.summary), children: [
+          /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { title: "Summary", className: clsx(styles$f.summary), children: [
             /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-style-label"), children: "Inputs" }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SubtaskEventView.tsx",
               lineNumber: 29,
               columnNumber: 9
             }, void 0),
-            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$g.summaryRendered), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Rendered, { values: event.input }, void 0, false, {
+            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$f.summaryRendered), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Rendered, { values: event.input }, void 0, false, {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SubtaskEventView.tsx",
               lineNumber: 31,
               columnNumber: 11
@@ -71382,13 +71367,13 @@ ${events}
     };
     const SubtaskSummary = ({ input: input2, result: result2 }) => {
       const output2 = typeof result2 === "object" ? result2 : { result: result2 };
-      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$g.subtaskSummary), children: [
+      return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$f.subtaskSummary), children: [
         /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-style-label"), children: "Input" }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SubtaskEventView.tsx",
           lineNumber: 74,
           columnNumber: 7
         }, void 0),
-        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-large", styles$g.subtaskLabel) }, void 0, false, {
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-large", styles$f.subtaskLabel) }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SubtaskEventView.tsx",
           lineNumber: 75,
           columnNumber: 7
@@ -71403,7 +71388,7 @@ ${events}
           lineNumber: 77,
           columnNumber: 16
         }, void 0) : void 0,
-        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-title-secondary", styles$g.subtaskLabel), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: ApplicationIcons.arrows.right }, void 0, false, {
+        /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-size-title-secondary", styles$f.subtaskLabel), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("i", { className: ApplicationIcons.arrows.right }, void 0, false, {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/SubtaskEventView.tsx",
           lineNumber: 79,
           columnNumber: 9
@@ -71464,19 +71449,19 @@ ${events}
     const summary = "_summary_1qsnv_1";
     const approval = "_approval_1qsnv_6";
     const progress = "_progress_1qsnv_12";
-    const styles$f = {
+    const styles$e = {
       summary,
       approval,
       progress
     };
     const ToolEventView = ({
-      eventNode: eventNode2,
+      eventNode,
       children: children2,
       className: className2
     }) => {
       var _a2, _b2;
-      const event = eventNode2.event;
-      const id = eventNode2.id;
+      const event = eventNode.event;
+      const id = eventNode.id;
       const { input: input2, functionCall, highlightLanguage } = reactExports.useMemo(
         () => resolveToolInput(event.function, event.arguments),
         [event.function, event.arguments]
@@ -71502,110 +71487,91 @@ ${events}
           className: className2,
           subTitle: formatTiming(event.timestamp, event.working_start),
           icon: ApplicationIcons.solvers.use_tools,
-          children: [
-            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { "data-name": "Summary", className: styles$f.summary, children: [
-              /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
-                ToolCallView,
-                {
-                  id: `${id}-tool-call`,
-                  functionCall,
-                  input: input2,
-                  highlightLanguage,
-                  output: ((_b2 = event.error) == null ? void 0 : _b2.message) || event.result,
-                  mode: "compact",
-                  view: event.view ? event.view : void 0
-                },
-                void 0,
-                false,
-                {
-                  fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ToolEventView.tsx",
-                  lineNumber: 67,
-                  columnNumber: 9
-                },
-                void 0
-              ),
-              lastModelNode ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
-                ChatView,
-                {
-                  id: `${id}-toolcall-chatmessage`,
-                  messages: lastModelNode.event.output.choices.map((m) => m.message),
-                  numbered: false,
-                  toolCallStyle: "compact"
-                },
-                void 0,
-                false,
-                {
-                  fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ToolEventView.tsx",
-                  lineNumber: 78,
-                  columnNumber: 11
-                },
-                void 0
-              ) : void 0,
-              approvalNode ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
-                ApprovalEventView,
-                {
-                  eventNode: approvalNode,
-                  className: styles$f.approval
-                },
-                void 0,
-                false,
-                {
-                  fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ToolEventView.tsx",
-                  lineNumber: 87,
-                  columnNumber: 11
-                },
-                void 0
-              ) : "",
-              event.pending ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$f.progress), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(PulsingDots, { subtle: false, size: "medium" }, void 0, false, {
-                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ToolEventView.tsx",
-                lineNumber: 96,
-                columnNumber: 13
-              }, void 0) }, void 0, false, {
-                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ToolEventView.tsx",
-                lineNumber: 95,
-                columnNumber: 11
-              }, void 0) : void 0
-            ] }, void 0, true, {
-              fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ToolEventView.tsx",
-              lineNumber: 66,
-              columnNumber: 7
-            }, void 0),
-            children2.length > 0 ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
-              TranscriptComponent,
+          children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { "data-name": "Summary", className: styles$e.summary, children: [
+            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+              ToolCallView,
               {
-                "data-name": "Transcript",
-                id: `${id}-subtask`,
-                eventNodes: children2,
-                "data-default": event.failed || event.agent ? true : null
+                id: `${id}-tool-call`,
+                functionCall,
+                input: input2,
+                highlightLanguage,
+                output: ((_b2 = event.error) == null ? void 0 : _b2.message) || event.result,
+                mode: "compact",
+                view: event.view ? event.view : void 0
               },
               void 0,
               false,
               {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ToolEventView.tsx",
-                lineNumber: 101,
+                lineNumber: 66,
                 columnNumber: 9
               },
               void 0
-            ) : ""
-          ]
+            ),
+            lastModelNode ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+              ChatView,
+              {
+                id: `${id}-toolcall-chatmessage`,
+                messages: lastModelNode.event.output.choices.map((m) => m.message),
+                numbered: false,
+                toolCallStyle: "compact"
+              },
+              void 0,
+              false,
+              {
+                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ToolEventView.tsx",
+                lineNumber: 77,
+                columnNumber: 11
+              },
+              void 0
+            ) : void 0,
+            approvalNode ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+              ApprovalEventView,
+              {
+                eventNode: approvalNode,
+                className: styles$e.approval
+              },
+              void 0,
+              false,
+              {
+                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ToolEventView.tsx",
+                lineNumber: 86,
+                columnNumber: 11
+              },
+              void 0
+            ) : "",
+            event.pending ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$e.progress), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(PulsingDots, { subtle: false, size: "medium" }, void 0, false, {
+              fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ToolEventView.tsx",
+              lineNumber: 95,
+              columnNumber: 13
+            }, void 0) }, void 0, false, {
+              fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ToolEventView.tsx",
+              lineNumber: 94,
+              columnNumber: 11
+            }, void 0) : void 0
+          ] }, void 0, true, {
+            fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ToolEventView.tsx",
+            lineNumber: 65,
+            columnNumber: 7
+          }, void 0)
         },
         void 0,
-        true,
+        false,
         {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/ToolEventView.tsx",
-          lineNumber: 59,
+          lineNumber: 58,
           columnNumber: 5
         },
         void 0
       );
     };
     const SpanEventView = ({
-      eventNode: eventNode2,
+      eventNode,
       children: children2,
       className: className2
     }) => {
-      const event = eventNode2.event;
-      const id = eventNode2.id;
+      const event = eventNode.event;
+      const id = eventNode.id;
       const descriptor = spanDescriptor(event);
       const title2 = descriptor.name || `${event.type ? event.type + ": " : "Step: "}${event.name}`;
       const text2 = summarize(children2);
@@ -71727,29 +71693,9 @@ ${events}
         }
       }
     };
-    const transcriptComponent = "_transcriptComponent_171gc_19";
-    const eventNode = "_eventNode_171gc_25";
-    const darkenBg = "_darkenBg_171gc_29";
-    const lastNode = "_lastNode_171gc_33";
-    const eventNodeContainer = "_eventNodeContainer_171gc_37";
-    const noBottom = "_noBottom_171gc_41";
-    const attached$1 = "_attached_171gc_45";
-    const styles$e = {
-      transcriptComponent,
-      eventNode,
-      darkenBg,
-      lastNode,
-      eventNodeContainer,
-      noBottom,
-      attached: attached$1
-    };
-    const darkenedBg = "_darkenedBg_u9na2_1";
-    const normalBg = "_normalBg_u9na2_5";
-    const node = "_node_u9na2_9";
-    const attached = "_attached_u9na2_14";
+    const node = "_node_1dxwr_1";
+    const attached = "_attached_1dxwr_6";
     const styles$d = {
-      darkenedBg,
-      normalBg,
       node,
       attached
     };
@@ -71763,35 +71709,37 @@ ${events}
         });
         return result2 === -1 ? void 0 : result2;
       }, [initialEventId]);
-      const renderRow = reactExports.useCallback((index, item2) => {
-        const bgClass = item2.depth % 2 == 0 ? styles$d.darkenedBg : styles$d.normalBg;
-        const paddingClass = index === 0 ? styles$d.first : void 0;
-        const previousIndex = index - 1;
-        const previous = previousIndex > 0 && previousIndex <= eventNodes.length ? eventNodes[previousIndex] : void 0;
-        const attached2 = item2.event.event === "tool" && ((previous == null ? void 0 : previous.event.event) === "tool" || (previous == null ? void 0 : previous.event.event) === "model");
-        const attachedClass = attached2 ? styles$d.attached : void 0;
-        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
-          "div",
-          {
-            id: item2.id,
-            className: clsx(styles$d.node, paddingClass, attachedClass),
-            style: { paddingLeft: `${item2.depth}em` },
-            children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(RenderedEventNode, { id: item2.id, node: item2, className: clsx(bgClass) }, void 0, false, {
+      const renderRow = reactExports.useCallback(
+        (index, item2) => {
+          const paddingClass = index === 0 ? styles$d.first : void 0;
+          const previousIndex = index - 1;
+          const previous = previousIndex > 0 && previousIndex <= eventNodes.length ? eventNodes[previousIndex] : void 0;
+          const attached2 = item2.event.event === "tool" && ((previous == null ? void 0 : previous.event.event) === "tool" || (previous == null ? void 0 : previous.event.event) === "model");
+          const attachedClass = attached2 ? styles$d.attached : void 0;
+          return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+            "div",
+            {
+              id: item2.id,
+              className: clsx(styles$d.node, paddingClass, attachedClass),
+              style: { paddingLeft: `${item2.depth * 0.5}em` },
+              children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(RenderedEventNode, { id: item2.id, node: item2 }, void 0, false, {
+                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualListComponent.tsx",
+                lineNumber: 54,
+                columnNumber: 11
+              }, void 0)
+            },
+            item2.id,
+            false,
+            {
               fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualListComponent.tsx",
-              lineNumber: 54,
+              lineNumber: 48,
               columnNumber: 9
-            }, void 0)
-          },
-          item2.id,
-          false,
-          {
-            fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualListComponent.tsx",
-            lineNumber: 48,
-            columnNumber: 7
-          },
-          void 0
-        );
-      }, []);
+            },
+            void 0
+          );
+        },
+        [eventNodes]
+      );
       return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
         LiveVirtualList,
         {
@@ -71806,7 +71754,7 @@ ${events}
         false,
         {
           fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualListComponent.tsx",
-          lineNumber: 60,
+          lineNumber: 62,
           columnNumber: 5
         },
         void 0
@@ -72018,8 +71966,8 @@ ${events}
           void 0,
           false,
           {
-            fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptView.tsx",
-            lineNumber: 113,
+            fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
+            lineNumber: 111,
             columnNumber: 7
           },
           void 0
@@ -72038,85 +71986,6 @@ ${events}
         return false;
       }
     ];
-    const TranscriptComponent = reactExports.memo(
-      ({ id, eventNodes }) => {
-        const rows = [];
-        let attached2 = false;
-        for (let i2 = 0; i2 < eventNodes.length; i2++) {
-          const eventNode2 = eventNodes[i2];
-          const clz = [styles$e.eventNode];
-          const containerClz = [];
-          if (eventNode2.event.event !== "tool") {
-            attached2 = false;
-          }
-          if (eventNode2.depth % 2 == 0) {
-            clz.push(styles$e.darkenBg);
-          }
-          if (i2 === eventNodes.length - 1) {
-            clz.push(styles$e.lastNode);
-          }
-          if (attached2) {
-            containerClz.push(styles$e.attached);
-          }
-          const eventId = `${id}|event|${i2}`;
-          const row2 = /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
-            "div",
-            {
-              className: clsx(
-                styles$e.eventNodeContainer,
-                i2 === eventNodes.length - 1 ? styles$e.noBottom : void 0,
-                containerClz
-              ),
-              style: { paddingLeft: `${eventNode2.depth * 1}em` },
-              children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
-                RenderedEventNode,
-                {
-                  id: eventId,
-                  node: eventNode2,
-                  className: clsx(clz)
-                },
-                void 0,
-                false,
-                {
-                  fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptView.tsx",
-                  lineNumber: 183,
-                  columnNumber: 11
-                },
-                void 0
-              )
-            },
-            eventId,
-            false,
-            {
-              fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptView.tsx",
-              lineNumber: 174,
-              columnNumber: 9
-            },
-            void 0
-          );
-          rows.push(row2);
-          if (eventNode2.event.event === "model") {
-            attached2 = true;
-          }
-        }
-        return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
-          "div",
-          {
-            id,
-            className: clsx("text-size-small", styles$e.transcriptComponent),
-            children: rows
-          },
-          void 0,
-          false,
-          {
-            fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptView.tsx",
-            lineNumber: 198,
-            columnNumber: 7
-          },
-          void 0
-        );
-      }
-    );
     const RenderedEventNode = reactExports.memo(
       ({ id, node: node2, className: className2 }) => {
         switch (node2.event.event) {
@@ -72130,8 +71999,8 @@ ${events}
               void 0,
               false,
               {
-                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptView.tsx",
-                lineNumber: 221,
+                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
+                lineNumber: 148,
                 columnNumber: 11
               },
               void 0
@@ -72146,8 +72015,8 @@ ${events}
               void 0,
               false,
               {
-                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptView.tsx",
-                lineNumber: 229,
+                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
+                lineNumber: 156,
                 columnNumber: 11
               },
               void 0
@@ -72162,8 +72031,8 @@ ${events}
               void 0,
               false,
               {
-                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptView.tsx",
-                lineNumber: 237,
+                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
+                lineNumber: 164,
                 columnNumber: 11
               },
               void 0
@@ -72178,8 +72047,8 @@ ${events}
               void 0,
               false,
               {
-                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptView.tsx",
-                lineNumber: 245,
+                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
+                lineNumber: 172,
                 columnNumber: 11
               },
               void 0
@@ -72194,8 +72063,8 @@ ${events}
               void 0,
               false,
               {
-                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptView.tsx",
-                lineNumber: 253,
+                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
+                lineNumber: 180,
                 columnNumber: 11
               },
               void 0
@@ -72210,8 +72079,8 @@ ${events}
               void 0,
               false,
               {
-                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptView.tsx",
-                lineNumber: 261,
+                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
+                lineNumber: 188,
                 columnNumber: 11
               },
               void 0
@@ -72226,8 +72095,8 @@ ${events}
               void 0,
               false,
               {
-                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptView.tsx",
-                lineNumber: 269,
+                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
+                lineNumber: 196,
                 columnNumber: 11
               },
               void 0
@@ -72243,8 +72112,8 @@ ${events}
               void 0,
               false,
               {
-                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptView.tsx",
-                lineNumber: 277,
+                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
+                lineNumber: 204,
                 columnNumber: 11
               },
               void 0
@@ -72260,8 +72129,8 @@ ${events}
               void 0,
               false,
               {
-                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptView.tsx",
-                lineNumber: 286,
+                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
+                lineNumber: 213,
                 columnNumber: 11
               },
               void 0
@@ -72276,8 +72145,8 @@ ${events}
               void 0,
               false,
               {
-                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptView.tsx",
-                lineNumber: 295,
+                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
+                lineNumber: 222,
                 columnNumber: 11
               },
               void 0
@@ -72292,8 +72161,8 @@ ${events}
               void 0,
               false,
               {
-                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptView.tsx",
-                lineNumber: 303,
+                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
+                lineNumber: 230,
                 columnNumber: 11
               },
               void 0
@@ -72309,8 +72178,8 @@ ${events}
               void 0,
               false,
               {
-                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptView.tsx",
-                lineNumber: 311,
+                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
+                lineNumber: 238,
                 columnNumber: 11
               },
               void 0
@@ -72325,8 +72194,8 @@ ${events}
               void 0,
               false,
               {
-                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptView.tsx",
-                lineNumber: 320,
+                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
+                lineNumber: 247,
                 columnNumber: 11
               },
               void 0
@@ -72341,8 +72210,8 @@ ${events}
               void 0,
               false,
               {
-                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptView.tsx",
-                lineNumber: 328,
+                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
+                lineNumber: 255,
                 columnNumber: 11
               },
               void 0
@@ -72357,8 +72226,8 @@ ${events}
               void 0,
               false,
               {
-                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptView.tsx",
-                lineNumber: 336,
+                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
+                lineNumber: 263,
                 columnNumber: 11
               },
               void 0
@@ -72373,8 +72242,8 @@ ${events}
               void 0,
               false,
               {
-                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptView.tsx",
-                lineNumber: 344,
+                fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/transcript/TranscriptVirtualList.tsx",
+                lineNumber: 271,
                 columnNumber: 11
               },
               void 0
@@ -72476,7 +72345,7 @@ ${events}
           {
             id: tabsetId,
             tabControlsClassName: clsx("text-size-base"),
-            tabPanelsClassName: clsx(styles$A.tabPanel),
+            tabPanelsClassName: clsx(styles$z.tabPanel),
             tools: tools2,
             children: [
               /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
@@ -72520,7 +72389,7 @@ ${events}
                 TabPanel,
                 {
                   id: kSampleMessagesTabId,
-                  className: clsx("sample-tab", styles$A.fullWidth, styles$A.chat),
+                  className: clsx("sample-tab", styles$z.fullWidth, styles$z.chat),
                   title: "Messages",
                   onSelected: onSelectedTab,
                   selected: effectiveSelectedTab === kSampleMessagesTabId,
@@ -72609,7 +72478,7 @@ ${events}
                   title: "Errors",
                   onSelected: onSelectedTab,
                   selected: effectiveSelectedTab === kSampleErrorTabId,
-                  children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$A.error), children: [
+                  children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$z.error), children: [
                     (sample2 == null ? void 0 : sample2.error) ? /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(Card, { children: [
                       /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(CardHeader, { label: `Sample Error` }, void 0, false, {
                         fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
@@ -72620,7 +72489,7 @@ ${events}
                         ANSIDisplay,
                         {
                           output: sample2.error.traceback_ansi,
-                          className: clsx("text-size-small", styles$A.ansi),
+                          className: clsx("text-size-small", styles$z.ansi),
                           style: {
                             fontSize: "clamp(0.4rem, calc(0.15em + 1vw), 0.8rem)",
                             margin: "0.5em 0"
@@ -72655,7 +72524,7 @@ ${events}
                           ANSIDisplay,
                           {
                             output: retry.traceback_ansi,
-                            className: clsx("text-size-small", styles$A.ansi),
+                            className: clsx("text-size-small", styles$z.ansi),
                             style: {
                               fontSize: "clamp(0.4rem, calc(0.15em + 1vw), 0.8rem)",
                               margin: "0.5em 0"
@@ -72711,7 +72580,7 @@ ${events}
                     fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
                     lineNumber: 286,
                     columnNumber: 13
-                  }, void 0) : /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$A.padded, styles$A.fullWidth), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+                  }, void 0) : /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$z.padded, styles$z.fullWidth), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
                     JSONPanel,
                     {
                       data: sample2,
@@ -72775,7 +72644,7 @@ ${events}
               ModelTokenTable,
               {
                 model_usage: sample2.model_usage,
-                className: clsx(styles$A.noTop)
+                className: clsx(styles$z.noTop)
               },
               void 0,
               false,
@@ -72805,7 +72674,7 @@ ${events}
               lineNumber: 330,
               columnNumber: 9
             }, void 0),
-            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(CardBody, { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$A.timePanel, "text-size-smaller"), children: [
+            /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(CardBody, { children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx(styles$z.timePanel, "text-size-smaller"), children: [
               /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("text-style-label", "text-style-secondary"), children: "Working" }, void 0, false, {
                 fileName: "/Users/charlesteague/Development/inspect_ai/src/inspect_ai/_view/www/src/app/samples/SampleDisplay.tsx",
                 lineNumber: 333,
@@ -72855,7 +72724,7 @@ ${events}
               {
                 id: "task-sample-metadata-${id}",
                 entries: sample2 == null ? void 0 : sample2.metadata,
-                className: clsx("tab-pane", styles$A.noTop)
+                className: clsx("tab-pane", styles$z.noTop)
               },
               void 0,
               false,
@@ -72890,7 +72759,7 @@ ${events}
               {
                 id: "task-sample-store-${id}",
                 entries: sample2 == null ? void 0 : sample2.store,
-                className: clsx("tab-pane", styles$A.noTop)
+                className: clsx("tab-pane", styles$z.noTop)
               },
               void 0,
               false,
@@ -95584,15 +95453,15 @@ Supported expressions:
             },
             void 0
           ),
-          /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { ref: divRef, className: clsx("workspace", styles$P.workspace), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("log-detail", styles$P.tabContainer), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
+          /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { ref: divRef, className: clsx("workspace", styles$O.workspace), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV("div", { className: clsx("log-detail", styles$O.tabContainer), children: /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
             TabSet,
             {
               id: "log-details",
               tools: tabTools2,
               type: "pills",
-              className: clsx(styles$P.tabSet, "text-size-smaller"),
-              tabControlsClassName: clsx(styles$P.tabs, "text-size-smaller"),
-              tabPanelsClassName: clsx(styles$P.tabPanels),
+              className: clsx(styles$O.tabSet, "text-size-smaller"),
+              tabControlsClassName: clsx(styles$O.tabs, "text-size-smaller"),
+              tabPanelsClassName: clsx(styles$O.tabPanels),
               children: Object.keys(tabs2).map((key2) => {
                 const tab2 = tabs2[key2];
                 return /* @__PURE__ */ jsxDevRuntimeExports.jsxDEV(
